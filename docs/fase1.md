@@ -31,7 +31,7 @@
 
 ## 1. Propósito da Avaliação e Uso Pretendido
 
-A presente avaliação tem como objetivo analisar a qualidade do produto de software Agio — um sistema web open source de gestão de inventário — sob as perspectivas de Adequação Funcional, Confiabilidade e Eficiência de Desempenho, conforme definidas na norma ISO/IEC 25010:2011 (SQuaRE).
+A presente avaliação tem como objetivo analisar a qualidade do produto de software Agio — um sistema web de código aberto de gestão de inventário — sob as perspectivas de Adequação Funcional, Confiabilidade e Eficiência de Desempenho, conforme definidas na norma ISO/IEC 25010:2011 (SQuaRE).
 
 O propósito específico é responder às seguintes questões de decisão:
 
@@ -41,7 +41,7 @@ O propósito específico é responder às seguintes questões de decisão:
 | O sistema mantém estabilidade sob uso contínuo e diante de entradas inesperadas? | Operadores e administradores do sistema | Decidir se o sistema está pronto para uso em ambiente de produção |
 | O desempenho é aceitável para o volume de dados e usuários esperados em uma empresa de pequeno/médio porte? | Potenciais adotantes do software | Avaliar a viabilidade de adoção do Agio como solução de inventário |
 
-Os resultados da avaliação serão documentados em relatório técnico com dados auditáveis, disponibilizados no repositório Git do projeto, e poderão ser utilizados pela comunidade open source para orientar evoluções do software.
+Os resultados da avaliação serão documentados em relatório técnico com dados auditáveis, disponibilizados no repositório Git do projeto, e poderão ser utilizados pela comunidade de código aberto para orientar evoluções do software.
 
 ## 2. Requisitante e Partes Interessadas
 
@@ -54,7 +54,7 @@ A Tabela 1 apresenta o mapeamento das partes interessadas, seus papéis, necessi
 | Equipe avaliadora (2026.1) | Requisitante da avaliação | Executar o processo conforme ISO/IEC 25040; obter resultados válidos e reprodutíveis | Relatório aceito pela disciplina com dados auditáveis | Define escopo, métricas e conduz a execução |
 | Profa. Cristiane Ramos | Orientadora e avaliadora acadêmica | Verificar aderência ao processo da ISO/IEC 25040 e à SQuaRE | Processo completo, rastreável e com rigor metodológico | Define critérios de aceite do trabalho |
 | Equipe original do Agio (2024.2) | Desenvolvedores do produto avaliado | Receber feedback sobre qualidade para orientar manutenção | Identificação clara de pontos fortes e fracos com evidências | Fornece o artefato avaliado e documentação existente |
-| Comunidade open source / potenciais adotantes | Usuários finais e contribuidores | Saber se o software é funcional, confiável e performático antes de adotar | Resultados claros sobre completude funcional, estabilidade e tempo de resposta | Determinam a relevância das características avaliadas |
+| Comunidade de código aberto / potenciais adotantes | Usuários finais e contribuidores | Saber se o software é funcional, confiável e performático antes de adotar | Resultados claros sobre completude funcional, estabilidade e tempo de resposta | Determinam a relevância das características avaliadas |
 | Empresas de pequeno/médio porte | Operadores do sistema em produção | Sistema estável, com funcionalidades completas e desempenho aceitável | Ausência de falhas críticas; tempo de resposta inferior a 2 segundos para operações comuns | Definem o perfil de carga e os cenários de uso relevantes |
 
 ## 3. Descrição do Software Avaliado
@@ -68,7 +68,7 @@ A Tabela 1 apresenta o mapeamento das partes interessadas, seus papéis, necessi
 | Repositório | [github.com/unb-mds/2024-2-Agio](https://github.com/unb-mds/2024-2-Agio) |
 | URL de produção | [agio-inventory-system.vercel.app](https://agio-inventory-system.vercel.app/) |
 | Origem | Projeto acadêmico da disciplina MDS (UnB, 2024.2) |
-| Licença | Open source (GitHub) |
+| Licença | Código aberto (GitHub) |
 | Domínio | Gestão de inventário corporativo para empresas de pequeno a médio porte |
 
 ### 3.2 Classificação do Tipo de Produto
@@ -85,7 +85,42 @@ Essa classificação impacta a avaliação porque: (a) o código-fonte está dis
 
 O Agio segue uma arquitetura modular em quatro camadas:
 
-*[DIAGRAMA: Inserir aqui o diagrama de arquitetura do sistema. Deve conter: Frontend (HTML/JS/CSS) conectado via HTTP/REST ao Backend (Django + DRF), que se comunica com o Banco de Dados (PostgreSQL) e Serviços Externos (Auth/Analytics). Incluir setas bidirecionais com protocolos. Pode ser feito no draw.io, Mermaid ou PlantUML.]*
+*Figura 1 — Diagrama de Arquitetura do Agio*
+
+```mermaid
+graph LR
+    subgraph Usuario
+        U["Navegador Web"]
+    end
+
+    subgraph Frontend
+        FE["HTML5 / JS / CSS"]
+    end
+
+    subgraph Backend
+        API["Django + DRF"]
+        AUTH["Autenticacao JWT"]
+        BL["Regras de Negocio"]
+    end
+
+    subgraph Banco de Dados
+        DB["PostgreSQL"]
+    end
+
+    subgraph Infraestrutura
+        DOCKER["Docker Compose"]
+        VERCEL["Vercel - Deploy"]
+    end
+
+    U -->|"HTTP"| FE
+    FE -->|"REST API"| API
+    API --> AUTH
+    API --> BL
+    API -->|"SQL Queries"| DB
+    DOCKER -.->|"containeriza"| API
+    DOCKER -.->|"containeriza"| DB
+    VERCEL -.->|"hospeda"| FE
+```
 
 | Camada | Tecnologia | Função |
 |---|---|---|
@@ -162,28 +197,52 @@ Subcaracterísticas selecionadas por característica:
 
 ### 4.3 Representação Gráfica do Modelo Adaptado
 
-*[DIAGRAMA: Inserir aqui a representação gráfica do modelo de qualidade adaptado. Formato sugerido: diagrama hierárquico com a ISO/IEC 25010 no topo, as 3 características selecionadas no segundo nível, e as 9 subcaracterísticas no terceiro nível. Cada subcaracterística deve ter uma seta pontilhada indicando a métrica correspondente (a ser definida na Fase 2). As características excluídas podem aparecer em cinza/riscadas para mostrar a decisão de corte. Pode ser feito em Mermaid, draw.io ou PlantUML.]*
+*Figura 2 — Modelo de Qualidade Adaptado (ISO/IEC 25010)*
 
-Exemplo de estrutura Mermaid para o diagrama:
-
-```
+```mermaid
 graph TD
-    ISO["ISO/IEC 25010 — Modelo Adaptado para o Agio"]
-    ISO --> AF["Adequação Funcional"]
+    ISO["ISO/IEC 25010<br>Modelo Adaptado para o Agio"]
+
+    ISO --> AF["Adequacao Funcional"]
     ISO --> CONF["Confiabilidade"]
-    ISO --> ED["Eficiência de Desempenho"]
+    ISO --> ED["Eficiencia de Desempenho"]
+
+    ISO -.->|"excluida"| USB["Usabilidade"]
+    ISO -.->|"excluida"| SEG["Seguranca"]
+    ISO -.->|"excluida"| MAN["Manutenibilidade"]
+    ISO -.->|"excluida"| COM["Compatibilidade"]
+    ISO -.->|"excluida"| POR["Portabilidade"]
 
     AF --> CF["Completude Funcional"]
-    AF --> COR["Correção Funcional"]
-    AF --> ADEQ["Adequação (Pertinência)"]
+    AF --> COR["Correcao Funcional"]
+    AF --> ADEQ["Adequacao - Pertinencia"]
 
     CONF --> MAT["Maturidade"]
     CONF --> DISP["Disponibilidade"]
-    CONF --> TOL["Tolerância a Falhas"]
+    CONF --> TOL["Tolerancia a Falhas"]
 
     ED --> CT["Comportamento Temporal"]
-    ED --> UR["Utilização de Recursos"]
+    ED --> UR["Utilizacao de Recursos"]
     ED --> CAP["Capacidade"]
+
+    CF -.-o M1["Metrica M1<br>Fase 2"]
+    COR -.-o M1
+    ADEQ -.-o M1
+    MAT -.-o M2["Metrica M2<br>Fase 2"]
+    DISP -.-o M2
+    TOL -.-o M2
+    CT -.-o M3["Metrica M3<br>Fase 2"]
+    UR -.-o M3
+    CAP -.-o M3
+
+    style USB fill:#ccc,stroke:#999,color:#999
+    style SEG fill:#ccc,stroke:#999,color:#999
+    style MAN fill:#ccc,stroke:#999,color:#999
+    style COM fill:#ccc,stroke:#999,color:#999
+    style POR fill:#ccc,stroke:#999,color:#999
+    style M1 fill:#fff3cd,stroke:#ffc107
+    style M2 fill:#fff3cd,stroke:#ffc107
+    style M3 fill:#fff3cd,stroke:#ffc107
 ```
 
 ## 5. Seleção e Priorização de Características
@@ -272,10 +331,10 @@ O Agio se conecta aos seguintes Objetivos de Desenvolvimento Sustentável da ONU
 
 | ODS | Meta | Indicador Relacionado | Pertinência ao Agio |
 |---|---|---|---|
-| **ODS 9 — Indústria, Inovação e Infraestrutura** | Meta 9.3: Aumentar o acesso de pequenas indústrias e empresas aos serviços financeiros e sua integração em cadeias de valor e mercados | 9.3.2 — Proporção de pequenas indústrias com empréstimo ou linha de crédito | O Agio oferece uma solução gratuita e open source de gestão de inventário para PMEs, reduzindo a barreira de entrada tecnológica para empresas que não podem pagar por sistemas comerciais como SAP ou Oracle |
+| **ODS 9 — Indústria, Inovação e Infraestrutura** | Meta 9.3: Aumentar o acesso de pequenas indústrias e empresas aos serviços financeiros e sua integração em cadeias de valor e mercados | 9.3.2 — Proporção de pequenas indústrias com empréstimo ou linha de crédito | O Agio oferece uma solução gratuita de código aberto de gestão de inventário para PMEs, reduzindo a barreira de entrada tecnológica para empresas que não podem pagar por sistemas comerciais como SAP ou Oracle |
 | **ODS 12 — Consumo e Produção Responsáveis** | Meta 12.6: Incentivar empresas a adotar práticas sustentáveis e integrar informações de sustentabilidade em seu ciclo de relatórios | 12.6.1 — Número de empresas que publicam relatórios de sustentabilidade | Um sistema de gestão de inventário eficiente reduz desperdícios por superestoque ou falta de controle, contribuindo para práticas de produção mais responsáveis. A funcionalidade de exportação CSV permite rastreabilidade e geração de relatórios |
 
-## 8. Uso de Inteligencia Artificial
+## 8. Uso de Inteligência Artificial
 
 Neste projeto, a ferramenta Claude (Anthropic) foi utilizada para as seguintes tarefas:
 
@@ -283,6 +342,7 @@ Neste projeto, a ferramenta Claude (Anthropic) foi utilizada para as seguintes t
 |---|---|---|
 | Estruturação inicial do documento da Fase 1 | Claude (claude.ai) | O texto gerado foi revisado integralmente pela equipe, confrontado com o enunciado do projeto e os critérios de avaliação da professora. Trechos genéricos foram substituídos por informações específicas do Agio |
 | Revisão de coerência entre seções | Claude (claude.ai) | A equipe verificou manualmente que todas as referências cruzadas entre seções estavam corretas e que as justificativas de seleção/exclusão eram consistentes |
+| Revisão Gramatical | Copilot | A equipe leu o documento gerado e confirmou a falta de problemas ortográficos | 
 
 Nenhum trecho foi utilizado sem revisão humana. Não há emojis, figurinhas ou ícones gerados por IA neste documento.
 
