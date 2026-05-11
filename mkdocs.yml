@@ -45,7 +45,7 @@ markdown_extensions:
   - tables
   - attr_list
   - def_list
-  - admonitions
+  - admonition
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
