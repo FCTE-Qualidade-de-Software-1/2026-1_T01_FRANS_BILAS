@@ -1,0 +1,56 @@
+site_name: Frans Bilas — Qualidade de Software 1 (2026.1)
+site_url: https://fcte-qualidade-de-software-1.github.io/2026-1_T01_FRANS_BILAS/
+docs_dir: docs
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Inicio: index.md
+  - Projeto:
+    - Fase 1 — Requisitos de Avaliacao: fase1.md
+    - Fase 2 — Especificacao: fase2.md
+    - Fase 3 — Projeto da Avaliacao: fase3.md
+    - Fase 4 — Execucao: fase4.md
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_FRANS_BILAS
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - def_list
+  - admonitions
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
