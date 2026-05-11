@@ -1,5 +1,7 @@
 site_name: Frans Bilas — Qualidade de Software 1 (2026.1)
 site_url: https://fcte-qualidade-de-software-1.github.io/2026-1_T01_FRANS_BILAS/
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_FRANS_BILAS
+repo_name: Repositorio GitHub
 docs_dir: docs
 
 theme:
@@ -36,12 +38,6 @@ nav:
     - Fase 2 — Especificacao: fase2.md
     - Fase 3 — Projeto da Avaliacao: fase3.md
     - Fase 4 — Execucao: fase4.md
-
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_FRANS_BILAS
 
 markdown_extensions:
   - tables
