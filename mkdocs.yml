@@ -3,6 +3,8 @@ site_url: https://fcte-qualidade-de-software-1.github.io/2026-1_T01_FRANS_BILAS/
 docs_dir: docs
 
 theme:
+icon:
+  logo: material/book-open-page-variant
   name: material
   language: pt-BR
   features:
@@ -12,14 +14,14 @@ theme:
     - toc.integrate
   palette:
     - scheme: default
-      primary: indigo
-      accent: amber
+      primary: deep purple
+      accent: orange
       toggle:
         icon: material/brightness-7
         name: Modo escuro
     - scheme: slate
-      primary: indigo
-      accent: amber
+      primary: deep purple
+      accent: orange
       toggle:
         icon: material/brightness-4
         name: Modo claro
