@@ -26,7 +26,6 @@ theme:
 
   palette:
 
-    # Light Mode
     - scheme: default
       primary: indigo
       accent: deep purple
@@ -35,7 +34,6 @@ theme:
         icon: material/weather-night
         name: Modo escuro
 
-    # Dark Mode
     - scheme: slate
       primary: indigo
       accent: deep purple
@@ -46,7 +44,6 @@ theme:
 
   features:
 
-    # Navegação
     - navigation.tabs
     - navigation.sections
     - navigation.expand
@@ -54,33 +51,27 @@ theme:
     - navigation.instant
     - navigation.tracking
 
-    # TOC
     - toc.follow
     - toc.integrate
 
-    # Busca
     - search.highlight
     - search.suggest
     - search.share
 
-    # Código
     - content.code.copy
     - content.code.annotate
 
-    # Outros
     - content.tabs.link
     - content.action.edit
 
 markdown_extensions:
 
-  # Markdown base
   - tables
   - attr_list
   - md_in_html
   - def_list
   - admonition
 
-  # Pymdown
   - pymdownx.details
   - pymdownx.superfences
 
@@ -96,7 +87,6 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-  # Mermaid
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -112,11 +102,26 @@ extra_javascript:
 nav:
   - 🏠 Início: index.md
 
-  - 📁 Projeto:
-      - Fase 1 — Requisitos de Avaliação: fase1.md
-      - Fase 2 — Especificação: fase2.md
-      - Fase 3 — Projeto da Avaliação: fase3.md
-      - Fase 4 — Execução: fase4.md
+  - 📁 Fase 1:
+      - Propósito da Avaliação: fase1/proposito.md
+      - Requisitante e Partes Interessadas: fase1/requisitante.md
+      - Descrição do Software: fase1/descricao.md
+      - Modelo de Qualidade: fase1/modelo_qualidade.md
+      - Priorização das Características: fase1/priorizacao_caracteristicas.md
+      - Escopo da Avaliação: fase1/escopo.md
+      - ODS Relacionados: fase1/ods_relacionados.md
+      - Uso de Inteligência Artificial: fase1/uso_de_IA.md
+      - Referências: fase1/referencias.md
+      - Contribuição da Equipe: fase1/contribuicao_equipe.md
+
+  - 🌐 Fase 2:
+      - Visão Geral: fase2/fase2.md
+
+  - 📄 Fase 3:
+      - Visão Geral: fase3/fase3.md
+
+  - 📊 Fase 4:
+      - Visão Geral: fase4/fase4.md
 
 extra:
   social:
