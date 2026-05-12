@@ -110,7 +110,7 @@ O Agio é um sistema web open source desenvolvido por alunos da UnB na disciplin
 
 As características selecionadas pelo grupo foram definidas utilizando uma matriz de **Impacto x Viabilidade**, considerando a relevância de cada atributo para a experiência do usuário e para a confiabilidade do sistema.
 
-> Mais detalhes disponíveis na [Fase 1](fase1.md).
+> Mais detalhes disponíveis na [Fase 1](fase1/proposito.md).
 
 ---
 
@@ -186,10 +186,10 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 | Etapa | Objetivo | Status |
 |:--|:--|:--:|
-| [Fase 1 — Requisitos de Avaliação](fase1.md) | Definição do escopo, propósito e modelo de qualidade | 🟡 Em andamento |
-| [Fase 2 — Especificação](fase2.md) | Definição das métricas e critérios de julgamento | ⚪ Pendente |
-| [Fase 3 — Projeto da Avaliação](fase3.md) | Planejamento da coleta e ferramentas | ⚪ Pendente |
-| [Fase 4 — Execução](fase4.md) | Coleta, análise e relatório final | ⚪ Pendente |
+| [Fase 1 — Requisitos de Avaliação](fase1/escopo.md) | Definição do escopo, propósito e modelo de qualidade | 🟡 Em andamento |
+| [Fase 2 — Especificação](fase2/fase2.md) | Definição das métricas e critérios de julgamento | ⚪ Pendente |
+| [Fase 3 — Projeto da Avaliação](fase3/fase3.md) | Planejamento da coleta e ferramentas | ⚪ Pendente |
+| [Fase 4 — Execução](fase4/fase4.md) | Coleta, análise e relatório final | ⚪ Pendente |
 
 ---
 
