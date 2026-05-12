@@ -1,54 +1,124 @@
-site_name: Frans Bilas — Qualidade de Software 1 (2026.1)
+site_name: Frans Bilas — Qualidade de Software (2026.1)
+
 site_url: https://fcte-qualidade-de-software-1.github.io/2026-1_T01_FRANS_BILAS/
+
 repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_FRANS_BILAS
-repo_name: Repositório GitHub
+
+repo_name: Frans Bilas
+
+edit_uri: edit/main/docs/
+
 docs_dir: docs
 
 theme:
-  icon:
-    logo: material/book-open-page-variant
   name: material
   language: pt-BR
+
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+
+  icon:
+    repo: fontawesome/brands/github
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  palette:
+
+    # Light Mode
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+
+    # Dark Mode
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
   features:
+
+    # Navegação
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
     - navigation.top
-    - toc.integrate
-  palette:
-    - scheme: default
-      primary: deep purple
-      accent: orange
-      toggle:
-        icon: material/brightness-7
-        name: Modo escuro
-    - scheme: slate
-      primary: deep purple
-      accent: orange
-      toggle:
-        icon: material/brightness-4
-        name: Modo claro
-  font:
-    text: Roboto
-    code: Roboto Mono
+    - navigation.instant
+    - navigation.tracking
 
-nav:
-  - Inicio: index.md
-  - Projeto:
-    - Fase 1 — Requisitos de Avaliacao: fase1.md
-    - Fase 2 — Especificacao: fase2.md
-    - Fase 3 — Projeto da Avaliacao: fase3.md
-    - Fase 4 — Execucao: fase4.md
+    # TOC
+    - toc.follow
+    - toc.integrate
+
+    # Busca
+    - search.highlight
+    - search.suggest
+    - search.share
+
+    # Código
+    - content.code.copy
+    - content.code.annotate
+
+    # Outros
+    - content.tabs.link
+    - content.action.edit
 
 markdown_extensions:
+
+  # Markdown base
   - tables
   - attr_list
+  - md_in_html
   - def_list
   - admonition
+
+  # Pymdown
   - pymdownx.details
+  - pymdownx.superfences
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  # Mermaid
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+nav:
+  - 🏠 Início: index.md
+
+  - 📁 Projeto:
+      - Fase 1 — Requisitos de Avaliação: fase1.md
+      - Fase 2 — Especificação: fase2.md
+      - Fase 3 — Projeto da Avaliação: fase3.md
+      - Fase 4 — Execução: fase4.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_FRANS_BILAS
