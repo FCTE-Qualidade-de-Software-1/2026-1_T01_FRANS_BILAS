@@ -61,7 +61,7 @@ O Agio segue uma arquitetura modular dividida em quatro camadas principais:
 
 ## 3.5 Diagrama de Arquitetura do Agio
 
-mermaid
+```mermaid
 graph LR
     subgraph Usuario
         U["Navegador Web"]
@@ -94,6 +94,7 @@ graph LR
     DOCKER -.->|"containeriza"| API
     DOCKER -.->|"containeriza"| DB
     VERCEL -.->|"hospeda"| FE
+```
 
 --- 
 
