@@ -197,11 +197,11 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 | Integrante | Matrícula | GitHub |
 |:--|:--|:--|
-| Beatriz Geane Santos Lins | 222021844 | [GitHub](https://github.com/) |
+| Beatriz Geane Santos Lins | 222021844 | [GitHub](https://github.com/Beatriz-Ge) |
 | Eduardo Belarmino Silva | 221008580 | [GitHub](https://github.com/) |
 | João Pedro Araújo de Freitas Lyra | 232003661 | [GitHub](https://github.com/Jadequilin) |
 | Manoel Castro Moura Filho | 200023535 | [GitHub](https://github.com/) |
-| Rivadalvio Joaquim da Silva Filho | 232024026 | [GitHub](https://github.com/) |
+| Rivadalvio Joaquim da Silva Filho | 232024026 | [GitHub](https://github.com/RivaFilho) |
 
 ---
 
