@@ -68,7 +68,7 @@ graph LR
     end
 
     subgraph Frontend
-        FE["HTML5 / JS / CSS"]
+        FE["HTML5 / CSS"]
     end
 
     subgraph Backend
@@ -100,12 +100,12 @@ graph LR
 
 ## 3.6 Componentes Arquiteturais
 
-| Camada         | Tecnologia                         | Função                                                  |
-| :------------- | :--------------------------------- | :------------------------------------------------------ |
-| Frontend       | HTML5, JavaScript e CSS            | Interface do usuário: dashboards, tabelas e formulários |
-| Backend        | Django 4.x + Django REST Framework | API REST, autenticação JWT e regras de negócio          |
-| Banco de Dados | PostgreSQL                         | Persistência de itens, usuários e permissões            |
-| Infraestrutura | Docker + Docker Compose            | Containerização e deploy do sistema                     |
+| Camada         | Tecnologia                                  | Função                                                  |
+| :------------- | :------------------------------------------ | :------------------------------------------------------ |
+| Frontend       | HTML5 e CSS                                 | Interface do usuário: dashboards, tabelas e formulários |
+| Backend        | Django 5.1.3 + Django REST Framework 3.15.2 | API REST, autenticação JWT e regras de negócio          |
+| Banco de Dados | PostgreSQL                                  | Persistência de itens, usuários e permissões            |
+| Infraestrutura | Docker + Docker Compose                     | Containerização e deploy do sistema                     |
 
 ---
 
@@ -160,7 +160,7 @@ A tabela abaixo resume os componentes que podem e os que não podem ser avaliado
 | Componente                  | O que é possível medir                                                                     | Limitações                                            |
 | :-------------------------- | :----------------------------------------------------------------------------------------- | :---------------------------------------------------- |
 | Backend (Django + DRF)      | Tempo de resposta dos endpoints, erros HTTP, comportamento sob carga e cobertura de testes | Não há acesso a dados corporativos reais de produção  |
-| Frontend (HTML/JS/CSS)      | Tempo de carregamento e renderização do dashboard                                          | Não é possível medir experiência subjetiva do usuário |
+| Frontend (HTML/CSS)         | Tempo de carregamento e renderização do dashboard                                          | Não é possível medir experiência subjetiva do usuário |
 | Banco de Dados (PostgreSQL) | Tempo de consultas e crescimento de registros                                              | Os testes utilizarão dados sintéticos                 |
 | Testes automatizados        | Cobertura e taxa de sucesso                                                                | A qualidade dos cenários está fora do escopo          |
 | Deploy (Vercel)             | Disponibilidade da aplicação publicada                                                     | Infraestrutura da Vercel não é controlada pela equipe |

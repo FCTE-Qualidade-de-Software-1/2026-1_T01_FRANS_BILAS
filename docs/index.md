@@ -102,7 +102,7 @@ O Agio é um sistema web open source desenvolvido por alunos da UnB na disciplin
 
 | Backend | Frontend | Banco de Dados | Infraestrutura | Deploy | Versão |
 |:--|:--|:--|:--|:--|:--|
-| Django 4.x + DRF | HTML5, JavaScript e CSS | PostgreSQL | Docker + Docker Compose | Vercel | 1.0.0 |
+| Django 5.1.3 + DRF | HTML5 e CSS | PostgreSQL | Docker + Docker Compose | Vercel | 1.0.0 |
 
 ---
 
@@ -198,7 +198,7 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 | Integrante | Matrícula | GitHub |
 |:--|:--|:--|
 | Beatriz Geane Santos Lins | 222021844 | [GitHub](https://github.com/Beatriz-Ge) |
-| Eduardo Belarmino Silva | 221008580 | [GitHub](https://github.com/) |
+| Eduardo Belarmino Silva | 221008580 | [GitHub](https://github.com/eduard0803) |
 | João Pedro Araújo de Freitas Lyra | 232003661 | [GitHub](https://github.com/Jadequilin) |
 | Manoel Castro Moura Filho | 200023535 | [GitHub](https://github.com/) |
 | Rivadalvio Joaquim da Silva Filho | 232024026 | [GitHub](https://github.com/RivaFilho) |
