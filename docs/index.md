@@ -87,12 +87,12 @@ O Agio é um sistema web open source desenvolvido por alunos da UnB na disciplin
 
 <div class="grid cards" markdown>
 
-- ✅ CRUD completo de itens
-- 🔐 Login e autenticação
-- 📊 Dashboard de visualização
-- 📁 Exportação CSV
-- 👤 Controle de acesso
-- 🐘 Integração PostgreSQL
+-  CRUD completo de itens
+-  Login e autenticação
+-  Dashboard de visualização
+-  Exportação CSV
+-  Controle de acesso
+-  Integração PostgreSQL
 
 </div>
 
@@ -186,10 +186,10 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 | Etapa | Objetivo | Status |
 |:--|:--|:--:|
-| [Fase 1 — Requisitos de Avaliação](fase1/escopo.md) | Definição do escopo, propósito e modelo de qualidade | 🟡 Em andamento |
-| [Fase 2 — Especificação](fase2/fase2.md) | Definição das métricas e critérios de julgamento | ⚪ Pendente |
-| [Fase 3 — Projeto da Avaliação](fase3/fase3.md) | Planejamento da coleta e ferramentas | ⚪ Pendente |
-| [Fase 4 — Execução](fase4/fase4.md) | Coleta, análise e relatório final | ⚪ Pendente |
+| [Fase 1 — Requisitos de Avaliação](fase1/escopo.md) | Definição do escopo, propósito e modelo de qualidade |  Em andamento |
+| [Fase 2 — Especificação](fase2/fase2.md) | Definição das métricas e critérios de julgamento |  Pendente |
+| [Fase 3 — Projeto da Avaliação](fase3/fase3.md) | Planejamento da coleta e ferramentas |  Pendente |
+| [Fase 4 — Execução](fase4/fase4.md) | Coleta, análise e relatório final |  Pendente |
 
 ---
 
