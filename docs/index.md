@@ -195,14 +195,57 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 ## Equipe
 
-| Integrante | Matrícula | GitHub |
-|:--|:--|:--|
-| Beatriz Geane Santos Lins | 222021844 | [GitHub](https://github.com/Beatriz-Ge) |
-| Eduardo Belarmino Silva | 221008580 | [GitHub](https://github.com/eduard0803) |
-| João Pedro Araújo de Freitas Lyra | 232003661 | [GitHub](https://github.com/Jadequilin) |
-| Manoel Castro Moura Filho | 200023535 | [GitHub](https://github.com/manoelmoura) |
-| Rivadalvio Joaquim da Silva Filho | 232024026 | [GitHub](https://github.com/RivaFilho) |
+## Equipe
 
+<div style="text-align: center; margin: 0; font-size: 14px;">
+  Tabela 2: Integrantes do grupo Frans Bilas
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/Beatriz-Ge">
+          <img src="https://avatars.githubusercontent.com/Beatriz-Ge" width="100" height="100" style="border-radius: 50%; object-fit: cover;" alt="Beatriz Geane"/>
+          <br /><sub><b>Beatriz Geane Santos Lins</b></sub>
+          <br /><sub>222021844</sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/eduard0803">
+          <img src="https://avatars.githubusercontent.com/eduard0803" width="100" height="100" style="border-radius: 50%; object-fit: cover;" alt="Eduardo Belarmino"/>
+          <br /><sub><b>Eduardo Belarmino Silva</b></sub>
+          <br /><sub>221008580</sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Jadequilin">
+          <img src="https://avatars.githubusercontent.com/Jadequilin" width="100" height="100" style="border-radius: 50%; object-fit: cover;" alt="Joao Pedro Lyra"/>
+          <br /><sub><b>Joao Pedro A. de F. Lyra</b></sub>
+          <br /><sub>232003661</sub>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="center">
+        <a href="https://github.com/manoelmoura">
+          <img src="https://avatars.githubusercontent.com/manoelmoura" width="100" height="100" style="border-radius: 50%; object-fit: cover;" alt="Manoel Castro"/>
+          <br /><sub><b>Manoel Castro Moura Filho</b></sub>
+          <br /><sub>200023535</sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/RivaFilho">
+          <img src="https://avatars.githubusercontent.com/RivaFilho" width="100" height="100" style="border-radius: 50%; object-fit: cover;" alt="Rivadalvio Joaquim"/>
+          <br /><sub><b>Rivadalvio Joaquim da Silva Filho</b></sub>
+          <br /><sub>232024026</sub>
+        </a>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</div>
 ---
 
 ## Histórico de Versões
