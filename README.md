@@ -32,8 +32,6 @@ Acesse a documentacao completa: [GitPage do projeto](https://fcte-qualidade-de-s
 
 ## Equipe
 
-## Equipe
-
 <div style="text-align: center; margin: 0; font-size: 14px;">
   Tabela 2: Integrantes do grupo Frans Bilas
 </div>
