@@ -1,4 +1,4 @@
-# 🤖 8. Uso de Inteligência Artificial
+# 8. Uso de Inteligência Artificial
 
 Neste projeto, ferramentas de IA foram integradas ao fluxo de trabalho para otimizar a documentação e garantir a coesão técnica. A utilização seguiu diretrizes de transparência e revisão humana rigorosa.
 

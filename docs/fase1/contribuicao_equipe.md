@@ -1,4 +1,4 @@
-# 👥 10. Tabela de Contribuição da Equipe
+#  10. Tabela de Contribuição da Equipe
 
 Esta secção detalha a participação individual de cada membro no desenvolvimento da Fase 1, garantindo a transparência e a rastreabilidade das atividades realizadas.
 

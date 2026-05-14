@@ -1,4 +1,4 @@
-# 🖥️ 3. Descrição do Software Avaliado
+#  3. Descrição do Software Avaliado
 
 ## 3.1 Identificação do Produto
 
@@ -34,11 +34,11 @@ Essa classificação impacta diretamente o processo de avaliação porque:
 
 <div class="grid cards" markdown>
 
-- 🔍 O código-fonte está disponível para inspeção e instrumentação direta
+-  O código-fonte está disponível para inspeção e instrumentação direta
 
-- 🐳 O ambiente de produção pode ser replicado localmente via Docker
+-  O ambiente de produção pode ser replicado localmente via Docker
 
-- ✅ Não existem restrições de licença para execução de testes
+-  Não existem restrições de licença para execução de testes
 
 </div>
 
@@ -50,10 +50,10 @@ O Agio segue uma arquitetura modular dividida em quatro camadas principais:
 
 <div class="grid cards" markdown>
 
-- 🎨 Frontend
-- ⚙️ Backend
-- 🐘 Banco de Dados
-- ☁️ Infraestrutura
+-  Frontend
+-  Backend
+-  Banco de Dados
+-  Infraestrutura
 
 </div>
 
@@ -125,13 +125,13 @@ Cada módulo segue a estrutura padrão do framework Django, contendo:
 
 <div class="grid cards" markdown>
 
-- 🧩 **Models**  
+-  **Models**  
   Estrutura e persistência de dados
 
-- 👁️ **Views**  
+-  **Views**  
   Regras de exibição e controle das requisições
 
-- 🧪 **Tests**  
+-  **Tests**  
   Testes automatizados do módulo
 
 </div>
@@ -144,12 +144,12 @@ As funcionalidades identificadas no backlog e nas entregas da sprint 9 incluem:
 
 | Funcionalidade | Descrição |
 |:--|:--|
-| 🔐 Controle de acesso | Criação de superusuário e autenticação |
-| 👤 Login JWT | Login/logout com autenticação baseada em tokens |
-| 📦 CRUD de itens | Cadastro, edição, remoção e consulta de itens |
-| 📊 Dashboard | Visualização de dados do inventário |
-| 📁 Exportação CSV | Geração de relatórios exportáveis |
-| 🐘 PostgreSQL | Integração com banco de dados relacional |
+| Controle de acesso | Criação de superusuário e autenticação |
+| Login JWT | Login/logout com autenticação baseada em tokens |
+| CRUD de itens | Cadastro, edição, remoção e consulta de itens |
+| Dashboard | Visualização de dados do inventário |
+| Exportação CSV | Geração de relatórios exportáveis |
+| PostgreSQL | Integração com banco de dados relacional |
 
 ---
 

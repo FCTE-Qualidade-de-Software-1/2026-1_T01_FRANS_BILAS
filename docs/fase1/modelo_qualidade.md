@@ -1,4 +1,4 @@
-# 🧩 4. Modelo de Qualidade
+# 4. Modelo de Qualidade
 
 ## 4.1 Base Normativa
 
@@ -40,13 +40,13 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 
 <div class="grid cards" markdown>
 
-- ✅ **Adequação Funcional**  
+- **Adequação Funcional**  
   Avaliação das funcionalidades implementadas, completude e correção do sistema.
 
-- 🔒 **Confiabilidade**  
+- **Confiabilidade**  
   Avaliação da estabilidade, disponibilidade e tolerância a falhas.
 
-- ⚡ **Eficiência de Desempenho**  
+- **Eficiência de Desempenho**  
   Avaliação de tempo de resposta, capacidade e utilização de recursos.
 
 </div>
@@ -69,14 +69,14 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 
 | Característica | Decisão | Justificativa |
 |:--|:--:|:--|
-| Adequação Funcional | ✅ Incluída | O sistema possui backlog documentado e funcionalidades diretamente mensuráveis. |
-| Confiabilidade | ✅ Incluída | É possível simular falhas e avaliar estabilidade operacional. |
-| Eficiência de Desempenho | ✅ Incluída | O sistema utiliza API REST e banco PostgreSQL, permitindo testes de carga. |
-| Usabilidade | ❌ Excluída | Demandaria participação de usuários reais em testes observacionais. |
-| Segurança | ❌ Excluída | Exigiria ferramentas e metodologia fora do escopo da disciplina. |
-| Manutenibilidade | ❌ Excluída | Requer análise profunda de código e métricas avançadas. |
-| Compatibilidade | ❌ Excluída | Não representa um risco relevante para o contexto do sistema. |
-| Portabilidade | ❌ Excluída | O ambiente Docker já reduz problemas de implantação. |
+| Adequação Funcional | Incluída | O sistema possui backlog documentado e funcionalidades diretamente mensuráveis. |
+| Confiabilidade |  Incluída | É possível simular falhas e avaliar estabilidade operacional. |
+| Eficiência de Desempenho |  Incluída | O sistema utiliza API REST e banco PostgreSQL, permitindo testes de carga. |
+| Usabilidade | Excluída | Demandaria participação de usuários reais em testes observacionais. |
+| Segurança |  Excluída | Exigiria ferramentas e metodologia fora do escopo da disciplina. |
+| Manutenibilidade |  Excluída | Requer análise profunda de código e métricas avançadas. |
+| Compatibilidade |  Excluída | Não representa um risco relevante para o contexto do sistema. |
+| Portabilidade |  Excluída | O ambiente Docker já reduz problemas de implantação. |
 
 ---
 

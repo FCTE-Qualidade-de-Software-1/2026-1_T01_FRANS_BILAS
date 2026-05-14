@@ -252,9 +252,9 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 | Versão | Data | Descrição | Autor(a) |
 |:--:|:--:|:--|:--|
-| 1.0 | 11/05/2026 | Criação da página inicial e estrutura inicial do projeto | Equipe Frans Bilas |
-| 1.0 | 12/05/2026 | Atualização da página inicial e estruturas do projeto | Equipe Frans Bilas |
-
+| 1.0 | 11/05/2026 | Criação da página inicial e estrutura inicial do projeto | [João Pedro](https://github.com/Jadequilin) e [Rivadalvio](https://github.com/RivaFilho) |
+| 1.1 | 12/05/2026 | Atualização da página inicial e estruturas do projeto | [Beatriz](https://github.com/Beatriz-Ge) |
+| 1.3 | 13/05/2026 | Atualização da apresentação dos integrantes | [João Pedro](https://github.com/Jadequilin) | 
 ---
 
 <div align="center">

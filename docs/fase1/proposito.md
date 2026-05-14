@@ -1,4 +1,4 @@
-# 🎯 1. Propósito da Avaliação
+#  1. Propósito da Avaliação
 
 A presente avaliação tem como objetivo analisar a qualidade do sistema Agio uma aplicação web open source de gestão de inventário sob as perspectivas de:
 

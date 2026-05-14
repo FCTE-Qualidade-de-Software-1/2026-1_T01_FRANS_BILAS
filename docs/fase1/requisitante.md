@@ -1,4 +1,4 @@
-# 🤝 2. Requisitante e Partes Interessadas
+#  2. Requisitante e Partes Interessadas
 
 A Tabela 1 detalha o mapeamento estratégico das partes interessadas, consolidando seus papéis, expectativas centrais e o impacto direto de cada perfil nas decisões metodológicas da avaliação.
 

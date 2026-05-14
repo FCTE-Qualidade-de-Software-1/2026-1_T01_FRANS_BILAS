@@ -1,4 +1,4 @@
-# 🎯 6. Escopo, Profundidade e Objetos de Avaliação
+# 6. Escopo, Profundidade e Objetos de Avaliação
 
 ## 6.1 Dentro do Escopo
 
@@ -15,19 +15,19 @@ Os componentes abaixo serão diretamente avaliados durante o processo definido p
 
 <div class="grid cards" markdown>
 
-- 🧩 **API REST**
+- **API REST**
   
   CRUD, autenticação e exportação de dados
 
-- 🐘 **Banco PostgreSQL**
+- **Banco PostgreSQL**
   
   Consultas e persistência de dados
 
-- ✅ **Testes Automatizados**
+- **Testes Automatizados**
   
   Cobertura e estabilidade do sistema
 
-- 🌐 **Deploy em Produção**
+- **Deploy em Produção**
   
   Disponibilidade e acesso externo
 
@@ -66,19 +66,19 @@ Os resultados obtidos serão considerados válidos apenas dentro das seguintes c
 
 <div class="grid cards" markdown>
 
-- 📦 **Versão Avaliada**
+- **Versão Avaliada**
   
   Release `1.0.0` do repositório oficial do Agio
 
-- 🧪 **Dados Sintéticos**
+- **Dados Sintéticos**
   
   Dados artificiais serão utilizados nos testes de desempenho
 
-- 🐳 **Ambiente Local**
+- **Ambiente Local**
   
   Execução via Docker Compose em ambiente controlado
 
-- 👥 **Carga Simulada**
+- **Carga Simulada**
   
   Até 50 usuários simultâneos e 10.000 itens cadastrados
 

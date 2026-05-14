@@ -1,4 +1,4 @@
-# 📊 5. Seleção e Priorização de Características
+#  5. Seleção e Priorização de Características
 
 ## 5.1 Características Selecionadas
 
@@ -6,9 +6,9 @@ Conforme definido na Seção 4.2, as características selecionadas para avaliaç
 
 <div class="grid cards" markdown>
 
-- ✅ **Adequação Funcional**
-- 🔒 **Confiabilidade**
-- ⚡ **Eficiência de Desempenho**
+-  **Adequação Funcional**
+-  **Confiabilidade**
+-  **Eficiência de Desempenho**
 
 </div>
 
@@ -43,14 +43,14 @@ A priorização foi conduzida utilizando uma matriz de Impacto × Viabilidade, c
 
 | Característica | Impacto | Viabilidade | Pontuação | Resultado |
 |:--|:--:|:--:|:--:|:--|
-| Adequação Funcional | 5 | 5 | **25** | ✅ Prioridade 1 |
-| Confiabilidade | 5 | 4 | **20** | ✅ Prioridade 2 |
-| Eficiência de Desempenho | 4 | 5 | **20** | ✅ Prioridade 3 |
-| Segurança | 4 | 2 | 8 | ❌ Excluída |
-| Usabilidade | 3 | 2 | 6 | ❌ Excluída |
-| Manutenibilidade | 3 | 2 | 6 | ❌ Excluída |
-| Compatibilidade | 2 | 4 | 8 | ❌ Excluída |
-| Portabilidade | 1 | 5 | 5 | ❌ Excluída |
+| Adequação Funcional | 5 | 5 | **25** | Prioridade 1 |
+| Confiabilidade | 5 | 4 | **20** | Prioridade 2 |
+| Eficiência de Desempenho | 4 | 5 | **20** | Prioridade 3 |
+| Segurança | 4 | 2 | 8 | Excluída |
+| Usabilidade | 3 | 2 | 6 |  Excluída |
+| Manutenibilidade | 3 | 2 | 6 | Excluída |
+| Compatibilidade | 2 | 4 | 8 | Excluída |
+| Portabilidade | 1 | 5 | 5 | Excluída |
 
 ---
 
@@ -101,11 +101,11 @@ As três características selecionadas apresentam forte relação entre si:
 
 <div class="grid cards" markdown>
 
-- ⚠️ Funcionalidades incompletas podem gerar falhas operacionais
+- Funcionalidades incompletas podem gerar falhas operacionais
 
-- 🔒 Problemas de desempenho podem afetar a confiabilidade do sistema
+- Problemas de desempenho podem afetar a confiabilidade do sistema
 
-- ⚡ Degradação sob carga impacta diretamente a percepção de qualidade
+- Degradação sob carga impacta diretamente a percepção de qualidade
 
 </div>
 

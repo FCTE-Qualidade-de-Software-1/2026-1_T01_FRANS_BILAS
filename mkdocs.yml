@@ -99,9 +99,9 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 nav:
-  - 🏠 Início: index.md
+  -  Início: index.md
 
-  - 📁 Fase 1:
+  -  Fase 1:
       - Propósito da Avaliação: fase1/proposito.md
       - Requisitante e Partes Interessadas: fase1/requisitante.md
       - Descrição do Software: fase1/descricao.md
@@ -113,13 +113,13 @@ nav:
       - Referências: fase1/referencias.md
       - Contribuição da Equipe: fase1/contribuicao_equipe.md
 
-  - 🌐 Fase 2:
+  -  Fase 2:
       - Visão Geral: fase2/fase2.md
 
-  - 📄 Fase 3:
+  -  Fase 3:
       - Visão Geral: fase3/fase3.md
 
-  - 📊 Fase 4:
+  -  Fase 4:
       - Visão Geral: fase4/fase4.md
 
 extra:
