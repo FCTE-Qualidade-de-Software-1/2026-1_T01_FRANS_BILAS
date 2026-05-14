@@ -195,8 +195,6 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 ## Equipe
 
-## Equipe
-
 <div style="text-align: center; margin: 0; font-size: 14px;">
   Tabela 2: Integrantes do grupo Frans Bilas
 </div>
