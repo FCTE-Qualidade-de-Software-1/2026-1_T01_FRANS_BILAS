@@ -4,8 +4,8 @@
 
 | ID | Métrica | Resultado | Nivel |
 |---|---|---|---|
-| M1 | Indice de Completude Functional (ICF) | 100,0% | Excelente |
-| M2 | Taxa de Correcao Functional (TCF) | 90,0% | Bom |
+| M1 | Indice de Completude Funcional (ICF) | 100,0% | Excelente |
+| M2 | Taxa de Correcao Funcional (TCF) | 90,0% | Bom |
 | M3 | Indice de Adequacao a Tarefa (IAT) | 83,3% | Bom |
 | M4 | Taxa de Maturidade por Cobertura de Testes (TMCT) | 0% pass (0 testes) / 57% cobertura | Insuficiente |
 | M5 | Taxa de Disponibilidade Operacional (TDO) | 100,0% (200/200 requisições) | Excelente |
@@ -18,21 +18,21 @@
 
 ## 2.2 Respostas as Questões GQM
 
-### GOAL 1 — Adequacao Functional
+### GOAL 1 — Adequacao Funcional
 
 **Q1: Quantas das funcionalidades previstas no backlog estão implementadas?**
 
-Das 8 funcionalidades previstas no backlog (homepage, login, dashboard, exportacao CSV, CRUD de produtos via API, admin, logout), todas 8 estão efetivamente implementadas e acessiveis, resultando em um ICF de 100%. O sistema cobre a totalidade do escopo functional planejado, incluindo operacoes CRUD completas, autenticacao, painel administrative e exportacao de dados.
+Das 8 funcionalidades previstas no backlog (homepage, login, dashboard, exportacao CSV, CRUD de produtos via API, admin, logout), todas 8 estão efetivamente implementadas e acessiveis, resultando em um ICF de 100%. O sistema cobre a totalidade do escopo Funcional planejado, incluindo operacoes CRUD completas, autenticacao, painel administrative e exportacao de dados.
 
 **Q2: Os resultados retornados pelos endpoints correspondem ao comportamento especificado?**
 
-Em 9 de 10 casos de teste, os endpoints retornaram o comportamento esperado (TCF = 90%). A unica falha identificada foi no acesso ao dashboard via API, que retorna HTTP 302 (redirect) em vez de HTTP 200, devido ao controle de sessão que valida `user_id` antes de renderizar a página. Isso não e um bug functional grave, mas uma restricao do fluxo de autenticacao baseado em sessão.
+Em 9 de 10 casos de teste, os endpoints retornaram o comportamento esperado (TCF = 90%). A unica falha identificada foi no acesso ao dashboard via API, que retorna HTTP 302 (redirect) em vez de HTTP 200, devido ao controle de sessão que valida `user_id` antes de renderizar a página. Isso não e um bug Funcional grave, mas uma restricao do fluxo de autenticacao baseado em sessão.
 
 **Q3: As funcionalidades são suficientes para cobrir os fluxos essenciais de gestão de inventario?**
 
 Cinco dos seis fluxos de trabalho essenciais estão completamente suportados (IAT = 83,3%). O unico fluxo parcial e o login via API REST (POST retorna erro 500), embora o login via formulario web funcione normalmente. Os fluxos de cadastro, consulta, edicao, remocao e exportacao funcionam sem problemas.
 
-**Resposta ao GOAL 1:** O sistema Agio apresenta nivel **Bom** em Adequacao Functional. A hipotese H1 (completude acima de 75%) foi **confirmada e superada** (100%). O sistema atende plenamente as necessidades basicas de gestão de inventario, com ressalvas na autenticacao via API.
+**Resposta ao GOAL 1:** O sistema Agio apresenta nivel **Bom** em Adequacao Funcional. A hipotese H1 (completude acima de 75%) foi **confirmada e superada** (100%). O sistema atende plenamente as necessidades basicas de gestão de inventario, com ressalvas na autenticacao via API.
 
 ---
 
@@ -76,8 +76,8 @@ O tempo de resposta degrada drasticamente com o aumento do volume de dados: de 1
 
 Conforme exigido nas premissas do projeto, apresentamos a relacao entre as tres características avaliadas:
 
-- **Adequacao Functional x Confiabilidade:** Embora todas as funcionalidades estejam implementadas (M1 = 100%), a ausencia total de testes automatizados (M4 = 0%) significa que a correção dessas funcionalidades não e verificada automaticamente. Qualquer manutencao futura pode introduzir regressoes sem deteccao. A alta completude functional sem cobertura de testes cria uma falsa sensacao de maturidade.
+- **Adequacao Funcional x Confiabilidade:** Embora todas as funcionalidades estejam implementadas (M1 = 100%), a ausencia total de testes automatizados (M4 = 0%) significa que a correção dessas funcionalidades não e verificada automaticamente. Qualquer manutencao futura pode introduzir regressoes sem deteccao. A alta completude Funcional sem cobertura de testes cria uma falsa sensacao de maturidade.
 
 - **Confiabilidade x Eficiencia de Desempenho:** A tolerância a falhas (M6 = 80%) e razoavel, mas a aceitacao de precos negativos pode gerar dados inconsistentes no banco, o que agravaria a degradação de desempenho (M9) ao processar dados inválidos em consultas de listagem. Alem disso, a ausencia de validacao robusta sob carga pode multiplicar entradas inválidas.
 
-- **Adequacao Functional x Eficiencia de Desempenho:** Todas as funcionalidades implementadas (M1) apresentaram tempos de resposta excelentes (M7) em volumes baixos. Porem, a funcionalidade de exportacao CSV — que e uma das mais relevantes para PMEs — e justamente a mais afetada pela degradação por volume (M9). A funcionalidade existe, mas não escala.
+- **Adequacao Funcional x Eficiencia de Desempenho:** Todas as funcionalidades implementadas (M1) apresentaram tempos de resposta excelentes (M7) em volumes baixos. Porem, a funcionalidade de exportacao CSV — que e uma das mais relevantes para PMEs — e justamente a mais afetada pela degradação por volume (M9). A funcionalidade existe, mas não escala.
