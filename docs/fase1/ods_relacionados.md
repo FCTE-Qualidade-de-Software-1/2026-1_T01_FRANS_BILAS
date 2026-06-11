@@ -44,7 +44,7 @@ O sistema Agio possui alinhamento com objetivos definidos pela Organização das
 
 - **Redução de desperdícios**
   
-  Melhor controle de estoque e rastreamento de itens
+  Melhor controle de estoque e rastreamento de items
 
 - **Acesso à tecnologia**
   

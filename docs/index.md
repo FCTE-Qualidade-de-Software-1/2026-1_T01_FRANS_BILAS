@@ -1,6 +1,6 @@
 # Qualidade de Software — Grupo Frans Bilas (2026.1)
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-em%20revis%C3%A3o-orange)
 ![ISO](https://img.shields.io/badge/ISO-25010-green)
 ![MkDocs](https://img.shields.io/badge/docs-MkDocs-blue)
 ![Semestre](https://img.shields.io/badge/FGA315-2026.1-purple)
@@ -32,7 +32,7 @@ O projeto tem como objetivo aplicar os modelos ISO/IEC 25010 e ISO/IEC 25040 na 
 />
 
 <p>
-<i>Frances “Fran” Bilas — Uma das programadoras originais do ENIAC</i>
+<i>Frances "Fran" Bilas — Uma das programadoras originais do ENIAC</i>
 </p>
 
 </div>
@@ -87,7 +87,7 @@ O Agio é um sistema web open source desenvolvido por alunos da UnB na disciplin
 
 <div class="grid cards" markdown>
 
--  CRUD completo de itens
+-  CRUD completo de items
 -  Login e autenticação
 -  Dashboard de visualização
 -  Exportação CSV
@@ -114,51 +114,42 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 ---
 
-## Adequação Funcional
+## Adequação Functional
 
-!!! info "Completude"
+!!! success "Completude — Excelente (100%)"
+    Todas as 8 funcionalidades do backlog estão implementadas e acessíveis.
 
-    Todas as funcionalidades essenciais de CRUD, autenticação e exportação CSV estão implementadas.
+!!! success "Correção — Bom (90%)"
+    9 de 10 casos de teste retornaram o comportamento esperado.
 
-!!! info "Correção"
-
-    O dashboard reflete corretamente os dados manipulados pelo usuário.
-
-!!! info "Adequação"
-
-    O sistema atende às necessidades reais de gestão de inventário para PMEs.
+!!! warning "Adequação — Bom (83,3%)"
+    5 de 6 fluxos essenciais completamente suportados. Login via API retorna erro 500.
 
 ---
 
 ## Confiabilidade
 
-!!! success "Maturidade"
+!!! success "Disponibilidade — Excelente (100%)"
+    200/200 requisições respondidas corretamente em ambiente local.
 
-    O projeto utiliza testes automatizados e integração contínua com GitHub Actions.
+!!! danger "Maturidade — Insuficiente (0 testes)"
+    O projeto não possui nenhum teste automatizado. Risco crítico de regressão.
 
-!!! success "Disponibilidade"
-
-    O sistema está publicado na Vercel com acesso contínuo.
-
-!!! success "Tolerância a Falhas"
-
-    O sistema responde de forma controlada a falhas de banco ou entradas inválidas.
+!!! warning "Tolerância a Falhas — Bom (80%)"
+    12 de 15 casos de falha tratados corretamente. Sistema aceita preços negativos.
 
 ---
 
 ## Eficiência de Desempenho
 
-!!! warning "Comportamento Temporal"
+!!! success "Comportamento Temporal — Excelente (2,3ms)"
+    Tempo médio de resposta muito abaixo do limit aceitável de 500ms.
 
-    As operações de CRUD possuem tempos de resposta aceitáveis.
+!!! success "Utilização de Recursos — Excelente"
+    PostgreSQL: CPU 0%, RAM 32,58 MB sob 50 usuários simultâneos.
 
-!!! warning "Utilização de Recursos"
-
-    O consumo de CPU e memória permanece dentro dos limites esperados.
-
-!!! warning "Capacidade"
-
-    O sistema suporta múltiplos usuários simultâneos sem degradação significativa.
+!!! danger "Capacidade — Insuficiente (5.253% de degradação)"
+    Sem páginação, o sistema não escala para volumes acima de 1.000 items.
 
 ---
 
@@ -186,10 +177,10 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 | Etapa | Objetivo | Status |
 |:--|:--|:--:|
-| [Fase 1 — Requisitos de Avaliação](fase1/escopo.md) | Definição do escopo, propósito e modelo de qualidade |  Em andamento |
-| [Fase 2 — Especificação](fase2/fase2.md) | Definição das métricas e critérios de julgamento |  Pendente |
-| [Fase 3 — Projeto da Avaliação](fase3/fase3.md) | Planejamento da coleta e ferramentas |  Pendente |
-| [Fase 4 — Execução](fase4/fase4.md) | Coleta, análise e relatório final |  Pendente |
+| [Fase 1 — Requisitos de Avaliação](fase1/proposito.md) | Definição do escopo, propósito e modelo de qualidade | Em revisão |
+| [Fase 2 — Especificação](fase2/introducao.md) | Definição das métricas e critérios de julgamento | Em revisão |
+| [Fase 3 — Projeto da Avaliação](fase3/método_avaliação.md) | Planejamento da coleta e ferramentas | Em revisão |
+| [Fase 4 — Execução](fase4/execucao_medições.md) | Coleta, análise e relatório final | Em revisão |
 
 ---
 
@@ -244,15 +235,18 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
     </tr>
   </table>
 </div>
+
 ---
 
 ## Histórico de Versões
 
-| Versão | Data | Descrição | Autor(a) |
+| Versão | Data | Descrição | Author(a) |
 |:--:|:--:|:--|:--|
 | 1.0 | 11/05/2026 | Criação da página inicial e estrutura inicial do projeto | [João Pedro](https://github.com/Jadequilin) e [Rivadalvio](https://github.com/RivaFilho) |
 | 1.1 | 12/05/2026 | Atualização da página inicial e estruturas do projeto | [Beatriz](https://github.com/Beatriz-Ge) |
-| 1.3 | 13/05/2026 | Atualização da apresentação dos integrantes | [João Pedro](https://github.com/Jadequilin) | 
+| 1.2 | 13/05/2026 | Atualização da apresentação dos integrantes | [João Pedro](https://github.com/Jadequilin) |
+| 2.0 | 10/06/2026 | Conclusão das Fases 2, 3 e 4 — execução das métricas, análise GQM e julgamento final | [João Pedro](https://github.com/Jadequilin) e [Rivadalvio](https://github.com/RivaFilho) |
+
 ---
 
 <div align="center">

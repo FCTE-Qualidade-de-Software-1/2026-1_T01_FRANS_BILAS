@@ -1,18 +1,18 @@
-# 4. Resumo das Metricas e Hierarquia GQM Completa
+# 4. Resumo das Métricas e Hierarquia GQM Completa
 
 ## 4.1 Tabela Resumo
 
-| ID | Metrica | Caracteristica | Subcaracteristica | Formula |
+| ID | Métrica | Caracteristica | Subcaracterística | Formula |
 |---|---|---|---|---|
-| M1 | Indice de Completude Funcional (ICF) | Adequacao Funcional | Completude Funcional | (Implementadas / Previstas) x 100 |
-| M2 | Taxa de Correcao Funcional (TCF) | Adequacao Funcional | Correcao Funcional | (Testes corretos / Total de testes) x 100 |
-| M3 | Indice de Adequacao a Tarefa (IAT) | Adequacao Funcional | Adequacao a Tarefa | (Fluxos suportados / Fluxos mapeados) x 100 |
+| M1 | Indice de Completude Functional (ICF) | Adequacao Functional | Completude Functional | (Implementadas / Previstas) x 100 |
+| M2 | Taxa de Correcao Functional (TCF) | Adequacao Functional | Correcao Functional | (Testes corretos / Total de testes) x 100 |
+| M3 | Indice de Adequacao a Tarefa (IAT) | Adequacao Functional | Adequacao a Tarefa | (Fluxos suportados / Fluxos mapeados) x 100 |
 | M4 | Taxa de Maturidade por Cobertura de Testes (TMCT) | Confiabilidade | Maturidade | (Testes passando / Total de testes) x 100 + cobertura |
-| M5 | Taxa de Disponibilidade Operacional (TDO) | Confiabilidade | Disponibilidade | (Requisicoes 2xx-3xx / Total de requisicoes) x 100 |
+| M5 | Taxa de Disponibilidade Operacional (TDO) | Confiabilidade | Disponibilidade | (Requisições 2xx-3xx / Total de requisições) x 100 |
 | M6 | Indice de Tolerancia a Falhas (ITF) | Confiabilidade | Tolerancia a Falhas | (Falhas tratadas corretamente / Total de falhas testadas) x 100 |
 | M7 | Tempo Medio de Resposta por Endpoint (TMRE) | Eficiencia de Desempenho | Comportamento Temporal | Media aritmetica dos tempos (ms) |
 | M8 | Utilizacao de Recursos sob Carga (URC) | Eficiencia de Desempenho | Utilizacao de Recursos | Pico de CPU (%) e RAM (MB) |
-| M9 | Degradacao de Desempenho por Volume (DDVD) | Eficiencia de Desempenho | Capacidade | Variacao % do TMRE entre 100 e 10.000 itens |
+| M9 | Degradacao de Desempenho por Volume (DDVD) | Eficiencia de Desempenho | Capacidade | Variacao % do TMRE entre 100 e 10.000 items |
 
 ---
 
@@ -20,9 +20,9 @@
 
 ```mermaid
 graph TD
-    AGIO["Avaliacao de Qualidade<br>Agio v1.0.0"]
+    AGIO["Avaliação de Qualidade<br>Agio v1.0.0"]
 
-    AGIO --> G1["GOAL 1<br>Adequacao Funcional"]
+    AGIO --> G1["GOAL 1<br>Adequacao Functional"]
     AGIO --> G2["GOAL 2<br>Confiabilidade"]
     AGIO --> G3["GOAL 3<br>Eficiencia de Desempenho"]
 
@@ -64,7 +64,7 @@ graph TD
 
 ---
 
-## 4.3 Criterios de Julgamento Consolidados
+## 4.3 Critérios de Julgamento Consolidados
 
 | Nivel | M1 (ICF) | M2 (TCF) | M3 (IAT) | M4 (TMCT) | M5 (TDO) | M6 (ITF) | M7 (TMRE) | M8-CPU (URC) | M8-RAM (URC) | M9 (DDVD) |
 |---|---|---|---|---|---|---|---|---|---|---|

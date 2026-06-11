@@ -13,7 +13,7 @@ Avaliacao da qualidade de produto de software do sistema **Agio** — Aplicacao 
 
 | Caracteristica | Subcaracteristicas |
 |---|---|
-| Adequacao Funcional | Completude, Correcao, Adequacao (Pertinencia) |
+| Adequacao Functional | Completude, Correcao, Adequacao (Pertinencia) |
 | Confiabilidade | Maturidade, Disponibilidade, Tolerancia a Falhas |
 | Eficiencia de Desempenho | Comportamento Temporal, Utilizacao de Recursos, Capacidade |
 

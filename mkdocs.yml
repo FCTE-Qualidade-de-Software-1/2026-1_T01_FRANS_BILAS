@@ -109,15 +109,14 @@ nav:
       - Priorização das Características: fase1/priorizacao_caracteristicas.md
       - Escopo da Avaliação: fase1/escopo.md
       - ODS Relacionados: fase1/ods_relacionados.md
-      - Uso de Inteligência Artificial: fase1/uso_de_IA.md
       - Referências: fase1/referencias.md
-      - Contribuição da Equipe: fase1/contribuicao_equipe.md
+      
 
   -  Fase 2:
       - Introducao e Objetivos: fase2/introducao.md
       - Metodologia GQM: fase2/metodologia_gqm.md
       - Metas, Questoes e Metricas: fase2/metas_gqm.md
-      - Adequacao Funcional: fase2/adequacao_funcional.md
+      - Adequacao Functional: fase2/adequacao_funcional.md
       - Confiabilidade: fase2/confiabilidade.md
       - Eficiencia de Desempenho: fase2/eficiencia_desempenho.md
       - Resumo das Metricas: fase2/resumo_metricas.md
@@ -129,8 +128,12 @@ nav:
 
   -  Fase 4:
       - Execucao das Medicoes: fase4/execucao_medicoes.md
-      - Analise e Respostas GQM: fase4/analise_gqm.md
+      - Analyse e Respostas GQM: fase4/analise_gqm.md
       - Julgamento e Conclusoes: fase4/julgamento_conclusoes.md
+
+  -  Projeto:
+      - Contribuição da Equipe: Projeto/contribuicao_equipe.md
+      - Uso de Inteligência Artificial: Projeto/uso_de_IA.md
 
 extra:
   social:

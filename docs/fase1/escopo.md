@@ -2,7 +2,7 @@
 
 ## 6.1 Dentro do Escopo
 
-Os componentes abaixo serão diretamente avaliados durante o processo definido pela ISO/IEC 25040.
+Os components abaixo serão diretamente avaliados durante o processo definido pela ISO/IEC 25040.
 
 | Objeto de Avaliação | Profundidade da Avaliação | Justificativa |
 |:--|:--|:--|
@@ -37,13 +37,13 @@ Os componentes abaixo serão diretamente avaliados durante o processo definido p
 
 ## 6.2 Fora do Escopo
 
-Os itens abaixo não serão avaliados nesta fase do projeto.
+Os items abaixo não serão avaliados nesta fase do projeto.
 
 | Item Excluído | Justificativa |
 |:--|:--|
 | Frontend — UX e Usabilidade | Demandaria testes com usuários reais |
 | Código-fonte — Manutenibilidade | Característica não selecionada |
-| Segurança — Pentesting e vulnerabilidades | Exige metodologia especializada |
+| Segurança — Pentesting e vulnerabilidades | Exige métodologia especializada |
 | Dados reais de empresas | Não há acesso a bases reais |
 | Integrações externas (SSO/BI) | Não implementadas na versão analisada |
 | Aplicativo mobile/desktop | Apenas a versão web será considerada |
@@ -55,12 +55,12 @@ Os itens abaixo não serão avaliados nesta fase do projeto.
     A avaliação concentra-se exclusivamente nas características
     selecionadas pela equipe e definidas no modelo de qualidade.
 
-    Aspectos como segurança, experiência do usuário e manutenção
+    Aspects como segurança, experiência do usuário e manutenção
     do código-fonte não fazem parte desta análise.
 
 ---
 
-## 6.3 Limites de Validade dos Resultados
+## 6.3 Limites de Validate dos Resultados
 
 Os resultados obtidos serão considerados válidos apenas dentro das seguintes condições experimentais.
 
@@ -68,7 +68,7 @@ Os resultados obtidos serão considerados válidos apenas dentro das seguintes c
 
 - **Versão Avaliada**
   
-  Release `1.0.0` do repositório oficial do Agio
+  Release `1.0.0` do repositório official do Agio
 
 - **Dados Sintéticos**
   
@@ -80,7 +80,7 @@ Os resultados obtidos serão considerados válidos apenas dentro das seguintes c
 
 - **Carga Simulada**
   
-  Até 50 usuários simultâneos e 10.000 itens cadastrados
+  Até 50 usuários simultâneos e 10.000 items cadastrados
 
 </div>
 

@@ -12,9 +12,9 @@ As referências utilizadas na elaboração deste projeto abrangem normas interna
 
 ---
 
-###  Literatura e Metodologia
+###  Literatura e Métodologia
 
-* **PRESSMAN, R. S.** *Engenharia de Software: uma abordagem profissional.* 8. ed. Porto Alegre: AMGH, 2014.
+* **PRESSMAN, R. S.** *Engenharia de Software: uma abordagem professional.* 8. ed. Porto Alegre: AMGH, 2014.
 
 ---
 
@@ -32,4 +32,4 @@ As referências utilizadas na elaboração deste projeto abrangem normas interna
 ---
 
 !!! info "Nota de Conformidade"
-    Todas as referências foram consultadas para garantir que a metodologia de avaliação aplicada ao sistema Agio esteja alinhada com os padrões acadêmicos e industriais vigentes.
+    Todas as referências foram consultadas para garantir que a métodologia de avaliação aplicada ao sistema Agio esteja alinhada com os padrões acadêmicos e industriais vigentes.

@@ -40,7 +40,7 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 
 <div class="grid cards" markdown>
 
-- **Adequação Funcional**  
+- **Adequação Functional**  
   Avaliação das funcionalidades implementadas, completude e correção do sistema.
 
 - **Confiabilidade**  
@@ -59,7 +59,7 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 |:--|:--|
 | Usabilidade | Necessidade de testes com usuários reais representativos |
 | Segurança | Exigiria pentesting e análise especializada |
-| Manutenibilidade | Alto risco de superficialidade metodológica |
+| Manutenibilidade | Alto risco de superficialidade métodológica |
 | Compatibilidade | Baixa relevância para o contexto do Agio |
 | Portabilidade | Docker já fornece portabilidade suficiente |
 
@@ -69,26 +69,26 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 
 | Característica | Decisão | Justificativa |
 |:--|:--:|:--|
-| Adequação Funcional | Incluída | O sistema possui backlog documentado e funcionalidades diretamente mensuráveis. |
+| Adequação Functional | Incluída | O sistema possui backlog documentado e funcionalidades diretamente mensuráveis. |
 | Confiabilidade |  Incluída | É possível simular falhas e avaliar estabilidade operacional. |
-| Eficiência de Desempenho |  Incluída | O sistema utiliza API REST e banco PostgreSQL, permitindo testes de carga. |
+| Eficiência de Desempenho |  Incluída | O sistema utilize API REST e banco PostgreSQL, permitindo testes de carga. |
 | Usabilidade | Excluída | Demandaria participação de usuários reais em testes observacionais. |
-| Segurança |  Excluída | Exigiria ferramentas e metodologia fora do escopo da disciplina. |
+| Segurança |  Excluída | Exigiria ferramentas e métodologia fora do escopo da disciplina. |
 | Manutenibilidade |  Excluída | Requer análise profunda de código e métricas avançadas. |
-| Compatibilidade |  Excluída | Não representa um risco relevante para o contexto do sistema. |
+| Compatibilidade |  Excluída | Não representa um risco relevant para o contexto do sistema. |
 | Portabilidade |  Excluída | O ambiente Docker já reduz problemas de implantação. |
 
 ---
 
 ## Subcaracterísticas Selecionadas
 
-### Adequação Funcional
+### Adequação Functional
 
 | Subcaracterística | Objetivo |
 |:--|:--|
-| Completude funcional | Verificar se todas as funcionalidades planejadas foram implementadas |
-| Correção funcional | Avaliar se os resultados produzidos estão corretos |
-| Adequação funcional | Verificar pertinência das funcionalidades para o domínio do sistema |
+| Completude functional | Verificar se todas as funcionalidades planejadas foram implementadas |
+| Correção functional | Avaliar se os resultados produzidos estão corretos |
+| Adequação functional | Verificar pertinência das funcionalidades para o domínio do sistema |
 
 ---
 
@@ -120,7 +120,7 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 graph TD
     ISO["ISO/IEC 25010<br>Modelo Adaptado para o Agio"]
 
-    ISO --> AF["Adequacao Funcional"]
+    ISO --> AF["Adequacao Functional"]
     ISO --> CONF["Confiabilidade"]
     ISO --> ED["Eficiencia de Desempenho"]
 
@@ -130,8 +130,8 @@ graph TD
     ISO -.->|"excluida"| COM["Compatibilidade"]
     ISO -.->|"excluida"| POR["Portabilidade"]
 
-    AF --> CF["Completude Funcional"]
-    AF --> COR["Correcao Funcional"]
+    AF --> CF["Completude Functional"]
+    AF --> COR["Correcao Functional"]
     AF --> ADEQ["Adequacao"]
 
     CONF --> MAT["Maturidade"]

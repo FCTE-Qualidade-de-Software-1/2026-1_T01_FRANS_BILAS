@@ -4,7 +4,7 @@ A presente avaliação tem como objetivo analisar a qualidade do sistema Agio um
 
 <div class="grid cards" markdown>
 
-- **1. Adequação Funcional**
+- **1. Adequação Functional**
 - **2. Confiabilidade**
 - **3. Eficiência de Desempenho**
 
@@ -31,5 +31,5 @@ A avaliação busca responder às seguintes questões:
     Os resultados da avaliação serão documentados em um relatório técnico
     com dados auditáveis, disponibilizado no repositório Git do projeto.
 
-    As informações poderão auxiliar futuras evoluções do sistema e orientar
+    As informações poderão auxiliary futuras evoluções do sistema e orientar
     a comunidade open source sobre a qualidade do software avaliado.

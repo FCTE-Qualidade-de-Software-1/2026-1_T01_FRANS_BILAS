@@ -22,7 +22,7 @@ O Agio é classificado como um software sob medida de código aberto (*custom op
 
     - Segundo **Pressman (2014)**, o Agio é um software de aplicação voltado à resolução de um problema de negócio específico, neste caso, a gestão de inventário.
 
-    - Segundo a **IEEE 1062**, o sistema não se enquadra como COTS (*Commercial Off-The-Shelf*), pois não é um produto comercial empacotado, mas sim um sistema desenvolvido sob demanda acadêmica e distribuído com código-fonte aberto.
+    - Segundo a **IEEE 1062**, o sistema não se enquadra como COTS (*Commercial Off-The-Shelf*), pois não é um produto commercial empacotado, mas sim um sistema desenvolvido sob demanda acadêmica e distribuído com código-fonte aberto.
 
     - Conforme a **ISO/IEC 25010**, o produto avaliado é um sistema computacional interativo composto por frontend web, backend com API REST e banco de dados relacional.
 
@@ -44,7 +44,7 @@ Essa classificação impacta diretamente o processo de avaliação porque:
 
 ---
 
-## 3.4 Arquitetura e Componentes
+## 3.4 Arquitetura e Components
 
 O Agio segue uma arquitetura modular dividida em quatro camadas principais:
 
@@ -59,7 +59,7 @@ O Agio segue uma arquitetura modular dividida em quatro camadas principais:
 
 ---
 
-## 3.5 Diagrama de Arquitetura do Agio
+## 3.5 Diagram de Arquitetura do Agio
 
 ```mermaid
 graph LR
@@ -98,13 +98,13 @@ graph LR
 
 --- 
 
-## 3.6 Componentes Arquiteturais
+## 3.6 Components Arquiteturais
 
 | Camada         | Tecnologia                                  | Função                                                  |
 | :------------- | :------------------------------------------ | :------------------------------------------------------ |
 | Frontend       | HTML5 e CSS                                 | Interface do usuário: dashboards, tabelas e formulários |
 | Backend        | Django 5.1.3 + Django REST Framework 3.15.2 | API REST, autenticação JWT e regras de negócio          |
-| Banco de Dados | PostgreSQL                                  | Persistência de itens, usuários e permissões            |
+| Banco de Dados | PostgreSQL                                  | Persistência de items, usuários e permissões            |
 | Infraestrutura | Docker + Docker Compose                     | Containerização e deploy do sistema                     |
 
 ---
@@ -146,7 +146,7 @@ As funcionalidades identificadas no backlog e nas entregas da sprint 9 incluem:
 |:--|:--|
 | Controle de acesso | Criação de superusuário e autenticação |
 | Login JWT | Login/logout com autenticação baseada em tokens |
-| CRUD de itens | Cadastro, edição, remoção e consulta de itens |
+| CRUD de items | Cadastro, edição, remoção e consulta de items |
 | Dashboard | Visualização de dados do inventário |
 | Exportação CSV | Geração de relatórios exportáveis |
 | PostgreSQL | Integração com banco de dados relacional |
@@ -155,7 +155,7 @@ As funcionalidades identificadas no backlog e nas entregas da sprint 9 incluem:
 
 ## 3.8 Implicações para a Avaliação
 
-A tabela abaixo resume os componentes que podem e os que não podem ser avaliados diretamente no contexto deste projeto.
+A tabela abaixo resume os components que podem e os que não podem ser avaliados diretamente no contexto deste projeto.
 
 | Componente                  | O que é possível medir                                                                     | Limitações                                            |
 | :-------------------------- | :----------------------------------------------------------------------------------------- | :---------------------------------------------------- |
