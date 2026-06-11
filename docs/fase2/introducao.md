@@ -1,6 +1,6 @@
 # 1. Introducao e Objetivos
 
-Esta fase tem como objetivo especificar a avaliação das características **Adequacao Functional**, **Confiabilidade** e **Eficiencia de Desempenho** do sistema Agio, conforme os requisitos definidos na [Fase 1](../fase1/proposito.md).
+Esta fase tem como objetivo especificar a avaliação das características **Adequacao Funcional**, **Confiabilidade** e **Eficiencia de Desempenho** do sistema Agio, conforme os requisitos definidos na [Fase 1](../fase1/proposito.md).
 
 A especificacao segue o modelo **Goal-Question-Metric (GQM)**, estruturado em tres niveis:
 
@@ -16,7 +16,7 @@ Conforme definido na Fase 1 (ver [Priorizacao das Caracteristicas](../fase1/prio
 
 | Caracteristica (Fase 1) | Goal GQM (Fase 2) | Stakeholders envolvidos |
 |---|---|---|
-| Adequacao Functional (prioridade 1) | GOAL 1 — Medir completude e correção functional | Equipe de desenvolvimento, potenciais adotantes |
+| Adequacao Funcional (prioridade 1) | GOAL 1 — Medir completude e correção Funcional | Equipe de desenvolvimento, potenciais adotantes |
 | Confiabilidade (prioridade 2) | GOAL 2 — Verificar estabilidade sob uso continuo | Operadores e administradores |
 | Eficiencia de Desempenho (prioridade 3) | GOAL 3 — Medir desempenho sob carga crescente | PMEs que exigem tempo de resposta adequado |
 
