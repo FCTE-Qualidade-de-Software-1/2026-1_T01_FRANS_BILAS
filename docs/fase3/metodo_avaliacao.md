@@ -137,7 +137,7 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 
 **Passos:**
 
-1. Criar script Python que insere dados sinteticos via API: items com gnome, descrição, quantidade e preco aleatorios.
+1. Criar script Python que insere dados sinteticos via API: items com nome, descrição, quantidade e preco aleatorios.
 2. Inserir em patamares: 100, 1.000, 5.000 e 10.000 items.
 3. Apos cada patamar, executar 50 requisições GET /api/items/ e calcular o tempo medio de resposta.
 4. Calcular degradação = ((TMRE_10000 - TMRE_100) / TMRE_100) x 100.
