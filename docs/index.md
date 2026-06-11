@@ -114,7 +114,7 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 ---
 
-## Adequação Functional
+## Adequação Funcional
 
 !!! success "Completude — Excelente (100%)"
     Todas as 8 funcionalidades do backlog estão implementadas e acessíveis.
