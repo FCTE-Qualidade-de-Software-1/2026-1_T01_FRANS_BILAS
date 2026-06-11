@@ -4,7 +4,7 @@ A presente avaliação tem como objetivo analisar a qualidade do sistema Agio um
 
 <div class="grid cards" markdown>
 
-- **1. Adequação Functional**
+- **1. Adequação Funcional**
 - **2. Confiabilidade**
 - **3. Eficiência de Desempenho**
 
