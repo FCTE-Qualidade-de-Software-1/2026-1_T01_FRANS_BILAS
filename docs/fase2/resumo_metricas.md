@@ -4,9 +4,9 @@
 
 | ID | Métrica | Caracteristica | Subcaracterística | Formula |
 |---|---|---|---|---|
-| M1 | Indice de Completude Functional (ICF) | Adequacao Functional | Completude Functional | (Implementadas / Previstas) x 100 |
-| M2 | Taxa de Correcao Functional (TCF) | Adequacao Functional | Correcao Functional | (Testes corretos / Total de testes) x 100 |
-| M3 | Indice de Adequacao a Tarefa (IAT) | Adequacao Functional | Adequacao a Tarefa | (Fluxos suportados / Fluxos mapeados) x 100 |
+| M1 | Indice de Completude Funcional (ICF) | Adequacao Funcional | Completude Funcional | (Implementadas / Previstas) x 100 |
+| M2 | Taxa de Correcao Funcional (TCF) | Adequacao Funcional | Correcao Funcional | (Testes corretos / Total de testes) x 100 |
+| M3 | Indice de Adequacao a Tarefa (IAT) | Adequacao Funcional | Adequacao a Tarefa | (Fluxos suportados / Fluxos mapeados) x 100 |
 | M4 | Taxa de Maturidade por Cobertura de Testes (TMCT) | Confiabilidade | Maturidade | (Testes passando / Total de testes) x 100 + cobertura |
 | M5 | Taxa de Disponibilidade Operacional (TDO) | Confiabilidade | Disponibilidade | (Requisições 2xx-3xx / Total de requisições) x 100 |
 | M6 | Indice de Tolerancia a Falhas (ITF) | Confiabilidade | Tolerancia a Falhas | (Falhas tratadas corretamente / Total de falhas testadas) x 100 |
@@ -22,7 +22,7 @@
 graph TD
     AGIO["Avaliação de Qualidade<br>Agio v1.0.0"]
 
-    AGIO --> G1["GOAL 1<br>Adequacao Functional"]
+    AGIO --> G1["GOAL 1<br>Adequacao Funcional"]
     AGIO --> G2["GOAL 2<br>Confiabilidade"]
     AGIO --> G3["GOAL 3<br>Eficiencia de Desempenho"]
 
