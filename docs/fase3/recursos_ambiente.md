@@ -4,7 +4,7 @@
 
 | Membro | Responsabilidade na Fase 4 |
 |---|---|
-| Joao Pedro Araujo | Execucao das métricas M1, M2, M3 (Adequacao Functional); consolidacao dos resultados |
+| Joao Pedro Araujo | Execucao das métricas M1, M2, M3 (Adequacao Funcional); consolidacao dos resultados |
 | Rivadalvio Joaquim | Execucao das métricas M7, M8, M9 (Eficiencia de Desempenho); scripts de carga |
 | Eduardo Belarmino | Execucao das métricas M4, M5, M6 (Confiabilidade); documentacao de evidencias |
 | Beatriz Geane | Organizacao do GitPages; graficos e visualizacoes dos resultados |
