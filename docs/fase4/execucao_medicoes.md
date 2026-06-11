@@ -44,7 +44,7 @@ Todas as funcionalidades previstas no backlog estão implementadas e acessiveis.
 | # | Caso de teste | Resultado esperado | Resultado obtido | Correto? |
 |---|---|---|---|---|
 | 1 | Criar produto com dados validos | HTTP 201 | 201 | Sim |
-| 2 | Criar produto duplicado (mesmo gnome) | HTTP 400 | 400 | Sim |
+| 2 | Criar produto duplicado (mesmo nome) | HTTP 400 | 400 | Sim |
 | 3 | Buscar produto existente | HTTP 200 | 200 | Sim |
 | 4 | Buscar produto inexistente | HTTP 404 | 404 | Sim |
 | 5 | Editar produto existente | HTTP 200/202 | 202 | Sim |
@@ -66,7 +66,7 @@ Todas as funcionalidades previstas no backlog estão implementadas e acessiveis.
 |---|---|---|---|
 | 1 | Autenticacao (login/logout) | Parcial | Login via POST retorna erro 500 (Internal Server Erro) no endpoint `/login/`; login via formulario web funciona normalmente |
 | 2 | Cadastro de novo item | Completo | POST `/product-manager/` cria item com HTTP 201 |
-| 3 | Consulta/busca de item | Completo | GET `/product-manager/?product=gnome` retorna dados corretos |
+| 3 | Consulta/busca de item | Completo | GET `/product-manager/?product=nome` retorna dados corretos |
 | 4 | Edicao de item existente | Completo | PUT `/product-manager/` atualiza com HTTP 202 |
 | 5 | Remocao de item | Completo | DELETE `/product-manager/` remove com HTTP 202 |
 | 6 | Exportacao de dados (CSV) | Completo | GET `/dashboard/export/csv/` retorna CSV valido |
