@@ -55,9 +55,9 @@ Conforme definido na [Fase 1 - Proposito](../fase1/proposito.md), esta avaliaç�
 
 ## 3.5 Conclusão
 
-O sistema Agio v1.0.0 apresenta um perfil de qualidade caracteristico de projetos academics em estagio inicial: **boa cobertura functional, mas com lacunas significativas em confiabilidade e escalabilidade**.
+O sistema Agio v1.0.0 apresenta um perfil de qualidade caracteristico de projetos academics em estagio inicial: **boa cobertura Funcional, mas com lacunas significativas em confiabilidade e escalabilidade**.
 
-Do ponto de vista de **Adequacao Functional**, o sistema atende plenamente ao backlog planejado e e functional para gestão basica de inventario. A alta completude (100%) demonstra que as 9 sprints de desenvolvimento foram efetivas na entrega das funcionalidades previstas.
+Do ponto de vista de **Adequacao Funcional**, o sistema atende plenamente ao backlog planejado e Funcional para gestão basica de inventario. A alta completude (100%) demonstra que as 9 sprints de desenvolvimento foram efetivas na entrega das funcionalidades previstas.
 
 Do ponto de vista de **Confiabilidade**, a ausencia total de testes automatizados e o achado mais critico desta avaliação. Embora o sistema funcione corretamente na maioria dos scenarios, não ha rede de seguranca contra regressoes. A aceitacao de precos negativos e outro ponto que pode gerar inconsistencias em dados reais.
 
