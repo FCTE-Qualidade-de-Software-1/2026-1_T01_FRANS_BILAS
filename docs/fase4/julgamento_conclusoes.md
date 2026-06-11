@@ -18,7 +18,7 @@ Conforme definido na [Fase 1 - Proposito](../fase1/proposito.md), esta avaliaç�
 
 | Caracteristica | Nivel Geral | Justificativa |
 |---|---|---|
-| Adequacao Functional | **Bom** | Completude excelente (100%), correção boa (90%), adequação boa (83,3%). Ponto fraco: login via API retorna erro 500. |
+| Adequacao Funcional | **Bom** | Completude excelente (100%), correção boa (90%), adequação boa (83,3%). Ponto fraco: login via API retorna erro 500. |
 | Confiabilidade | **Insuficiente** | Disponibilidade excelente (TDO = 100%). Porem, ausencia total de testes automatizados (M4 = 0%) compromete gravemente a maturidade. Tolerancia a falhas razoavel (80%), mas o sistema aceita precos negativos. |
 | Eficiencia de Desempenho | **Regular** | Tempo de resposta excelente (M7 = 2,3ms), mas degradação por volume insuficiente (M9 = 5.253%). O sistema não escala sem páginacao. |
 
