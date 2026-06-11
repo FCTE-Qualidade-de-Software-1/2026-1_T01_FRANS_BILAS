@@ -1,0 +1,138 @@
+site_name: Frans Bilas — Qualidade de Software (2026.1)
+
+site_url: https://fcte-qualidade-de-software-1.github.io/2026-1_T01_FRANS_BILAS/
+
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_FRANS_BILAS
+
+repo_name: Frans Bilas
+
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: pt-BR
+
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+
+  icon:
+    repo: fontawesome/brands/github
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  palette:
+
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+  features:
+
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+
+    - toc.follow
+    - toc.integrate
+
+    - search.highlight
+    - search.suggest
+    - search.share
+
+    - content.code.copy
+    - content.code.annotate
+
+    - content.tabs.link
+    - content.action.edit
+
+markdown_extensions:
+
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - admonition
+
+  - pymdownx.details
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+nav:
+  -  Início: index.md
+
+  -  Fase 1:
+      - Propósito da Avaliação: fase1/proposito.md
+      - Requisitante e Partes Interessadas: fase1/requisitante.md
+      - Descrição do Software: fase1/descricao.md
+      - Modelo de Qualidade: fase1/modelo_qualidade.md
+      - Priorização das Características: fase1/priorizacao_caracteristicas.md
+      - Escopo da Avaliação: fase1/escopo.md
+      - ODS Relacionados: fase1/ods_relacionados.md
+      - Uso de Inteligência Artificial: fase1/uso_de_IA.md
+      - Referências: fase1/referencias.md
+      - Contribuição da Equipe: fase1/contribuicao_equipe.md
+
+  -  Fase 2:
+      - Introducao e Objetivos: fase2/introducao.md
+      - Metodologia GQM: fase2/metodologia_gqm.md
+      - Metas, Questoes e Metricas: fase2/metas_gqm.md
+      - Adequacao Funcional: fase2/adequacao_funcional.md
+      - Confiabilidade: fase2/confiabilidade.md
+      - Eficiencia de Desempenho: fase2/eficiencia_desempenho.md
+      - Resumo das Metricas: fase2/resumo_metricas.md
+
+  -  Fase 3:
+      - Metodo e Instrucoes de Coleta: fase3/metodo_avaliacao.md
+      - Recursos e Ambiente: fase3/recursos_ambiente.md
+      - Cronograma: fase3/cronograma.md
+
+  -  Fase 4:
+      - Execucao das Medicoes: fase4/execucao_medicoes.md
+      - Analise e Respostas GQM: fase4/analise_gqm.md
+      - Julgamento e Conclusoes: fase4/julgamento_conclusoes.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_FRANS_BILAS
