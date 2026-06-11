@@ -12,7 +12,7 @@ A especificacao segue o modelo **Goal-Question-Metric (GQM)**, estruturado em tr
 
 ## Rastreabilidade com a Fase 1
 
-Conforme definido na Fase 1 (ver [Priorizacao das Caracteristicas](../fase1/priorizacao_características.md)), as tres características foram selecionadas por meio de uma matriz de Impacto x Viabilidade. Os objetivos GQM desta fase derivam diretamente dessas características e dos stakeholders mapeados na Fase 1 (ver [Requisitante e Partes Interessadas](../fase1/requisitante.md)).
+Conforme definido na Fase 1 (ver [Priorizacao das Caracteristicas](../fase1/priorizacao_caracteristicas.md)), as tres características foram selecionadas por meio de uma matriz de Impacto x Viabilidade. Os objetivos GQM desta fase derivam diretamente dessas características e dos stakeholders mapeados na Fase 1 (ver [Requisitante e Partes Interessadas](../fase1/requisitante.md)).
 
 | Caracteristica (Fase 1) | Goal GQM (Fase 2) | Stakeholders envolvidos |
 |---|---|---|
