@@ -18,7 +18,7 @@ As medições foram realizadas conforme o método e as instrucoes definidos na [
 
 ## 1.2 Resultados por Métrica
 
-### M1 — Indice de Completude Functional (ICF)
+### M1 — Indice de Completude Funcional (ICF)
 
 Checklist de funcionalidades do backlog:
 
@@ -39,7 +39,7 @@ Todas as funcionalidades previstas no backlog estão implementadas e acessiveis.
 
 ---
 
-### M2 — Taxa de Correcao Functional (TCF)
+### M2 — Taxa de Correcao Funcional (TCF)
 
 | # | Caso de teste | Resultado esperado | Resultado obtido | Correto? |
 |---|---|---|---|---|
