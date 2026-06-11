@@ -24,7 +24,7 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 
 ## 1.2 Instrucoes Detalhadas por Métrica
 
-### 1.2.1 M1 — Indice de Completude Functional (ICF)
+### 1.2.1 M1 — Indice de Completude Funcional (ICF)
 
 **Passos:**
 
@@ -38,7 +38,7 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 
 ---
 
-### 1.2.2 M2 — Taxa de Correcao Functional (TCF)
+### 1.2.2 M2 — Taxa de Correcao Funcional (TCF)
 
 **Passos:**
 
