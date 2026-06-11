@@ -5,11 +5,6 @@
   width="280"
   alt="Logo Frans Bilas"
 />
-
-# Grupo Frans Bilas
-
-### Qualidade de Software — FGA315 (2026.1)
-
 </div>
 # Qualidade de Software — Grupo Frans Bilas (2026.1)
 
