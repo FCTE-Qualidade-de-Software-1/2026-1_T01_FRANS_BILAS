@@ -1,11 +1,11 @@
-# 3.2 Adequacao Functional — Questões e Métricas
+# 3.2 Adequacao Funcional — Questões e Métricas
 
 ## Questões, Métricas e Critérios de Julgamento
 
 | Subcaracterística | Questão (Q) | Métrica (M) | Fonte de Dados / Método de Coleta | Critério de Julgamento |
 |---|---|---|---|---|
-| **Completude Functional** | **Q1:** Quantas das funcionalidades previstas no backlog estão efetivamente implementadas e acessiveis? | **M1: Indice de Completude Functional (ICF)** = (Funcionalidades implementadas e operacionais / Total de funcionalidades previstas no backlog) x 100 | Inspecao manual de cada funcionalidade listada no backlog; execucao dos endpoints via Postman/curl; verificacao do deploy na Vercel | Excelente: >= 90% / Bom: 75-89% / Regular: 60-74% / Insuficiente: < 60% |
-| **Correcao Functional** | **Q2:** Os resultados retornados pelos endpoints da API correspondem ao comportamento especificado (regras de negocio corretas)? | **M2: Taxa de Correcao Functional (TCF)** = (Casos de teste com resultado correto / Total de casos de teste funcionais executados) x 100 | Execucao dos testes automatizados existentes (`python manage.py test`) + casos de teste manuais adicionais cobrindo regras de negocio (CRUD, JWT, exportacao CSV) | Excelente: >= 95% / Bom: 80-94% / Regular: 65-79% / Insuficiente: < 65% |
+| **Completude Funcional** | **Q1:** Quantas das funcionalidades previstas no backlog estão efetivamente implementadas e acessiveis? | **M1: Indice de Completude Funcional (ICF)** = (Funcionalidades implementadas e operacionais / Total de funcionalidades previstas no backlog) x 100 | Inspecao manual de cada funcionalidade listada no backlog; execucao dos endpoints via Postman/curl; verificacao do deploy na Vercel | Excelente: >= 90% / Bom: 75-89% / Regular: 60-74% / Insuficiente: < 60% |
+| **Correcao Funcional** | **Q2:** Os resultados retornados pelos endpoints da API correspondem ao comportamento especificado (regras de negocio corretas)? | **M2: Taxa de Correcao Funcional (TCF)** = (Casos de teste com resultado correto / Total de casos de teste funcionais executados) x 100 | Execucao dos testes automatizados existentes (`python manage.py test`) + casos de teste manuais adicionais cobrindo regras de negocio (CRUD, JWT, exportacao CSV) | Excelente: >= 95% / Bom: 80-94% / Regular: 65-79% / Insuficiente: < 65% |
 | **Adequacao a Tarefa** | **Q3:** As funcionalidades implementadas são suficientes para cobrir os fluxos de trabalho essenciais de gestão de inventario para PMEs? | **M3: Indice de Adequacao a Tarefa (IAT)** = (Fluxos de trabalho completamente suportados / Total de fluxos de trabalho mapeados) x 100 | Definicao de fluxos de trabalho essenciais (cadastro de item, consulta, edicao, remocao, exportacao, autenticacao); verificacao passo a passo de cada fluxo no sistema | Excelente: >= 90% / Bom: 75-89% / Regular: 50-74% / Insuficiente: < 50% |
 
 ---
@@ -18,16 +18,16 @@
 
 ---
 
-## Diagram GQM — Adequacao Functional
+## Diagram GQM — Adequacao Funcional
 
 ```mermaid
 graph TD
-    G1["GOAL 1<br>Adequacao Functional"]
+    G1["GOAL 1<br>Adequacao Funcional"]
     G1 --> Q1["Q1: Completude do backlog?"]
     G1 --> Q2["Q2: Correcao dos resultados da API?"]
     G1 --> Q3["Q3: Adequacao aos fluxos de PMEs?"]
-    Q1 --> M1["M1: Indice de Completude<br>Functional - ICF"]
-    Q2 --> M2["M2: Taxa de Correcao<br>Functional - TCF"]
+    Q1 --> M1["M1: Indice de Completude<br>Funcional - ICF"]
+    Q2 --> M2["M2: Taxa de Correcao<br>Funcional - TCF"]
     Q3 --> M3["M3: Indice de Adequacao<br>a Tarefa - IAT"]
 
     style G1 fill:#1E3A5F,color:#fff
