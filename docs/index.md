@@ -1,3 +1,16 @@
+<div align="center">
+
+<img
+  src="assets/images/logo-frans-bilas.png"
+  width="280"
+  alt="Logo Frans Bilas"
+/>
+
+# Grupo Frans Bilas
+
+### Qualidade de Software — FGA315 (2026.1)
+
+</div>
 # Qualidade de Software — Grupo Frans Bilas (2026.1)
 
 ![Status](https://img.shields.io/badge/status-em%20revis%C3%A3o-orange)
