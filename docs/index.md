@@ -179,8 +179,8 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 |:--|:--|:--:|
 | [Fase 1 — Requisitos de Avaliação](fase1/proposito.md) | Definição do escopo, propósito e modelo de qualidade | Em revisão |
 | [Fase 2 — Especificação](fase2/introducao.md) | Definição das métricas e critérios de julgamento | Em revisão |
-| [Fase 3 — Projeto da Avaliação](fase3/método_avaliação.md) | Planejamento da coleta e ferramentas | Em revisão |
-| [Fase 4 — Execução](fase4/execucao_medições.md) | Coleta, análise e relatório final | Em revisão |
+| [Fase 3 — Projeto da Avaliação](fase3/metodo_avaliacao.md) | Planejamento da coleta e ferramentas | Em revisão |
+| [Fase 4 — Execução](fase4/execucao_medicoes.md) | Coleta, análise e relatório final | Em revisão |
 
 ---
 
