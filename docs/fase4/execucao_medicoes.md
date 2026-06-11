@@ -1,6 +1,6 @@
 # 1. Obtencao das Medidas
 
-As medições foram realizadas conforme o método e as instrucoes definidos na [Fase 3](../fase3/método_avaliação.md), utilizando os recursos e o ambiente especificados na [Fase 3 - Recursos](../fase3/recursos_ambiente.md).
+As medições foram realizadas conforme o método e as instrucoes definidos na [Fase 3](../fase3/metodo_avaliacao.md), utilizando os recursos e o ambiente especificados na [Fase 3 - Recursos](../fase3/recursos_ambiente.md).
 
 ---
 
