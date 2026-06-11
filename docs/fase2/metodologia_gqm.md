@@ -12,6 +12,6 @@ A aplicação do GQM assegura que cada métrica esteja diretamente relacionada a
 |---|---|---|
 | Objeto | O que sera analisado | Sistema Agio v1.0.0 (web) |
 | Proposito | Por que sera analisado | Avaliação de qualidade para decisão de adocao e manutencao |
-| Qualidade do foco | Caracteristica de interesse | Adequacao Functional, Confiabilidade e Eficiencia de Desempenho (ISO/IEC 25010:2011) |
+| Qualidade do foco | Caracteristica de interesse | Adequacao Funcional, Confiabilidade e Eficiencia de Desempenho (ISO/IEC 25010:2011) |
 | Ponto de vista | Quem vai utilizar os dados | Equipe avaliadora, equipe original do Agio, potenciais adotantes (PMEs) |
 | Contexto | Onde a avaliação sera conduzida | Ambiente local via Docker Compose; dados sinteticos; ate 50 usuarios simulados simultâneos |
