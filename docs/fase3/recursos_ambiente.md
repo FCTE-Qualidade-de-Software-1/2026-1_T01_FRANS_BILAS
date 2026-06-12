@@ -1,54 +1,63 @@
 # 2. Recursos e Ambiente de Avaliação
 
+Esta seção descreve os recursos humanos e a infraestrutura de hardware e software necessários para garantir a correta execução, repetibilidade e auditoria das medições de qualidade.
+
+---
+
 ## 2.1 Recursos Humanos
 
-| Membro | Responsabilidade na Fase 4 |
-|---|---|
-| Joao Pedro Araujo | Execucao das métricas M1, M2, M3 (Adequacao Funcional); consolidacao dos resultados |
-| Rivadalvio Joaquim | Execucao das métricas M7, M8, M9 (Eficiencia de Desempenho); scripts de carga |
-| Eduardo Belarmino | Execucao das métricas M4, M5, M6 (Confiabilidade); documentacao de evidencias |
-| Beatriz Geane | Organizacao do GitPages; graficos e visualizacoes dos resultados |
-| Manoel Castro | Apoio na coleta de dados e participacao nas reunioes |
+Abaixo estão mapeados os membros da equipe e suas respectivas atribuições operacionais e de consolidação durante o ciclo de avaliação:
+
+| Membro | 📋 Responsabilidade na Avaliação |
+| :--- | :--- |
+| **João Pedro Araújo** | Execução das métricas **M1**, **M2** e **M3** (*Adequação Funcional*) e consolidação dos resultados funcionais. |
+| **Rivadalvio Joaquim** | Execução das métricas **M7**, **M8** e **M9** (*Eficiência de Desempenho*) e desenvolvimento dos scripts de carga. |
+| **Eduardo Belarmino** | Execução das métricas **M4**, **M5** e **M6** (*Confiabilidade*) e documentação das evidências de testes. |
+| **Beatriz Geane** | Organização do ecossistema do GitHub Pages, geração de gráficos e refinamento das visualizações dos resultados. |
+| **Manoel Castro** | Apoio geral na coleta de dados, validação cruzada e participação nas reuniões de alinhamento. |
 
 ---
 
 ## 2.2 Ambiente de Hardware
 
-| Recurso | Especificacao |
-|---|---|
-| Maquina de teste | Notebook com minimo 8GB RAM, processador multi-core, SSD |
-| Sistema operacional | Windows 10/11 com Docker Desktop ou Linux com Docker Engine |
-| Conectividade | Internet para acesso ao deploy na Vercel e ao repositorio GitHub |
+Para mitigar variações espúrias nos testes de desempenho local, estabeleceu-se a seguinte configuração mínima para a máquina de testes:
+
+| Recurso | 🔍 Especificação Técnica Mínima |
+| :--- | :--- |
+| **Máquina de Teste** | Notebook ou Desktop com no mínimo 8GB de memória RAM, processador multi-core (mínimo 4 núcleos) e armazenamento em SSD. |
+| **Sistema Operacional** | Windows 10/11 configurado com Docker Desktop **ou** distribuições Linux homologadas com Docker Engine nativo. |
+| **Conectividade** | Conexão banda larga estável com a internet para comunicação com o deploy na Vercel e o repositório oficial no GitHub. |
 
 ---
 
 ## 2.3 Ambiente de Software
 
-| Ferramenta | Versão | Finalidade | Métrica(s) |
-|---|---|---|---|
-| Docker Desktop | >= 24.x | Containerizacao do ambiente Agio (Django + PostgreSQL) | Todas |
-| Python | >= 3.10 | Scripts de automacao, testes, geracao de dados sinteticos | M2, M5, M7, M8, M9 |
-| Postman | >= 11.x | Execucao de requisições manuais e testes de API | M1, M2, M3, M6 |
-| Locust | >= 2.x | Teste de carga com multiplos usuarios simultâneos | M5, M8 |
-| coverage.py | >= 7.x | Medicao de cobertura de codigo dos testes automatizados | M4 |
-| pytest-django | (bundled no projeto) | Execucao dos testes automatizados existentes | M2, M4 |
-| Git / GitHub | - | Versionamento e armazenamento de evidencias e dados brutos | Todas |
+As ferramentas utilizadas foram selecionadas para garantir a automação do processo e a precisão na coleta dos indicadores quantitativos:
+
+| Ferramenta | Versão | Finalidade Principal | Métrica(s) Relacionada(s) |
+| :--- | :---: | :--- | :---: |
+| **Docker / Compose** | >= 24.x | Containerização e isolamento do ambiente Agio (Django + PostgreSQL). | Todas |
+| **Python** | >= 3.10 | Interpretador base para scripts de automação, chamadas de testes e geração de massa sintética. | M2, M5, M7, M8, M9 |
+| **Postman** | >= 11.x | Execução e automação de requisições manuais, validação de regras e testes de estresse de API. | M1, M2, M3, M6 |
+| **Locust** | >= 2.x | Framework para simulação e geração de carga com múltiplos usuários simultâneos em tempo real. | M5, M8 |
+| **coverage.py** | >= 7.x | Instrumentação e medição da cobertura de código das suítes de testes automatizados backend. | M4 |
+| **pytest-django** | (bundled no projeto) | Framework de testes embutido no projeto para execução da suíte de testes existente. | M2, M4 |
+| **Git / GitHub** | — | Controle de versão, armazenamento de logs brutos, artefatos e versionamento das evidências. | Todas |
 
 ---
 
 ## 2.4 Massa de Dados
 
-Para as métricas de Eficiencia de Desempenho (M7, M8, M9), sera utilizada massa de dados sinteticos gerada por script Python. Os dados seguem o modelo de item do Agio:
+Para as métricas de **Eficiência de Desempenho (M7, M8 e M9)**, será utilizada uma massa de dados sintéticos gerada por um script customizado em Python através da biblioteca `Faker`. Os registros simulados seguirão estritamente o modelo de dados da entidade de itens do Agio:
 
-| Campo | Tipo | Geracao |
-|---|---|---|
-| gnome | string | `faker.commerce.product_name()` ou gnomes aleatorios |
-| descrição | string | Texto aleatorio de 50-200 characters |
-| quantidade | inteiro | Aleatorio entre 1 e 1000 |
-| preco | decimal | Aleatorio entre 0.01 e 9999.99 |
+| Campo do Modelo | Tipo de Dado | Estratégia de Geração Sintética |
+| :--- | :---: | :--- |
+| **nome** | `string` | `faker.commerce.product_name()` gerando nomes textuais de produtos. |
+| **descrição** | `string` | Texto de descrição aleatório contendo entre 50 e 200 caracteres. |
+| **quantidade** | `integer` | Valor numérico inteiro gerado aleatoriamente no intervalo de 1 a 1000. |
+| **preço** | `decimal` | Valor decimal de ponto flutuante flutuando aleatoriamente entre 0.01 e 9999.99. |
 
 Patamares de volume: 100, 1.000, 5.000 e 10.000 items.
-
 A massa de dados sera armazenada no repositorio Git em formato CSV para auditoria (conforme premissa do projeto).
 
 ---
