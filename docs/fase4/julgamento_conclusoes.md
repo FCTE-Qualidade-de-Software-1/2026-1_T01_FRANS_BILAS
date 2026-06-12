@@ -1,66 +1,78 @@
-# 3. Julgamento, Conclusoes e Sugestoes de Melhoria
+# 3. Julgamento, Conclusões e Sugestões de Melhoria
 
 ## 3.1 Julgamento Final da Qualidade
 
-### Coerencia com o Proposito da Avaliação (Fase 1)
+### Coerência com o Propósito da Avaliação (Fase 1)
 
-Conforme definido na [Fase 1 - Proposito](../fase1/proposito.md), esta avaliação respondeu a tres questões de decisão:
+Conforme definido no planejamento inicial, esta avaliação buscou responder a três questões essenciais de decisão para o negócio e para a engenharia do projeto:
 
-| Questão de Decisão (Fase 1) | Resultado da Avaliação | Julgamento |
-|---|---|---|
-| As funcionalidades atendem ao backlog? | ICF = 100%, TCF = 90%, IAT = 83,3% | O sistema atende a totalidade das funcionalidades planejadas, com correção adequada na maioria dos scenarios. E viavel para uso basico de gestão de inventario, com ressalvas na autenticacao via API. |
-| O sistema e estavel para producao? | TMCT = 0%, TDO = 100%, ITF = 80% | O sistema **não esta pronto para producao** sem mitigacao. A disponibilidade e excelente (100%) e a tolerância a falhas e razoavel (80%), mas a ausencia total de testes automatizados representa risco critico de regressão. O sistema aceita dados inválidos (precos negativos). |
-| O desempenho e aceitavel para PMEs? | TMRE = 2,3ms, DDVD = 5.253% | O desempenho e excelente para volumes pequenos (ate 1.000 items), mas degrada criticamente sem páginacao. PMEs com ate 500 items podem usar o sistema sem problemas; acima disso, e necessario implementar páginacao. |
-
----
-
-## 3.2 Resumo por Caracteristica
-
-| Caracteristica | Nivel Geral | Justificativa |
-|---|---|---|
-| Adequacao Funcional | **Bom** | Completude excelente (100%), correção boa (90%), adequação boa (83,3%). Ponto fraco: login via API retorna erro 500. |
-| Confiabilidade | **Insuficiente** | Disponibilidade excelente (TDO = 100%). Porem, ausencia total de testes automatizados (M4 = 0%) compromete gravemente a maturidade. Tolerancia a falhas razoavel (80%), mas o sistema aceita precos negativos. |
-| Eficiencia de Desempenho | **Regular** | Tempo de resposta excelente (M7 = 2,3ms), mas degradação por volume insuficiente (M9 = 5.253%). O sistema não escala sem páginacao. |
+| Questão de Decisão (Fase 1) | Resultado Consolidado | Julgamento Técnico e Prático |
+| :--- | :---: | :--- |
+| **As funcionalidades atendem ao backlog?** | `ICF = 100%`<br>`TCF = 90%`<br>`IAT = 83,3%` | **Viável para uso básico.** O sistema cobre a totalidade das funcionalidades planejadas, entregando o comportamento correto na grande maioria dos cenários de teste. Apresenta ressalvas apenas no fluxo de autenticação via API externa. |
+| **O sistema é estável para produção?** | `TMCT = 0%`<br>`TDO = 100%`<br>`ITF = 80%` | 🔴 **Não está pronto para produção.** Embora a disponibilidade seja excelente (100%) e a tolerância a falhas provocadas seja boa (80%), a ausência total de testes automatizados impõe um risco crítico de regressão. O sistema também carece de validações matemáticas essenciais (aceita preços negativos). |
+| **O desempenho é aceitável para PMEs?** | `TMRE = 2,3ms`<br>`DDVD = 5.253%` | **Adequado apenas para microvolumes.** A velocidade de resposta é excelente para bases pequenas (até 1.000 itens cadastrados). Contudo, a performance degrada criticamente a partir daí devido à falta de paginação, limitando o uso para inventários muito reduzidos. |
 
 ---
 
-## 3.3 Sugestoes de Melhoria
+## 3.2 Resumo por Característica
 
-| Prioridade | Acao | Métrica | Impacto esperado |
-|---|---|---|---|
-| **Alta** | Implementar páginacao no endpoint de listagem e exportacao CSV (`ProductTable.objects.all()` deve usar `.páginate()` ou `Páginator`) | M9 (DDVD) | Reduzir degradação de 5.253% para menos de 50%, viabilizando uso com 10.000+ items |
-| **Alta** | Criar suite de testes automatizados cobrindo pelo menos CRUD, autenticacao e exportacao CSV (minimo 20 testes) | M4 (TMCT) | Elevar de 0 para pelo menos 80% pass rate com 50%+ de cobertura |
-| **Alta** | Adicionar validacao de preco no serializer: `price` deve ser >= 0 | M6 (ITF) | Elevar tolerância a falhas de 80% para 87%+ |
-| **Media** | Corrigir login via API POST (atualmente retorna HTTP 500) para tratar corretamente requisições JSON | M3 (IAT) | Elevar adequação de 83,3% para 100% |
-| **Media** | Adicionar validacao no serializer para campos `category` e `description` como obrigatorios (ou documentar que são opcionais) | M6 (ITF) | Elevar para 93%+ se tornados obrigatorios |
-| **Baixa** | Implementar autenticacao JWT para endpoints da API REST (atualmente usa sessão Django) | M6 (ITF) | Melhorar seguranca e padronizar autenticacao API |
+A tabela abaixo sintetiza o veredicto de qualidade para cada uma das macrocaracterísticas da ISO/IEC 25010 avaliadas no sistema Agio v1.0.0:
 
----
-
-## 3.4 Verificacao das Hypotheses
-
-| Hipotese | Resultado | Confirmada? |
-|---|---|---|
-| H1: Completude acima de 75% | ICF = 100% | Sim — superada |
-| H2: Correcao acima de 80% para CRUD | TCF = 90% | Sim |
-| H3: Fluxos basicos cobertos | IAT = 83,3% | Sim |
-| H4: Pass rate acima de 80%, cobertura baixa | TMCT = 0% pass, 57% cob | Não — 0 testes escritos |
-| H5: Disponibilidade acima de 99% local | TDO = 100,0% (200/200 requisições) | Sim — confirmada e superada |
-| H6: Erros 500 em entradas inválidas | ITF = 80% (login retorna 500) | Parcialmente — maioria trata corretamente, mas login falha |
-| H7: Tempo de resposta abaixo de 1s | TMRE = 2,3ms | Sim — muito abaixo |
-| H8: CPU abaixo de 70% | PostgreSQL CPU 0%, Django resposta media 21ms sob 50 usuarios | Sim — confirmada com margem ampla |
-| H9: Degradacao acima de 50% | DDVD = 5.253% | Sim — muito acima do esperado |
+| Característica de Qualidade | Nível Geral | Justificativa Técnica |
+| :--- | :---: | :--- |
+| 🎯 **Adequação Funcional** | 🔵 **Bom** | Completude excelente (`100%`), taxa de correção robusta (`90%`) e boa adequação à tarefa diária (`83,3%`). O único ponto crítico de atenção é a falha (HTTP 500) no login via rota direta de API. |
+| 🛡️ **Confiabilidade** | 🔴 **Insuficiente** | Apesar da excelente estabilidade e disponibilidade em tempo de execução (`TDO = 100%`), a falta absoluta de testes automatizados escritos (`TMCT = 0%`) compromete severamente a maturidade do software. O sistema também permite falhas de consistência lógica ao aceitar preços negativos. |
+| ⚡ **Eficiência de Desempenho** | 🟡 **Regular** | Os tempos de resposta em cenários isolados são excepcionais (`TMRE = 2,3ms`), mas a taxa de degradação volumétrica é alarmante (`DDVD = 5.253%`). O sistema não possui escalabilidade arquitetural sem uma reestruturação de rotas. |
 
 ---
 
-## 3.5 Conclusão
+## 3.3 Sugestões de Melhoria e Plano de Ação
 
-O sistema Agio v1.0.0 apresenta um perfil de qualidade caracteristico de projetos academics em estagio inicial: **boa cobertura Funcional, mas com lacunas significativas em confiabilidade e escalabilidade**.
+Para elevar o nível de maturidade do sistema Agio e viabilizar sua implantação segura em ambientes corporativos, propõe-se o seguinte plano de correções priorizado:
 
-Do ponto de vista de **Adequacao Funcional**, o sistema atende plenamente ao backlog planejado e Funcional para gestão basica de inventario. A alta completude (100%) demonstra que as 9 sprints de desenvolvimento foram efetivas na entrega das funcionalidades previstas.
+| Prioridade | Ação Corretiva Recomendada | Métrica Alvo | Impacto Técnico Esperado |
+| :---: | :--- | :---: | :--- |
+| 🔴 **Alta** | Implementar paginação no endpoint de listagem e exportação de CSV. Substituir chamadas irrestritas do tipo `ProductTable.objects.all()` pela utilização de `.paginate()` ou da classe `Paginator` nativa do Django. | **M9**<br>*(DDVD)* | Reduzir a taxa de degradação volumétrica de 5.253% para menos de 50%, viabilizando o suporte a inventários de grande porte (10.000+ itens). |
+| 🔴 **Alta** | Construir uma suíte base de testes automatizados (unitários e de integração), cobrindo no mínimo as operações de CRUD, fluxos de autenticação e geração de arquivos CSV. | **M4**<br>*(TMCT)* | Mitigar riscos de regressão no código, elevando o indicador de zero para pelo menos 80% de *pass rate* com mais de 50% de cobertura real de linhas. |
+| 🔴 **Alta** | Adicionar validação de consistência monetária na camada de *Serializer* do Django REST Framework: impedir a gravação de registros caso o campo `price` seja $< 0$. | **M6**<br>*(ITF)* | Proteger a integridade lógica e fiscal do banco de dados, elevando o Índice de Tolerância a Falhas para mais de 87%. |
+| 🟡 **Média** | Corrigir o tratamento de exceção na rota de login (`POST`), sanando o estouro de erro interno (HTTP 500) para responder corretamente payloads em formato JSON. | **M3**<br>*(IAT)* | Garantir o desacoplamento do backend e estabilizar a Taxa de Adequação à Tarefa em 100%. |
+| 🟡 **Média** | Configurar os campos `category` e `description` como explicitamente obrigatórios no *Serializer*, ou atualizar a documentação do sistema informando que são metadados opcionais. | **M6**<br>*(ITF)* | Alinhar a expectativa de preenchimento do usuário com as regras internas de tratamento de dados do sistema. |
+| 🟢 **Baixa** | Adotar e padronizar o uso de tokens JWT nativos para a proteção de todos os endpoints expostos pela API REST, substituindo o modelo atual dependente de sessões web do Django. | **M6**<br>*(ITF)* | Elevar o patamar de segurança da arquitetura e alinhar o projeto às melhores práticas de desenvolvimento de APIs. |
 
-Do ponto de vista de **Confiabilidade**, a ausencia total de testes automatizados e o achado mais critico desta avaliação. Embora o sistema funcione corretamente na maioria dos scenarios, não ha rede de seguranca contra regressoes. A aceitacao de precos negativos e outro ponto que pode gerar inconsistencias em dados reais.
+---
 
-Do ponto de vista de **Eficiencia de Desempenho**, o sistema e rapido em volumes baixos, mas a falta de páginacao o torna inviavel para empresas com mais de 1.000 items no inventario. A implementacao de páginacao e a melhoria de maior impacto com menor esforco.
+## 3.4 Verificação das Hipóteses
 
-**Recomendacao final:** O Agio e viavel para adocao por PMEs com inventarios pequenos (ate 500 items), desde que as melhorias de prioridade alta (páginacao, testes e validacao de precos) sejam implementadas antes do uso em producao. Sem essas melhorias, o risco de inconsistencias e degradação de desempenho torna o sistema inadequado para uso corporativo.
+| Código | Hipótese Formulada na Fase 2 | Indicador Vinculado | Status da Hipótese |
+| :---: | :--- | :---: | :---: |
+| **H1** | Espera-se completude do backlog acima de 75% devido às 9 sprints. | `ICF = 100%` | 🟢 **Confirmada e Superada** |
+| **H2** | Taxa de correção acima de 80% para operações básicas de CRUD. | `TCF = 90%` | 🟢 **Confirmada** |
+| **H3** | Fluxos de trabalho básicos de inventário cobertos. | `IAT = 83,3%` | 🟢 **Confirmada** |
+| **H4** | *Pass rate* de testes acima de 80%, mas volumetria e cobertura baixas. | `TMCT = 0%` | 🔴 **Refutada** *(Não há testes escritos)* |
+| **H5** | Taxa de disponibilidade em ambiente local superior a 99%. | `TDO = 100%` | 🟢 **Confirmada e Superada** |
+| **H6** | Presença de erros HTTP 500 em cenários de entradas inválidas. | `ITF = 80%` | 🟡 **Parcialmente Confirmada** *(Apenas a rota de login falhou)* |
+| **H7** | Tempo médio de resposta mantido abaixo de 1.000 ms sob uso normal. | `TMRE = 2,3ms` | 🟢 **Confirmada com Margem** |
+| **H8** | Consumo de CPU mantido abaixo do teto limite de 70%. | `URC (CPU) = 0%` | 🟢 **Confirmada com Margem** |
+| **H9** | Degradação de performance superior a 50% diante de bases volumosas. | `DDVD = 5.253%` | 🟢 **Confirmada** *(Impacto acima do esperado)* |
+
+---
+
+## 3.5 Conclusão Geral
+
+O sistema Agio v1.0.0 apresenta um perfil de qualidade característico de projetos acadêmicos em estágio inicial de maturidade: **excelente cobertura de escopo funcional, mas com lacunas severas de engenharia nas camadas de confiabilidade, segurança e escalabilidade**.
+
+A alta taxa de completude (`100%`) comprova que o ciclo de 9 sprints foi altamente eficaz em transformar requisitos de negócio em código disponível. O sistema entrega uma experiência ágil, leve e responsiva para usuários que operam com pequenos volumes de estoque. 
+
+Contudo, a ausência de uma suíte de testes automatizados e o crescimento linear e agressivo do tempo de processamento em consultas volumosas impedem a classificação do software como uma solução pronta para ambientes de produção estáveis.
+
+---
+
+## 3.6 Recomendação Final de Engenharia
+
+> [!IMPORTANT]
+> **Perfil de Adoção Recomendado:**
+> O Agio v1.0.0 é considerado **apto e recomendado** para adoção imediata por micro e pequenas empresas cujo volume total de inventário não ultrapasse o teto limite de **500 itens cadastrados**, operando preferencialmente via interface web tradicional.
+
+> [!CAUTION]
+> **Restrição de Implantação:**
+> **Não é recomendada** a implantação do sistema em ambientes corporativos ou corporações de médio porte sem a prévia execução das melhorias de **Alta Prioridade** listadas na seção 3.3 (implementação de paginação e validação de payloads). A ausência desses ajustes expõe a empresa a riscos de inconsistência financeira no estoque e indisponibilidade do servidor por esgotamento de recursos.
