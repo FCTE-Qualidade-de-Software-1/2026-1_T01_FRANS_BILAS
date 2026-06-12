@@ -27,21 +27,21 @@ Verificação sistemática do backlog mapeado em relação às entregas funciona
 
 | # | Funcionalidade (Backlog) | Status | HTTP Status | Evidência Comportamental |
 | :---: | :--- | :---: | :---: | :--- |
-| 1 | Página Inicial (*Homepage*) | 🟢 Sim | 200 | Página institucional renderizada corretamente. |
-| 2 | Tela de Login | 🟢 Sim | 200 | Formulário de login acessível e funcional via web. |
-| 3 | Dashboard Principal | 🟢 Sim | 200 | Tabela consolidada de produtos exibida com sucesso. |
-| 4 | Exportação de Relatório CSV | 🟢 Sim | 200 | Arquivo CSV gerado e baixado via endpoint REST. |
-| 5 | Product Manager - `GET` (Consulta) | 🟢 Sim | 200 / 404 | Retorna o payload do produto ou 404 para ID inexistente. |
-| 6 | Product Manager - `POST` (Criação) | 🟢 Sim | 201 / 400 | Cria o registro em banco ou rejeita dados malformados. |
-| 7 | Painel Admin Django | 🟢 Sim | 200 | Interface administrativa nativa do Django acessível. |
-| 8 | Fluxo de Logout | 🟢 Sim | 200 | Sessão do usuário encerrada com redirecionamento seguro. |
+| 1 | Página Inicial (*Homepage*) | Sim | 200 | Página institucional renderizada corretamente. |
+| 2 | Tela de Login | Sim | 200 | Formulário de login acessível e funcional via web. |
+| 3 | Dashboard Principal | Sim | 200 | Tabela consolidada de produtos exibida com sucesso. |
+| 4 | Exportação de Relatório CSV | Sim | 200 | Arquivo CSV gerado e baixado via endpoint REST. |
+| 5 | Product Manager - `GET` (Consulta) | Sim | 200 / 404 | Retorna o payload do produto ou 404 para ID inexistente. |
+| 6 | Product Manager - `POST` (Criação) | Sim | 201 / 400 | Cria o registro em banco ou rejeita dados malformados. |
+| 7 | Painel Admin Django | Sim | 200 | Interface administrativa nativa do Django acessível. |
+| 8 | Fluxo de Logout | Sim | 200 | Sessão do usuário encerrada com redirecionamento seguro. |
 
 
 !!! note "Resultado Final (M1)"
 
     **ICF = 8 / 8 = 100,0%**
 
-    **Nível de Maturidade:** 🟢 **Excelente**
+    **Nível de Maturidade:** **Excelente**
 
     *Análise:* Todas as funcionalidades previstas no backlog original estão integralmente implementadas e acessíveis. O ecossistema do sistema cobre com sucesso o controle de acessos, o CRUD operacional de estoque, dashboards e rotinas de exportação.
 
@@ -53,16 +53,16 @@ Execução de cenários funcionais para validação das regras de negócio e com
 
 | # | Cenário do Caso de Teste | Resultado Esperado | Resultado Obtido | Validação |
 | :---: | :--- | :---: | :---: | :---: |
-| 1 | Criar produto enviando dados válidos | HTTP 201 | HTTP 201 | 🟢 Correto |
-| 2 | Tentar criar produto com nome duplicado | HTTP 400 | HTTP 400 | 🟢 Correto |
-| 3 | Buscar dados de um produto existente | HTTP 200 | HTTP 200 | 🟢 Correto |
-| 4 | Buscar um produto com ID inexistente | HTTP 404 | HTTP 404 | 🟢 Correto |
-| 5 | Editar campos de um produto existente | HTTP 200 ou 202 | HTTP 202 | 🟢 Correto |
-| 6 | Deletar um produto existente no banco | HTTP 200 a 204 | HTTP 202 | 🟢 Correto |
-| 7 | Solicitar a exportação do inventário em CSV | HTTP 200 | HTTP 200 | 🟢 Correto |
-| 8 | Acessar rota do Dashboard Autenticado | HTTP 200 | HTTP 302 *(Redirect)* | 🔴 Incorreto |
-| 9 | Requisição `GET` sem o parâmetro obrigatório `product` | HTTP 400 | HTTP 400 | 🟢 Correto |
-| 10 | Requisição `POST` omitindo campos obrigatórios | HTTP 400 | HTTP 400 | 🟢 Correto |
+| 1 | Criar produto enviando dados válidos | HTTP 201 | HTTP 201 | Correto |
+| 2 | Tentar criar produto com nome duplicado | HTTP 400 | HTTP 400 | Correto |
+| 3 | Buscar dados de um produto existente | HTTP 200 | HTTP 200 | Correto |
+| 4 | Buscar um produto com ID inexistente | HTTP 404 | HTTP 404 | Correto |
+| 5 | Editar campos de um produto existente | HTTP 200 ou 202 | HTTP 202 | Correto |
+| 6 | Deletar um produto existente no banco | HTTP 200 a 204 | HTTP 202 | Correto |
+| 7 | Solicitar a exportação do inventário em CSV | HTTP 200 | HTTP 200 | Correto |
+| 8 | Acessar rota do Dashboard Autenticado | HTTP 200 | HTTP 302 *(Redirect)* | Incorreto |
+| 9 | Requisição `GET` sem o parâmetro obrigatório `product` | HTTP 400 | HTTP 400 | Correto |
+| 10 | Requisição `POST` omitindo campos obrigatórios | HTTP 400 | HTTP 400 | Correto |
 
 !!! warning "Nota de Falha (Caso de Teste 8)"
     **O teste falhou porque o endpoint do dashboard emite um redirecionamento HTTP 302 em vez de renderizar diretamente os dados quando consumido via API de testes. Isso ocorre devido ao middleware de controle de sessão web que força a validação estrita do `user_id`.**
@@ -71,7 +71,7 @@ Execução de cenários funcionais para validação das regras de negócio e com
 
     **TCF = 9 / 10 = 90,0%**
 
-    **Nível de Maturidade:** 🔵 **Bom**
+    **Nível de Maturidade:** **Bom**
 
 ---
 
@@ -81,17 +81,17 @@ Avaliação da cobertura sistêmica sobre a jornada operacional de gerenciamento
 
 | # | Fluxo de Trabalho Avaliado | Status do Fluxo | Observações de Coleta |
 | :---: | :--- | :---: | :--- |
-| 1 | Autenticação completa (*Login/Logout*) | 🟡 Parcial | O envio de requisições `POST` diretamente para o endpoint de API `/login/` retorna erro de servidor (HTTP 500). Contudo, o fluxo de login executado manualmente via formulário web funciona perfeitamente. |
-| 2 | Cadastro de novos itens no estoque | 🟢 Completo | Rota `POST /product-manager/` grava novos itens emitindo HTTP 201. |
-| 3 | Consulta e busca filtrada de produtos | 🟢 Completo | Rota `GET /product-manager/?product=nome` retorna a massa mapeada de forma correta. |
-| 4 | Edição e atualização de itens existentes | 🟢 Completo | Rota `PUT /product-manager/` realiza os ajustes emitindo HTTP 202. |
-| 5 | Remoção/Baixa de itens do inventário | 🟢 Completo | Rota `DELETE /product-manager/` elimina o registro emitindo HTTP 202. |
-| 6 | Exportação de dados consolidados (CSV) | 🟢 Completo | Rota `GET /dashboard/export/csv/` faz o streaming de arquivo CSV válido. |
+| 1 | Autenticação completa (*Login/Logout*) | Parcial | O envio de requisições `POST` diretamente para o endpoint de API `/login/` retorna erro de servidor (HTTP 500). Contudo, o fluxo de login executado manualmente via formulário web funciona perfeitamente. |
+| 2 | Cadastro de novos itens no estoque | Completo | Rota `POST /product-manager/` grava novos itens emitindo HTTP 201. |
+| 3 | Consulta e busca filtrada de produtos | Completo | Rota `GET /product-manager/?product=nome` retorna a massa mapeada de forma correta. |
+| 4 | Edição e atualização de itens existentes | Completo | Rota `PUT /product-manager/` realiza os ajustes emitindo HTTP 202. |
+| 5 | Remoção/Baixa de itens do inventário | Completo | Rota `DELETE /product-manager/` elimina o registro emitindo HTTP 202. |
+| 6 | Exportação de dados consolidados (CSV) | Completo | Rota `GET /dashboard/export/csv/` faz o streaming de arquivo CSV válido. |
 
 
 !!! note "Resultado Final (M3)"
     **IAT = 5 / 6 = 83,3%**
-    **Nível de Maturidade:** 🔵 **Bom**
+    **Nível de Maturidade:** **Bom**
 
 ---
 
@@ -123,7 +123,7 @@ Avaliação da cobertura sistêmica sobre a jornada operacional de gerenciamento
     **TMCT:** `0% pass rate` (0 testes implementados)  
     **Cobertura Nominal:** `57%`
 
-    **Nível de Maturidade:** 🔴 **Insuficiente**
+    **Nível de Maturidade:** **Insuficiente**
 
     *Análise Crítica:*  
     O projeto **não possui nenhum teste automatizado escrito**.  
@@ -146,7 +146,7 @@ Mapeamento de estabilidade sob disparo sequencial contínuo de chamadas na API:
 
     **TDO:** `100,0%`
 
-    **Nível de Maturidade:** 🟢 **Excelente**
+    **Nível de Maturidade:** **Excelente**
 
     *Detalhamento:*  
     O script injetou com sucesso 200 requisições sequenciais do tipo `GET` voltadas ao endpoint `/product-manager/?product=teste`, utilizando intervalos regulares de 0,5 segundos.
@@ -169,21 +169,21 @@ Comportamento do barramento da API diante de entradas corrompidas ou requisiçõ
 
 | # | Vetor de Falha Injetado | Código Esperado | Código Obtido | Status de Tratamento |
 | :---: | :--- | :---: | :---: | :---: |
-| 1 | `POST` omitindo o campo obrigatório `product_name` | 400 | 400 | 🟢 Tratado |
-| 2 | `POST` omitindo o campo obrigatório `amount` | 400 | 400 | 🟢 Tratado |
-| 3 | `POST` omitindo o campo obrigatório `price` | 400 | 400 | 🟢 Tratado |
-| 4 | `POST` omitindo o campo `category` | 400 | 201 | 🔴 Não Tratado |
-| 5 | `POST` omitindo o campo `description` | 400 | 201 | 🔴 Não Tratado |
-| 6 | `POST` enviando valor não numérico em `amount` (ex: "texto") | 400 / 422 | 400 | 🟢 Tratado |
-| 7 | `POST` enviando valor monetário negativo em `price` (ex: -10.50) | 400 / 422 | 201 | 🔴 Não Tratado |
-| 8 | `POST` enviando valor não numérico em `price` (ex: "abc") | 400 / 422 | 400 | 🟢 Tratado |
-| 9 | Acesso ao Dashboard sem cabeçalhos de autenticação | 302 / 401 | 302 | 🟢 Tratado |
-| 10 | Chamada de listagem na API sem credenciais de acesso | 401 / 403 | 404 | 🟢 Tratado |
-| 11 | Envio de requisição `POST` contendo payload totalmente vazio | 400 | 400 | 🟢 Tratado |
-| 12 | Requisição `GET` para produto inexistente no banco | 404 | 404 | 🟢 Tratado |
-| 13 | Requisição `PUT` para produto inexistente no banco | 404 | 404 | 🟢 Tratado |
-| 14 | Requisição `DELETE` para produto inexistente no banco | 404 | 404 | 🟢 Tratado |
-| 15 | Requisição `DELETE` omitindo o parâmetro `product_name` | 400 | 400 | 🟢 Tratado |
+| 1 | `POST` omitindo o campo obrigatório `product_name` | 400 | 400 | Tratado |
+| 2 | `POST` omitindo o campo obrigatório `amount` | 400 | 400 | Tratado |
+| 3 | `POST` omitindo o campo obrigatório `price` | 400 | 400 | Tratado |
+| 4 | `POST` omitindo o campo `category` | 400 | 201 | Não Tratado |
+| 5 | `POST` omitindo o campo `description` | 400 | 201 | Não Tratado |
+| 6 | `POST` enviando valor não numérico em `amount` (ex: "texto") | 400 / 422 | 400 | Tratado |
+| 7 | `POST` enviando valor monetário negativo em `price` (ex: -10.50) | 400 / 422 | 201 | Não Tratado |
+| 8 | `POST` enviando valor não numérico em `price` (ex: "abc") | 400 / 422 | 400 | Tratado |
+| 9 | Acesso ao Dashboard sem cabeçalhos de autenticação | 302 / 401 | 302 | Tratado |
+| 10 | Chamada de listagem na API sem credenciais de acesso | 401 / 403 | 404 | Tratado |
+| 11 | Envio de requisição `POST` contendo payload totalmente vazio | 400 | 400 | Tratado |
+| 12 | Requisição `GET` para produto inexistente no banco | 404 | 404 | Tratado |
+| 13 | Requisição `PUT` para produto inexistente no banco | 404 | 404 | Tratado |
+| 14 | Requisição `DELETE` para produto inexistente no banco | 404 | 404 | Tratado |
+| 15 | Requisição `DELETE` omitindo o parâmetro `product_name` | 400 | 400 | Tratado |
 
 
 !!! warning "Vulnerabilidades Identificadas"
@@ -202,7 +202,7 @@ Comportamento do barramento da API diante de entradas corrompidas ou requisiçõ
 
     **ITF:** `12 / 15 = 80,0%`
 
-    **Nível de Maturidade:** 🔵 **Bom**
+    **Nível de Maturidade:** **Bom**
 
 ---
 
@@ -223,7 +223,7 @@ Métricas de latência bruta coletadas sob condições controladas de concorrên
 
     **TMRE:** `2,3 ms`
 
-    **Nível de Maturidade:** 🟢 **Excelente**
+    **Nível de Maturidade:** **Excelente**
 
     *Nota de Ambiente:*  
     Os tempos apresentados foram obtidos utilizando o cliente de testes nativo do Django (*in-process test client*) executando sobre SQLite.
@@ -240,8 +240,8 @@ Consumo de hardware e comportamento da aplicação sob estresse computacional ge
 
 | Componente Analisado | Pico de CPU (%) | Alocação de Memória RAM | Classificação CPU | Classificação RAM |
 | :--- | :---: | :---: | :---: | :---: |
-| **Django Backend** *(Processo Nativo Host)* | < 15,00% | ~45,00 MB *(Estimado via SO)* | 🟢 Excelente | 🟢 Excelente |
-| **PostgreSQL Container** *(Docker)* | 0,00% *(Idle)* | 32,58 MB / 15,51 GB | 🟢 Excelente | 🟢 Excelente |
+| **Django Backend** *(Processo Nativo Host)* | < 15,00% | ~45,00 MB *(Estimado via SO)* | Excelente | Excelente |
+| **PostgreSQL Container** *(Docker)* | 0,00% *(Idle)* | 32,58 MB / 15,51 GB | Excelente | Excelente |
 
 #### Sumário de Performance Emitido pelo Locust
 * **Parâmetros do Teste:** 50 usuários simultâneos, taxa de subida de 10 usuários/s, sustentação de carga por 60 segundos. 
@@ -261,7 +261,7 @@ Consumo de hardware e comportamento da aplicação sob estresse computacional ge
     **Latência média sob estresse:** `21 ms`  
     **Percentil 95:** `31 ms`
 
-    **Nível de Maturidade:** 🟢 **Excelente**
+    **Nível de Maturidade:** **Excelente**
 
     *Nota:*  
     O servidor Django foi executado diretamente no host Windows por limitações da infraestrutura de testes.
@@ -287,7 +287,7 @@ Análise de escalabilidade temporal do sistema à medida que a base de dados sof
 
     **DDVD:** `5.253%`
 
-    **Nível de Maturidade:** 🔴 **Insuficiente**
+    **Nível de Maturidade:** **Insuficiente**
 
     *Análise Diagnóstica:*  
     O sistema apresenta degradação severa e progressiva de desempenho devido à **ausência completa de paginação ou segmentação de memória** no método de exportação.

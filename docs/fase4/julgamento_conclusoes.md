@@ -9,7 +9,7 @@ Conforme definido no planejamento inicial, esta avaliação buscou responder a t
 | Questão de Decisão (Fase 1) | Resultado Consolidado | Julgamento Técnico e Prático |
 | :--- | :---: | :--- |
 | **As funcionalidades atendem ao backlog?** | `ICF = 100%`<br>`TCF = 90%`<br>`IAT = 83,3%` | **Viável para uso básico.** O sistema cobre a totalidade das funcionalidades planejadas, entregando o comportamento correto na grande maioria dos cenários de teste. Apresenta ressalvas apenas no fluxo de autenticação via API externa. |
-| **O sistema é estável para produção?** | `TMCT = 0%`<br>`TDO = 100%`<br>`ITF = 80%` | 🔴 **Não está pronto para produção.** Embora a disponibilidade seja excelente (100%) e a tolerância a falhas provocadas seja boa (80%), a ausência total de testes automatizados impõe um risco crítico de regressão. O sistema também carece de validações matemáticas essenciais (aceita preços negativos). |
+| **O sistema é estável para produção?** | `TMCT = 0%`<br>`TDO = 100%`<br>`ITF = 80%` | **Não está pronto para produção.** Embora a disponibilidade seja excelente (100%) e a tolerância a falhas provocadas seja boa (80%), a ausência total de testes automatizados impõe um risco crítico de regressão. O sistema também carece de validações matemáticas essenciais (aceita preços negativos). |
 | **O desempenho é aceitável para PMEs?** | `TMRE = 2,3ms`<br>`DDVD = 5.253%` | **Adequado apenas para microvolumes.** A velocidade de resposta é excelente para bases pequenas (até 1.000 itens cadastrados). Contudo, a performance degrada criticamente a partir daí devido à falta de paginação, limitando o uso para inventários muito reduzidos. |
 
 ---
@@ -20,9 +20,9 @@ A tabela abaixo sintetiza o veredicto de qualidade para cada uma das macrocaract
 
 | Característica de Qualidade | Nível Geral | Justificativa Técnica |
 | :--- | :---: | :--- |
-| 🎯 **Adequação Funcional** | 🔵 **Bom** | Completude excelente (`100%`), taxa de correção robusta (`90%`) e boa adequação à tarefa diária (`83,3%`). O único ponto crítico de atenção é a falha (HTTP 500) no login via rota direta de API. |
-| 🛡️ **Confiabilidade** | 🔴 **Insuficiente** | Apesar da excelente estabilidade e disponibilidade em tempo de execução (`TDO = 100%`), a falta absoluta de testes automatizados escritos (`TMCT = 0%`) compromete severamente a maturidade do software. O sistema também permite falhas de consistência lógica ao aceitar preços negativos. |
-| ⚡ **Eficiência de Desempenho** | 🟡 **Regular** | Os tempos de resposta em cenários isolados são excepcionais (`TMRE = 2,3ms`), mas a taxa de degradação volumétrica é alarmante (`DDVD = 5.253%`). O sistema não possui escalabilidade arquitetural sem uma reestruturação de rotas. |
+| **Adequação Funcional** | **Bom** | Completude excelente (`100%`), taxa de correção robusta (`90%`) e boa adequação à tarefa diária (`83,3%`). O único ponto crítico de atenção é a falha (HTTP 500) no login via rota direta de API. |
+| **Confiabilidade** | **Insuficiente** | Apesar da excelente estabilidade e disponibilidade em tempo de execução (`TDO = 100%`), a falta absoluta de testes automatizados escritos (`TMCT = 0%`) compromete severamente a maturidade do software. O sistema também permite falhas de consistência lógica ao aceitar preços negativos. |
+| ⚡ **Eficiência de Desempenho** | **Regular** | Os tempos de resposta em cenários isolados são excepcionais (`TMRE = 2,3ms`), mas a taxa de degradação volumétrica é alarmante (`DDVD = 5.253%`). O sistema não possui escalabilidade arquitetural sem uma reestruturação de rotas. |
 
 ---
 
@@ -32,12 +32,12 @@ Para elevar o nível de maturidade do sistema Agio e viabilizar sua implantaçã
 
 | Prioridade | Ação Corretiva Recomendada | Métrica Alvo | Impacto Técnico Esperado |
 | :---: | :--- | :---: | :--- |
-| 🔴 **Alta** | Implementar paginação no endpoint de listagem e exportação de CSV. Substituir chamadas irrestritas do tipo `ProductTable.objects.all()` pela utilização de `.paginate()` ou da classe `Paginator` nativa do Django. | **M9**<br>*(DDVD)* | Reduzir a taxa de degradação volumétrica de 5.253% para menos de 50%, viabilizando o suporte a inventários de grande porte (10.000+ itens). |
-| 🔴 **Alta** | Construir uma suíte base de testes automatizados (unitários e de integração), cobrindo no mínimo as operações de CRUD, fluxos de autenticação e geração de arquivos CSV. | **M4**<br>*(TMCT)* | Mitigar riscos de regressão no código, elevando o indicador de zero para pelo menos 80% de *pass rate* com mais de 50% de cobertura real de linhas. |
-| 🔴 **Alta** | Adicionar validação de consistência monetária na camada de *Serializer* do Django REST Framework: impedir a gravação de registros caso o campo `price` seja $< 0$. | **M6**<br>*(ITF)* | Proteger a integridade lógica e fiscal do banco de dados, elevando o Índice de Tolerância a Falhas para mais de 87%. |
-| 🟡 **Média** | Corrigir o tratamento de exceção na rota de login (`POST`), sanando o estouro de erro interno (HTTP 500) para responder corretamente payloads em formato JSON. | **M3**<br>*(IAT)* | Garantir o desacoplamento do backend e estabilizar a Taxa de Adequação à Tarefa em 100%. |
-| 🟡 **Média** | Configurar os campos `category` e `description` como explicitamente obrigatórios no *Serializer*, ou atualizar a documentação do sistema informando que são metadados opcionais. | **M6**<br>*(ITF)* | Alinhar a expectativa de preenchimento do usuário com as regras internas de tratamento de dados do sistema. |
-| 🟢 **Baixa** | Adotar e padronizar o uso de tokens JWT nativos para a proteção de todos os endpoints expostos pela API REST, substituindo o modelo atual dependente de sessões web do Django. | **M6**<br>*(ITF)* | Elevar o patamar de segurança da arquitetura e alinhar o projeto às melhores práticas de desenvolvimento de APIs. |
+| **Alta** | Implementar paginação no endpoint de listagem e exportação de CSV. Substituir chamadas irrestritas do tipo `ProductTable.objects.all()` pela utilização de `.paginate()` ou da classe `Paginator` nativa do Django. | **M9**<br>*(DDVD)* | Reduzir a taxa de degradação volumétrica de 5.253% para menos de 50%, viabilizando o suporte a inventários de grande porte (10.000+ itens). |
+| **Alta** | Construir uma suíte base de testes automatizados (unitários e de integração), cobrindo no mínimo as operações de CRUD, fluxos de autenticação e geração de arquivos CSV. | **M4**<br>*(TMCT)* | Mitigar riscos de regressão no código, elevando o indicador de zero para pelo menos 80% de *pass rate* com mais de 50% de cobertura real de linhas. |
+| **Alta** | Adicionar validação de consistência monetária na camada de *Serializer* do Django REST Framework: impedir a gravação de registros caso o campo `price` seja $< 0$. | **M6**<br>*(ITF)* | Proteger a integridade lógica e fiscal do banco de dados, elevando o Índice de Tolerância a Falhas para mais de 87%. |
+| **Média** | Corrigir o tratamento de exceção na rota de login (`POST`), sanando o estouro de erro interno (HTTP 500) para responder corretamente payloads em formato JSON. | **M3**<br>*(IAT)* | Garantir o desacoplamento do backend e estabilizar a Taxa de Adequação à Tarefa em 100%. |
+| **Média** | Configurar os campos `category` e `description` como explicitamente obrigatórios no *Serializer*, ou atualizar a documentação do sistema informando que são metadados opcionais. | **M6**<br>*(ITF)* | Alinhar a expectativa de preenchimento do usuário com as regras internas de tratamento de dados do sistema. |
+| **Baixa** | Adotar e padronizar o uso de tokens JWT nativos para a proteção de todos os endpoints expostos pela API REST, substituindo o modelo atual dependente de sessões web do Django. | **M6**<br>*(ITF)* | Elevar o patamar de segurança da arquitetura e alinhar o projeto às melhores práticas de desenvolvimento de APIs. |
 
 ---
 
@@ -45,15 +45,15 @@ Para elevar o nível de maturidade do sistema Agio e viabilizar sua implantaçã
 
 | Código | Hipótese Formulada na Fase 2 | Indicador Vinculado | Status da Hipótese |
 | :---: | :--- | :---: | :---: |
-| **H1** | Espera-se completude do backlog acima de 75% devido às 9 sprints. | `ICF = 100%` | 🟢 **Confirmada e Superada** |
-| **H2** | Taxa de correção acima de 80% para operações básicas de CRUD. | `TCF = 90%` | 🟢 **Confirmada** |
-| **H3** | Fluxos de trabalho básicos de inventário cobertos. | `IAT = 83,3%` | 🟢 **Confirmada** |
-| **H4** | *Pass rate* de testes acima de 80%, mas volumetria e cobertura baixas. | `TMCT = 0%` | 🔴 **Refutada** *(Não há testes escritos)* |
-| **H5** | Taxa de disponibilidade em ambiente local superior a 99%. | `TDO = 100%` | 🟢 **Confirmada e Superada** |
-| **H6** | Presença de erros HTTP 500 em cenários de entradas inválidas. | `ITF = 80%` | 🟡 **Parcialmente Confirmada** *(Apenas a rota de login falhou)* |
-| **H7** | Tempo médio de resposta mantido abaixo de 1.000 ms sob uso normal. | `TMRE = 2,3ms` | 🟢 **Confirmada com Margem** |
-| **H8** | Consumo de CPU mantido abaixo do teto limite de 70%. | `URC (CPU) = 0%` | 🟢 **Confirmada com Margem** |
-| **H9** | Degradação de performance superior a 50% diante de bases volumosas. | `DDVD = 5.253%` | 🟢 **Confirmada** *(Impacto acima do esperado)* |
+| **H1** | Espera-se completude do backlog acima de 75% devido às 9 sprints. | `ICF = 100%` | **Confirmada e Superada** |
+| **H2** | Taxa de correção acima de 80% para operações básicas de CRUD. | `TCF = 90%` | **Confirmada** |
+| **H3** | Fluxos de trabalho básicos de inventário cobertos. | `IAT = 83,3%` | **Confirmada** |
+| **H4** | *Pass rate* de testes acima de 80%, mas volumetria e cobertura baixas. | `TMCT = 0%` | **Refutada** *(Não há testes escritos)* |
+| **H5** | Taxa de disponibilidade em ambiente local superior a 99%. | `TDO = 100%` | **Confirmada e Superada** |
+| **H6** | Presença de erros HTTP 500 em cenários de entradas inválidas. | `ITF = 80%` | **Parcialmente Confirmada** *(Apenas a rota de login falhou)* |
+| **H7** | Tempo médio de resposta mantido abaixo de 1.000 ms sob uso normal. | `TMRE = 2,3ms` | **Confirmada com Margem** |
+| **H8** | Consumo de CPU mantido abaixo do teto limite de 70%. | `URC (CPU) = 0%` | **Confirmada com Margem** |
+| **H9** | Degradação de performance superior a 50% diante de bases volumosas. | `DDVD = 5.253%` | **Confirmada** *(Impacto acima do esperado)* |
 
 ---
 

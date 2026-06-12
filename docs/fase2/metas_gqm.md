@@ -4,7 +4,7 @@
 
 As metas da avaliação foram estruturadas seguindo o padrão metodológico do GQM: Propósito — Objeto — Foco de Qualidade — Ponto de Vista — Ambiente.
 
-| 🧩 Elemento | 🎯 GOAL 1 | 🛡️ GOAL 2 | ⚡ GOAL 3 |
+| Elemento | GOAL 1 | GOAL 2 | GOAL 3 |
 | :--- | :--- | :--- | :--- |
 | **Objeto** | Sistema Agio v1.0.0<br>*(API REST + Frontend)* | Sistema Agio v1.0.0<br>*(API REST + Banco de Dados)* | Sistema Agio v1.0.0<br>*(Backend Django + PostgreSQL)* |
 | **Propósito** | Avaliar a completude e a correção das funcionalidades implementadas em relação ao backlog planejado. | Verificar a estabilidade do sistema sob uso contínuo e diante de entradas inesperadas. | Medir o desempenho do sistema em operações de inventário sob condições de carga crescente. |
@@ -14,7 +14,7 @@ As metas da avaliação foram estruturadas seguindo o padrão metodológico do G
 
 ---
 
-### 🎯 GOAL 1 — Adequação Funcional
+### GOAL 1 — Adequação Funcional
 
 Medir o nível de completude e a correção das funcionalidades implementadas no sistema Agio em relação ao backlog planejado (*Controle de Acesso, Login JWT, CRUD de Itens, Dashboard, Exportação CSV, PostgreSQL*), do ponto de vista da equipe de desenvolvimento e de potenciais adotantes, no contexto de ambiente controlado via Docker Compose, com o objetivo de identificar lacunas funcionais e priorizar correções.
 
@@ -26,7 +26,7 @@ Medir o nível de completude e a correção das funcionalidades implementadas no
 
 ---
 
-### 🛡️ GOAL 2 — Confiabilidade
+### GOAL 2 — Confiabilidade
 
 Verificar a estabilidade do sistema Agio sob uso contínuo e entradas inesperadas, com foco em maturidade (cobertura de testes), disponibilidade e tolerância a falhas, do ponto de vista de operadores e administradores, no contexto da execução via Docker Compose com carga simulada de até 50 usuários simultâneos.
 
@@ -38,7 +38,7 @@ Verificar a estabilidade do sistema Agio sob uso contínuo e entradas inesperada
 
 ---
 
-### ⚡ GOAL 3 — Eficiência de Desempenho
+### GOAL 3 — Eficiência de Desempenho
 
 Medir e avaliar o comportamento temporal, a utilização de recursos e a capacidade de armazenamento/processamento do sistema Agio sob carga crescente de dados (até 10.000 itens cadastrados) e de acessos (até 50 usuários simultâneos), do ponto de vista de PMEs que exigem baixo tempo de resposta, para determinar a viabilidade de adoção do ecossistema em ambiente de produção.
 

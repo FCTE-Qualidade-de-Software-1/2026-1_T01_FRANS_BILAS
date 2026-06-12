@@ -8,7 +8,7 @@ Esta seção descreve os recursos humanos e a infraestrutura de hardware e softw
 
 Abaixo estão mapeados os membros da equipe e suas respectivas atribuições operacionais e de consolidação durante o ciclo de avaliação:
 
-| Membro | 📋 Responsabilidade na Avaliação |
+| Membro | Responsabilidade na Avaliação |
 | :--- | :--- |
 | **João Pedro Araújo** | Execução das métricas **M1**, **M2** e **M3** (*Adequação Funcional*) e consolidação dos resultados funcionais. |
 | **Rivadalvio Joaquim** | Execução das métricas **M7**, **M8** e **M9** (*Eficiência de Desempenho*) e desenvolvimento dos scripts de carga. |
@@ -22,7 +22,7 @@ Abaixo estão mapeados os membros da equipe e suas respectivas atribuições ope
 
 Para mitigar variações espúrias nos testes de desempenho local, estabeleceu-se a seguinte configuração mínima para a máquina de testes:
 
-| Recurso | 🔍 Especificação Técnica Mínima |
+| Recurso | Especificação Técnica Mínima |
 | :--- | :--- |
 | **Máquina de Teste** | Notebook ou Desktop com no mínimo 8GB de memória RAM, processador multi-core (mínimo 4 núcleos) e armazenamento em SSD. |
 | **Sistema Operacional** | Windows 10/11 configurado com Docker Desktop **ou** distribuições Linux homologadas com Docker Engine nativo. |

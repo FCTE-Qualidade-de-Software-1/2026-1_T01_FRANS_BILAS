@@ -15,7 +15,7 @@ O modelo **Goal-Question-Metric (GQM)**, proposto por Basili et al. (1994), defi
 
 A tabela abaixo estabelece as fronteiras e as diretrizes do modelo GQM aplicadas especificamente ao cenário do sistema Agio.
 
-| 🧩 Elemento | 📋 Definição no GQM | 🚀 Aplicação ao Agio |
+| Elemento | Definição no GQM | Aplicação ao Agio |
 | :--- | :--- | :--- |
 | **Objeto** | O que será analisado. | Sistema Agio v1.0.0 (Web/API). |
 | **Propósito** | Por que será analisado. | Avaliação de qualidade de software para embasar decisões de adoção e planejamento de manutenção. |
