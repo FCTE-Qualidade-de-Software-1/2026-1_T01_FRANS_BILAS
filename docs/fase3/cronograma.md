@@ -1,28 +1,32 @@
 # 3. Cronograma de Avaliação
 
-O cronograma abaixo distribui as atividades da Fase 4 (Execucao) em periodos de uma semana, alinhando as acoes a execucao planejada.
-
-## 3.1 Cronograma de Atividades
-
-| Semana | Periodo | Atividade | Métricas | Responsavel |
-|---|---|---|---|---|
-| 1 | Semana 1 | Configuracao do ambiente Docker; criacao de superusuario; validacao do deploy Vercel; instalacao de ferramentas (Locust, coverage, Postman) | - | Todos |
-| 1 | Semana 1 | Levantamento do backlog e criacao do checklist de funcionalidades | M1 | Joao Pedro |
-| 2 | Semana 2 | Execucao da inspecao Funcional (M1, M3); execucao dos testes automatizados e manuais (M2) | M1, M2, M3 | Joao Pedro |
-| 2 | Semana 2 | Execucao de cobertura de testes (M4); bateria de disponibilidade (M5); testes de tolerância a falhas (M6) | M4, M5, M6 | Eduardo |
-| 3 | Semana 3 | Geracao da massa de dados sinteticos; medicao de tempo de resposta (M7); teste de carga (M8); medicao de degradação por volume (M9) | M7, M8, M9 | Rivadalvio |
-| 3 | Semana 3 | Consolidacao dos dados brutos; upload de evidencias no repositorio | Todas | Todos |
-| 4 | Semana 4 | Analyse dos resultados; comparacao com critérios de julgamento; elaboracao de graficos | Todas | Beatriz + Joao Pedro |
-| 4 | Semana 4 | Redacao do relatorio final; atualizacao do GitPages; release EU2 | - | Todos |
+O cronograma abaixo distribui as atividades da Fase 4 (Execução) em períodos semanais, garantindo o alinhamento das ações práticas ao planejamento estratégico das metas.
 
 ---
 
-## 3.2 Marcos de Entrega
+## 3.1 Cronograma de Atividades
 
-| Marco | Data prevista | Descrição |
-|---|---|---|
-| Ambiente configurado | Final da Semana 1 | Docker rodando, ferramentas instaladas, deploy acessivel |
-| Dados de Adequacao Funcional coletados | Final da Semana 2 | M1, M2, M3 com evidencias |
-| Dados de Confiabilidade coletados | Final da Semana 2 | M4, M5, M6 com evidencias |
-| Dados de Eficiencia coletados | Final da Semana 3 | M7, M8, M9 com evidencias |
-| Relatorio final e GitPages atualizados | Final da Semana 4 | Entrega EU2 |
+| 🗓️ Semana | ⏱️ Período | 📝 Atividade | 📊 Métricas | 👤 Responsável |
+| :---: | :---: | :--- | :---: | :--- |
+| **Semana 1** | Período 1 | Configuração do ambiente Docker; criação de superusuário; validação do deploy na Vercel; instalação de ferramentas (*Locust, coverage, Postman*). | — | **Todos** |
+| **Semana 1** | Período 1 | Levantamento do backlog e criação do checklist detalhado de funcionalidades do sistema. | **M1** | João Pedro |
+| **Semana 2** | Período 2 | Execução da inspeção funcional (**M1**, **M3**) e execução das baterias de testes automatizados e manuais (**M2**). | **M1, M2, M3** | João Pedro |
+| **Semana 2** | Período 2 | Execução de cobertura de testes (**M4**); bateria de testes de disponibilidade (**M5**); testes de tolerância a falhas (**M6**). | **M4, M5, M6** | Eduardo |
+| **Semana 3** | Período 3 | Geração da massa de dados sintéticos via script; medição de tempo de resposta (**M7**); teste de carga (**M8**); medição de degradação por volume (**M9**). | **M7, M8, M9** | Rivadalvio |
+| **Semana 3** | Período 3 | Consolidação geral dos dados brutos coletados e upload das evidências estruturadas no repositório. | **Todas** | **Todos** |
+| **Semana 4** | Período 4 | Análise aprofundada dos resultados; comparação com os critérios de julgamento estabelecidos; elaboração de gráficos estatísticos. | **Todas** | Beatriz <br> João Pedro |
+| **Semana 4** | Período 4 | Redação do relatório técnico final; atualização e publicação no GitPages; fechamento da release EU2. | — | **Todos** |
+
+---
+
+## 3.2 Marcos de Entrega (Milestones)
+
+Acompanhe os principais pontos de virada e entregáveis previstos ao longo das quatro semanas de execução do plano:
+
+| 🏆 Marco / Deliverable | 📅 Data Prevista | 📄 Descrição do Status Esperado |
+| :--- | :---: | :--- |
+| 🛡️ **Ambiente Configurado** | Final da Semana 1 | Ecossistema Docker totalmente operacional, ferramentas analíticas instaladas e deploy externo na Vercel validado. |
+| 🎯 **Dados de Adequação Coletados** | Final da Semana 2 | Métricas **M1**, **M2** e **M3** consolidadas com suas respectivas evidências e logs anexados. |
+| 🔒 **Dados de Confiabilidade Coletados** | Final da Semana 2 | Métricas **M4**, **M5** e **M6** finalizadas, contendo relatórios de cobertura de código e falhas controladas. |
+| ⚡ **Dados de Eficiência Coletados** | Final da Semana 3 | Métricas **M7**, **M8** e **M9** concluídas com os relatórios gerados pelas ferramentas Locust e scripts de estresse. |
+| 🚀 **Relatório Final & GitPages** | Final da Semana 4 | Documentação final revisada, gráficos gerados e homologação concluída para a entrega da **Release EU2**. |
