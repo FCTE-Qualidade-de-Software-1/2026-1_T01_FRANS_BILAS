@@ -113,23 +113,23 @@ nav:
       
 
   -  Fase 2:
-      - Introducao e Objetivos: fase2/introducao.md
+      - Introdução e Objetivos: fase2/introducao.md
       - Metodologia GQM: fase2/metodologia_gqm.md
-      - Metas, Questoes e Metricas: fase2/metas_gqm.md
-      - Adequacao Functional: fase2/adequacao_funcional.md
+      - Metas, Questões e Métricas: fase2/metas_gqm.md
+      - Adequação Funcional: fase2/adequacao_funcional.md
       - Confiabilidade: fase2/confiabilidade.md
-      - Eficiencia de Desempenho: fase2/eficiencia_desempenho.md
-      - Resumo das Metricas: fase2/resumo_metricas.md
+      - Eficiência de Desempenho: fase2/eficiencia_desempenho.md
+      - Resumo das Métricas: fase2/resumo_metricas.md
 
   -  Fase 3:
-      - Metodo e Instrucoes de Coleta: fase3/metodo_avaliacao.md
+      - Método e Instruções de Coleta: fase3/metodo_avaliacao.md
       - Recursos e Ambiente: fase3/recursos_ambiente.md
       - Cronograma: fase3/cronograma.md
 
   -  Fase 4:
-      - Execucao das Medicoes: fase4/execucao_medicoes.md
-      - Analyse e Respostas GQM: fase4/analise_gqm.md
-      - Julgamento e Conclusoes: fase4/julgamento_conclusoes.md
+      - Execução das Medições: fase4/execucao_medicoes.md
+      - Análise e Respostas GQM: fase4/analise_gqm.md
+      - Julgamento e Conclusões: fase4/julgamento_conclusoes.md
 
   -  Projeto:
       - Contribuição da Equipe: Projeto/contribuicao_equipe.md
