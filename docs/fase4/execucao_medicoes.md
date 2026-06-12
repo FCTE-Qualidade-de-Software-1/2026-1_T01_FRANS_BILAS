@@ -36,10 +36,14 @@ Verificação sistemática do backlog mapeado em relação às entregas funciona
 | 7 | Painel Admin Django | 🟢 Sim | 200 | Interface administrativa nativa do Django acessível. |
 | 8 | Fluxo de Logout | 🟢 Sim | 200 | Sessão do usuário encerrada com redirecionamento seguro. |
 
-> [!NOTE]
-> **Resultado Final (M1):** `ICF = 8 / 8 = 100,0%`
-> <br>**Nível de Maturidade:** 🟢 **Excelente**
-> <br>*Análise:* Todas as funcionalidades previstas no backlog original estão integralmente implementadas e acessíveis. O ecossistema do sistema cobre com sucesso o controle de acessos, o CRUD operacional de estoque, dashboards e rotinas de exportação.
+
+!!! note "Resultado Final (M1)"
+
+    **ICF = 8 / 8 = 100,0%**
+
+    **Nível de Maturidade:** 🟢 **Excelente**
+
+    *Análise:* Todas as funcionalidades previstas no backlog original estão integralmente implementadas e acessíveis. O ecossistema do sistema cobre com sucesso o controle de acessos, o CRUD operacional de estoque, dashboards e rotinas de exportação.
 
 ---
 
@@ -60,12 +64,14 @@ Execução de cenários funcionais para validação das regras de negócio e com
 | 9 | Requisição `GET` sem o parâmetro obrigatório `product` | HTTP 400 | HTTP 400 | 🟢 Correto |
 | 10 | Requisição `POST` omitindo campos obrigatórios | HTTP 400 | HTTP 400 | 🟢 Correto |
 
-> [!WARNING]
-> **Nota de Falha (Caso de Teste 8):** O teste falhou porque o endpoint do dashboard emite um redirecionamento HTTP 302 em vez de renderizar diretamente os dados quando consumido via API de testes. Isso ocorre devido ao middleware de controle de sessão web que força a validação estrita do `user_id`.
+!!! warning "Nota de Falha (Caso de Teste 8)"
+    **O teste falhou porque o endpoint do dashboard emite um redirecionamento HTTP 302 em vez de renderizar diretamente os dados quando consumido via API de testes. Isso ocorre devido ao middleware de controle de sessão web que força a validação estrita do `user_id`.**
 
-> [!NOTE]
-> **Resultado Final (M2):** `TCF = 9 / 10 = 90,0%`
-> <br>**Nível de Maturidade:** 🔵 **Bom**
+!!! note "Resultado Final (M2)"
+
+    **TCF = 9 / 10 = 90,0%**
+
+    **Nível de Maturidade:** 🔵 **Bom**
 
 ---
 
@@ -82,9 +88,10 @@ Avaliação da cobertura sistêmica sobre a jornada operacional de gerenciamento
 | 5 | Remoção/Baixa de itens do inventário | 🟢 Completo | Rota `DELETE /product-manager/` elimina o registro emitindo HTTP 202. |
 | 6 | Exportação de dados consolidados (CSV) | 🟢 Completo | Rota `GET /dashboard/export/csv/` faz o streaming de arquivo CSV válido. |
 
-> [!NOTE]
-> **Resultado Final (M3):** `IAT = 5 / 6 = 83,3%`
-> <br>**Nível de Maturidade:** 🔵 **Bom**
+
+!!! note "Resultado Final (M3)"
+    **IAT = 5 / 6 = 83,3%**
+    **Nível de Maturidade:** 🔵 **Bom**
 
 ---
 
@@ -111,10 +118,18 @@ Avaliação da cobertura sistêmica sobre a jornada operacional de gerenciamento
     TOTAL                             190     82    57%
     ```
 
-> [!CAUTION]
-> **Resultado Final (M4):** `TMCT = 0% pass rate` (0 testes implementados) \| **Cobertura Nominal:** `57%`
-> <br>**Nível de Maturidade:** 🔴 **Insuficiente**
-> <br>*Análise Crítica:* O projeto **não possui nenhum teste automatizado escrito**. Os arquivos estruturais `tests.py` de todas as aplicações backend contêm apenas o comentário padrão do framework (`# Create your tests here.`). A cobertura indicada de 57% é um falso-positivo técnico: reflete apenas as linhas de código interpretadas nativamente pelo Django ao realizar o carregamento e a importação inicial dos módulos, e não testes reais de asserção.
+!!! danger "Resultado Final (M4)"
+
+    **TMCT:** `0% pass rate` (0 testes implementados)  
+    **Cobertura Nominal:** `57%`
+
+    **Nível de Maturidade:** 🔴 **Insuficiente**
+
+    *Análise Crítica:*  
+    O projeto **não possui nenhum teste automatizado escrito**.  
+    Os arquivos estruturais `tests.py` de todas as aplicações backend contêm apenas o comentário padrão do framework (`# Create your tests here.`).
+
+    A cobertura indicada de 57% é um falso-positivo técnico: ela reflete apenas as linhas de código interpretadas nativamente pelo Django durante o carregamento e a importação inicial dos módulos, e não testes reais de asserção.
 
 ---
 
@@ -126,11 +141,25 @@ Mapeamento de estabilidade sob disparo sequencial contínuo de chamadas na API:
 | :--- | :---: | :---: | :---: | :---: |
 | **Ambiente Local** *(Docker + PostgreSQL)* | 200 | 200 | 0 | **100,0%** |
 
-> [!NOTE]
-> **Resultado Final (M5):** `TDO = 100,0%`
-> <br>**Nível de Maturidade:** 🟢 **Excelente**
-> <br>*Detalhamento:* O script injetou com sucesso 200 requisições sequenciais do tipo `GET` voltadas ao endpoint `/product-manager/?product=teste` utilizando intervalos regulares de 0,5 segundos. Todas as chamadas retornaram HTTP 404 de forma consistente (comportamento correto, haja vista que o item buscado era sintético e inexistente). Não houve registros de timeouts ou instabilidades de infraestrutura. A latência média fixou-se em **21ms**.
-> <br>*Nota de Engenharia:* O endpoint de exportação de CSV necessita de cookies de sessão web válidos. Devido ao bug de estouro HTTP 500 na rota de login via API (visto em M3), a bateria automatizada de disponibilidade foi migrada defensivamente para a rota pública da API REST (`/product-manager/`), que representa o núcleo das operações do sistema.
+
+!!! note "Resultado Final (M5)"
+
+    **TDO:** `100,0%`
+
+    **Nível de Maturidade:** 🟢 **Excelente**
+
+    *Detalhamento:*  
+    O script injetou com sucesso 200 requisições sequenciais do tipo `GET` voltadas ao endpoint `/product-manager/?product=teste`, utilizando intervalos regulares de 0,5 segundos.
+
+    Todas as chamadas retornaram HTTP 404 de forma consistente, comportamento considerado correto, visto que o item buscado era sintético e inexistente.
+
+    Não houve registros de timeouts ou instabilidades de infraestrutura.  
+    A latência média observada foi de **21 ms**.
+
+    *Nota de Engenharia:*  
+    O endpoint de exportação de CSV necessita de cookies de sessão web válidos.
+
+    Devido ao erro HTTP 500 identificado na rota de login via API (observado em M3), a bateria automatizada de disponibilidade foi migrada defensivamente para a rota pública da API REST (`/product-manager/`), representando o núcleo operacional do sistema.
 
 ---
 
@@ -156,14 +185,24 @@ Comportamento do barramento da API diante de entradas corrompidas ou requisiçõ
 | 14 | Requisição `DELETE` para produto inexistente no banco | 404 | 404 | 🟢 Tratado |
 | 15 | Requisição `DELETE` omitindo o parâmetro `product_name` | 400 | 400 | 🟢 Tratado |
 
-> [!WARNING]
-> **Vulnerabilidades Identificadas:**
-> * **Casos 4 e 5:** Os campos de categoria e descrição possuem tratamento *fallback* direto no modelo de dados do Django (`"Sem categoria"` e `"Sem descrição"`). Portanto, a aplicação aceita a criação omitindo os campos. Esse comportamento é considerado intencional pelo design do backend.
-> * **Caso 7:** O sistema possui uma **falha real de validação**, permitindo a criação de produtos com preços negativos no estoque (retornando HTTP 201). Não há travas de consistência matemática nas camadas de *Serializer* ou de *Model*.
 
-> [!NOTE]
-> **Resultado Final (M6):** `ITF = 12 / 15 = 80,0%`
-> <br>**Nível de Maturidade:** 🔵 **Bom**
+!!! warning "Vulnerabilidades Identificadas"
+
+    * **Casos 4 e 5:**  
+      Os campos de categoria e descrição possuem tratamento *fallback* diretamente no modelo de dados do Django (`"Sem categoria"` e `"Sem descrição"`).
+
+      Portanto, a aplicação aceita a criação de registros mesmo com a omissão desses campos. Esse comportamento é considerado intencional pelo design do backend.
+
+    * **Caso 7:**  
+      O sistema possui uma **falha real de validação**, permitindo a criação de produtos com preços negativos no estoque, retornando HTTP 201.
+
+      Não há mecanismos de consistência matemática implementados nas camadas de *Serializer* ou de *Model*.
+
+!!! note "Resultado Final (M6)"
+
+    **ITF:** `12 / 15 = 80,0%`
+
+    **Nível de Maturidade:** 🔵 **Bom**
 
 ---
 
@@ -179,10 +218,19 @@ Métricas de latência bruta coletadas sob condições controladas de concorrên
 | `GET /dashboard/export/csv/` | 50 | 2,8 ms | 1,8 ms | 38,3 ms |
 | **Média Consolidada (TMRE Geral)** | **200** | **2,3 ms** | — | — |
 
-> [!NOTE]
-> **Resultado Final (M7):** `TMRE = 2,3 ms`
-> <br>**Nível de Maturidade:** 🟢 **Excelente**
-> <br>*Nota de Ambiente:* Os tempos acima foram levantados utilizando o cliente de teste nativo do Django (*in-process test client*) rodando sobre SQLite. Em cenários de implantação real (Docker + barramento do PostgreSQL), esses tempos sofrerão acréscimos marginais devido à latência de rede entre camadas, mantendo, contudo, a proporcionalidade entre as rotas.
+
+!!! note "Resultado Final (M7)"
+
+    **TMRE:** `2,3 ms`
+
+    **Nível de Maturidade:** 🟢 **Excelente**
+
+    *Nota de Ambiente:*  
+    Os tempos apresentados foram obtidos utilizando o cliente de testes nativo do Django (*in-process test client*) executando sobre SQLite.
+
+    Em cenários reais de implantação — utilizando Docker e barramento do PostgreSQL — esses valores tendem a sofrer pequenos acréscimos decorrentes da latência de comunicação entre camadas.
+
+    Ainda assim, a proporcionalidade de desempenho entre as rotas deve permanecer equivalente.
 
 ---
 
@@ -206,11 +254,21 @@ Consumo de hardware e comportamento da aplicação sob estresse computacional ge
 | `GET /dashboard/export/csv/` | 591 | 0,00% | 21 ms | 54 ms | 9,99 |
 | **Massa Agregada** | **2.803** | **~0,00% Erros 5xx** | **21 ms** | **67 ms** | **47,39** |
 
-> [!NOTE]
-> **Resultado Final (M8):** Consumo de RAM PostgreSQL: **32,58 MB** \| Latência média sob estresse: **21ms** (Percentil 95: **31ms**).
-> <br>**Nível de Maturidade:** 🟢 **Excelente**
-> <br>*Nota:* O servidor Django foi executado diretamente no host Windows por questões de infraestrutura de teste, fazendo com que o utilitário `docker stats` monitorasse exclusivamente o container do banco de dados PostgreSQL. O desempenho global do servidor web foi inferido com precisão através das métricas de vazão e latência do Locust.
 
+!!! note "Resultado Final (M8)"
+
+    **Consumo de RAM PostgreSQL:** `32,58 MB`  
+    **Latência média sob estresse:** `21 ms`  
+    **Percentil 95:** `31 ms`
+
+    **Nível de Maturidade:** 🟢 **Excelente**
+
+    *Nota:*  
+    O servidor Django foi executado diretamente no host Windows por limitações da infraestrutura de testes.
+
+    Dessa forma, o utilitário `docker stats` monitorou exclusivamente o container do PostgreSQL.
+
+    Ainda assim, o desempenho global do servidor web pôde ser inferido de maneira confiável por meio das métricas de vazão e latência coletadas pelo Locust.
 ---
 
 ### M9 — Degradação de Desempenho por Volume de Dados (DDVD)
@@ -224,7 +282,16 @@ Análise de escalabilidade temporal do sistema à medida que a base de dados sof
 | **5.000** | 46,1 ms | +2.612% |
 | **10.000** | 91,0 ms | +5.253% |
 
-> [!CAUTION]
-> **Resultado Final (M9):** `DDVD = 5.253%`
-> <br>**Nível de Maturidade:** 🔴 **Insuficiente**
-> <br>*Análise Diagnóstica:* O sistema apresenta uma degradação severa e acelerada de performance devido à **ausência completa de paginação ou segmentação de memória** no método de exportação. A função associada à rota (`export_dashboard_csv`) realiza a chamada de busca irrestrita `ProductTable.objects.all()` diretamente na memória da aplicação para depois convertê-la em arquivo de texto. Conforme a base escala para os 10.000 registros, o tempo de resposta cresce de forma linear agressiva, gerando gargalo crítico na CPU e no consumo de RAM.
+
+!!! danger "Resultado Final (M9)"
+
+    **DDVD:** `5.253%`
+
+    **Nível de Maturidade:** 🔴 **Insuficiente**
+
+    *Análise Diagnóstica:*  
+    O sistema apresenta degradação severa e progressiva de desempenho devido à **ausência completa de paginação ou segmentação de memória** no método de exportação.
+
+    A função associada à rota (`export_dashboard_csv`) executa a consulta irrestrita `ProductTable.objects.all()` diretamente na memória da aplicação antes da conversão para o arquivo CSV.
+
+    À medida que a base cresce para volumes próximos de 10.000 registros, o tempo de resposta aumenta de forma linear e agressiva, produzindo gargalos críticos de CPU e consumo de RAM.
