@@ -18,8 +18,11 @@ As metas da avaliação foram estruturadas seguindo o padrão metodológico do G
 
 Medir o nível de completude e a correção das funcionalidades implementadas no sistema Agio em relação ao backlog planejado (*Controle de Acesso, Login JWT, CRUD de Itens, Dashboard, Exportação CSV, PostgreSQL*), do ponto de vista da equipe de desenvolvimento e de potenciais adotantes, no contexto de ambiente controlado via Docker Compose, com o objetivo de identificar lacunas funcionais e priorizar correções.
 
-> [!NOTE]
-> **Hipótese 1 (H1):** Espera-se que o sistema apresente um alto índice de completude funcional (acima de 75%), dado que o projeto passou por 9 sprints de desenvolvimento, embora possam existir lacunas em funcionalidades secundárias.
+!!! note "Hipótese 1 (H1)"
+
+    Espera-se que o sistema apresente um alto índice de completude funcional (acima de 75%), considerando que o projeto passou por nove sprints de desenvolvimento.
+
+    Ainda assim, podem existir lacunas relacionadas a funcionalidades secundárias ou componentes menos priorizados durante a evolução do sistema.
 
 ---
 
