@@ -42,5 +42,8 @@ Verificar a estabilidade do sistema Agio sob uso contínuo e entradas inesperada
 
 Medir e avaliar o comportamento temporal, a utilização de recursos e a capacidade de armazenamento/processamento do sistema Agio sob carga crescente de dados (até 10.000 itens cadastrados) e de acessos (até 50 usuários simultâneos), do ponto de vista de PMEs que exigem baixo tempo de resposta, para determinar a viabilidade de adoção do ecossistema em ambiente de produção.
 
-> [!IMPORTANT]
-> **Hipótese 3 (H3):** Espera-se que o tempo de resposta se mantenha abaixo de 1 segundo para operações comuns, mas há uma forte tendência de degradação significativa com volumes superiores a 5.000 itens, dado que não há evidências explícitas de otimização de consultas (*query tuning*) no repositório atual.
+!!! info "Hipótese 3 (H3)"
+
+    Espera-se que o tempo de resposta permaneça abaixo de 1 segundo para operações comuns do sistema.
+
+    Contudo, existe uma forte tendência de degradação significativa de desempenho em cenários com volumes superiores a 5.000 itens, considerando a ausência de evidências explícitas de otimização de consultas (*query tuning*) no repositório atual.
