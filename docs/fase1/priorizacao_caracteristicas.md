@@ -65,7 +65,7 @@ Durante o processo de seleção, alguns *trade-offs* foram discutidos pela equip
 !!! tip "Adequação Functional × Usabilidade"
 
     Ambas impactam diretamente o usuário final.  
-    Entretanto, Adequação Functional foi priorizada por permitir
+    Entretanto, Adequação Funcional foi priorizada por permitir
     medição objetiva com base no backlog e nas funcionalidades implementadas.
 
     A avaliação de Usabilidade exigiria testes com usuários reais,

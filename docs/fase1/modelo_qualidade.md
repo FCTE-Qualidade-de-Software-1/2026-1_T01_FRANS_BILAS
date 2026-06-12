@@ -75,20 +75,20 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 | Usabilidade | Excluída | Demandaria participação de usuários reais em testes observacionais. |
 | Segurança |  Excluída | Exigiria ferramentas e métodologia fora do escopo da disciplina. |
 | Manutenibilidade |  Excluída | Requer análise profunda de código e métricas avançadas. |
-| Compatibilidade |  Excluída | Não representa um risco relevant para o contexto do sistema. |
+| Compatibilidade |  Excluída | Não representa um risco relevante para o contexto do sistema. |
 | Portabilidade |  Excluída | O ambiente Docker já reduz problemas de implantação. |
 
 ---
 
 ## Subcaracterísticas Selecionadas
 
-### Adequação Functional
+### Adequação Funcional
 
 | Subcaracterística | Objetivo |
 |:--|:--|
-| Completude functional | Verificar se todas as funcionalidades planejadas foram implementadas |
-| Correção functional | Avaliar se os resultados produzidos estão corretos |
-| Adequação functional | Verificar pertinência das funcionalidades para o domínio do sistema |
+| Completude funcional | Verificar se todas as funcionalidades planejadas foram implementadas |
+| Correção funcional | Avaliar se os resultados produzidos estão corretos |
+| Adequação funcional | Verificar pertinência das funcionalidades para o domínio do sistema |
 
 ---
 
