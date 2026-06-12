@@ -75,6 +75,13 @@ Contudo, a ausência de uma suíte de testes automatizados e o crescimento linea
 
     Recomenda-se, preferencialmente, a utilização do sistema por meio da interface web tradicional.
 
-> [!CAUTION]
-> **Restrição de Implantação:**
-> **Não é recomendada** a implantação do sistema em ambientes corporativos ou corporações de médio porte sem a prévia execução das melhorias de **Alta Prioridade** listadas na seção 3.3 (implementação de paginação e validação de payloads). A ausência desses ajustes expõe a empresa a riscos de inconsistência financeira no estoque e indisponibilidade do servidor por esgotamento de recursos.
+!!! warning "Restrição de Implantação"
+
+    **Não é recomendada** a implantação do sistema em ambientes corporativos ou organizações de médio porte sem a implementação prévia das melhorias classificadas como **Alta Prioridade**, descritas na seção 3.3.
+
+    Entre essas melhorias, destacam-se:
+
+    - implementação de paginação;
+    - validação adequada de *payloads*.
+
+    A ausência desses mecanismos expõe a organização a riscos de inconsistência financeira no estoque e possíveis indisponibilidades do servidor decorrentes do esgotamento de recursos computacionais.
