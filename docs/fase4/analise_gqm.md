@@ -1,83 +1,78 @@
-# 2. Analyse e Respostas GQM
+# 2. Análise e Respostas GQM
 
-## 2.1 Consolidacao dos Resultados
-
-| ID | Métrica | Resultado | Nivel |
-|---|---|---|---|
-| M1 | Indice de Completude Funcional (ICF) | 100,0% | Excelente |
-| M2 | Taxa de Correcao Funcional (TCF) | 90,0% | Bom |
-| M3 | Indice de Adequacao a Tarefa (IAT) | 83,3% | Bom |
-| M4 | Taxa de Maturidade por Cobertura de Testes (TMCT) | 0% pass (0 testes) / 57% cobertura | Insuficiente |
-| M5 | Taxa de Disponibilidade Operacional (TDO) | 100,0% (200/200 requisições) | Excelente |
-| M6 | Indice de Tolerancia a Falhas (ITF) | 80,0% | Bom |
-| M7 | Tempo Medio de Resposta por Endpoint (TMRE) | 2,3ms | Excelente |
-| M8 | Utilizacao de Recursos sob Carga (URC) | PostgreSQL: CPU 0%, RAM 32,58 MB; Django: ~21ms tempo medio sob 50 usuarios | Excelente |
-| M9 | Degradacao de Desempenho por Volume (DDVD) | 5.253% | Insuficiente |
+Nesta seção, os dados brutos coletados são consolidados, cruzados e interpretados à luz das metas de qualidade estabelecidas na abordagem GQM, permitindo avaliar o real estado de maturidade do sistema Agio.
 
 ---
 
-## 2.2 Respostas as Questões GQM
+## 2.1 Consolidação dos Resultados
 
-### GOAL 1 — Adequacao Funcional
+A tabela abaixo resume os indicadores obtidos para cada métrica, correlacionando-os com suas respectivas réguas de corte e níveis de julgamento:
 
-**Q1: Quantas das funcionalidades previstas no backlog estão implementadas?**
-
-Das 8 funcionalidades previstas no backlog (homepage, login, dashboard, exportacao CSV, CRUD de produtos via API, admin, logout), todas 8 estão efetivamente implementadas e acessiveis, resultando em um ICF de 100%. O sistema cobre a totalidade do escopo Funcional planejado, incluindo operacoes CRUD completas, autenticacao, painel administrative e exportacao de dados.
-
-**Q2: Os resultados retornados pelos endpoints correspondem ao comportamento especificado?**
-
-Em 9 de 10 casos de teste, os endpoints retornaram o comportamento esperado (TCF = 90%). A unica falha identificada foi no acesso ao dashboard via API, que retorna HTTP 302 (redirect) em vez de HTTP 200, devido ao controle de sessão que valida `user_id` antes de renderizar a página. Isso não e um bug Funcional grave, mas uma restricao do fluxo de autenticacao baseado em sessão.
-
-**Q3: As funcionalidades são suficientes para cobrir os fluxos essenciais de gestão de inventario?**
-
-Cinco dos seis fluxos de trabalho essenciais estão completamente suportados (IAT = 83,3%). O unico fluxo parcial e o login via API REST (POST retorna erro 500), embora o login via formulario web funcione normalmente. Os fluxos de cadastro, consulta, edicao, remocao e exportacao funcionam sem problemas.
-
-**Resposta ao GOAL 1:** O sistema Agio apresenta nivel **Bom** em Adequacao Funcional. A hipotese H1 (completude acima de 75%) foi **confirmada e superada** (100%). O sistema atende plenamente as necessidades basicas de gestão de inventario, com ressalvas na autenticacao via API.
+| ID | Métrica Analisada | Resultado Obtido | Nível de Julgamento |
+| :---: | :--- | :---: | :---: |
+| **M1** | Índice de Completude Funcional (ICF) | 100,0% | 🟢 **Excelente** |
+| **M2** | Taxa de Correção Funcional (TCF) | 90,0% | 🔵 **Bom** |
+| **M3** | Índice de Adequação à Tarefa (IAT) | 83,3% | 🔵 **Bom** |
+| **M4** | Taxa de Maturidade por Cobertura de Testes (TMCT) | 0% pass *(0 testes)* / 57% cob. | 🔴 **Insuficiente** |
+| **M5** | Taxa de Disponibilidade Operacional (TDO) | 100,0% *(200/200 reqs)* | 🟢 **Excelente** |
+| **M6** | Índice de Tolerância a Falhas (ITF) | 80,0% | 🔵 **Bom** |
+| **M7** | Tempo Médio de Resposta por Endpoint (TMRE) | 2,3 ms | 🟢 **Excelente** |
+| **M8** | Utilização de Recursos sob Carga (URC) | PostgreSQL: CPU 0% \| RAM 32,58 MB<br>Django: ~21ms *(50 usuários)* | 🟢 **Excelente** |
+| **M9** | Degradação de Desempenho por Volume (DDVD) | 5.253% | 🔴 **Insuficiente** |
 
 ---
 
-### GOAL 2 — Confiabilidade
+## 2.2 Respostas às Questões GQM
 
-**Q4: Qual e a cobertura e taxa de sucesso dos testes?**
+### 🎯 GOAL 1 — Adequação Funcional
 
-O sistema não possui nenhum teste automatizado (TMCT = 0% pass rate). Os arquivos `tests.py` de todos os tres apps (dashboard, homepage, login) contem apenas o comentário padrao do Django. A cobertura de codigo medida pelo coverage.py e de 57%, mas reflete apenas o codigo importado, não testes reais. Isso representa uma fragilidade critica: qualquer alteracao no codigo pode introduzir regressoes sem deteccao automatica.
+* **Q1: Quantas das funcionalidades previstas no backlog estão efetivamente implementadas e acessíveis?**
+    * *Resposta:* Das 8 funcionalidades mapeadas no backlog (*homepage, login, dashboard, exportação CSV, CRUD de produtos via API, admin, logout*), todas as 8 estão 100% funcionais e disponíveis, resultando em um ICF de 100%. O sistema cobre com sucesso todo o escopo de gerenciamento planejado.
+* **Q2: Os resultados retornados pelos endpoints da API correspondem ao comportamento especificado?**
+    * *Resposta:* Em 9 dos 10 cenários de testes estruturados, a API devolveu o comportamento esperado (TCF = 90%). A única inconsistência mapeada ocorreu na rota de visualização do dashboard via requisição de API, que emite um redirecionamento HTTP 302 em vez de estabilizar em HTTP 200, devido ao forte acoplamento do controle de sessão web (`user_id`).
+* **Q3: As funcionalidades implementadas são suficientes para cobrir os fluxos de trabalho essenciais de gestão de inventário para PMEs?**
+    * *Resposta:* Cinco dos seis fluxos vitais do dia a dia de uma empresa estão perfeitamente amparados (IAT = 83,3%). O único fluxo que operou parcialmente foi o de autenticação via API REST (o método `POST` direto estoura erro interno 500 no endpoint `/login/`), embora o acesso tradicional via formulário web funcione de forma transparente.
 
-**Q5: O sistema permanece disponivel sob carga continua?**
-
-O sistema apresentou disponibilidade de 100% (TDO = 100,0%) durante a bateria de 200 requisições sequenciais ao endpoint `/product-manager/`. Nenhum erro de servidor (5xx) ou timeout foi registrado. O endpoint respondeu consistentemente em todas as requisições, com tempo medio de 21ms. A hipotese H5 foi **confirmada e superada**.
-
-**Q6: Como o sistema responde a entradas inválidas?**
-
-Em 12 de 15 casos de falha testados, o sistema tratou a entrada inválida corretamente (ITF = 80%). As falhas identificadas são: (1) aceita precos negativos sem validacao, (2) campos `category` e `description` tem defaults no modelo, o que permite criacao sem else — comportamento intencional mas potencialmente problematico. A falha mais grave e a aceitacao de precos negativos, que pode gerar inconsistencias no inventario.
-
-**Resposta ao GOAL 2:** O sistema Agio apresenta nivel **Insuficiente** em Confiabilidade devido a ausencia total de testes automatizados (M4). A tolerância a falhas (M6 = 80%, Bom) e parcialmente compensatoria, mas não substitui a falta de testes. A hipotese H4 (pass rate acima de 80%) foi **refutada** — não ha testes. A hipotese H6 (erros 500 em entradas inválidas) foi **parcialmente confirmada**: o login via POST retorna 500, embora a maioria dos endpoints trate falhas adequadamente.
-
----
-
-### GOAL 3 — Eficiencia de Desempenho
-
-**Q7: Qual e o tempo medio de resposta dos endpoints criticos?**
-
-O tempo medio de resposta geral foi de 2,3ms (TMRE), classificado como Excelente. Todos os endpoints responderam em menos de 5ms em media, com o endpoint de criacao de produto (POST) sendo o mais lento (4,3ms). Em ambiente Docker com PostgreSQL, os tempos absolutos serao maiores, mas dada a margem significativa em relacao ao limit de 500ms, o desempenho deve se manter no nivel Excelente.
-
-**Q8: Qual e o consumo de CPU e memoria sob carga?**
-
-Com 50 usuarios simultâneos durante 60 segundos (Locust), o sistema processou 2.803 requisições a uma taxa media de 47,39 req/s. O PostgreSQL consumiu apenas 32,58 MB de RAM com CPU em 0%, classificado como Excelente. O Django manteve tempo de resposta medio de 21ms com percentile 95 de 31ms. A hipotese H8 foi **confirmada**.
-
-**Q9: O tempo de resposta se mantem aceitavel com volume crescente?**
-
-O tempo de resposta degrada drasticamente com o aumento do volume de dados: de 1,7ms com 100 items para 91ms com 10.000 items (DDVD = 5.253%). Embora os tempos absolutos ainda sejam baixos (91ms esta dentro do nivel Excelente em termos absolutos), a **taxa de degradação** e critica e indica que o sistema não escala bem. A causa raiz e a ausencia de páginacao no endpoint de listagem/exportacao, que executa `ProductTable.objects.all()` sem limit.
-
-**Resposta ao GOAL 3:** O sistema Agio apresenta resultados mistos em Eficiencia de Desempenho. O tempo de resposta absoluto e excelente (M7), mas a degradação por volume e insuficiente (M9). A hipotese H9 (degradação acima de 50%) foi **confirmada e significativamente superada**. Para PMEs com ate 1.000 items, o desempenho e adequado; acima disso, a implementacao de páginacao e essential.
+> [!NOTE]
+> **Veredito do GOAL 1 — Adequação Funcional:** 🔵 **BOM**
+> <br>A hipótese inicial **H1** (completude acima de 75%) foi **confirmada e superada**, atingindo a marca de 100%. O sistema atende plenamente aos requisitos funcionais necessários para a gestão de estoque de pequenas empresas, restando apenas aplicar refinamentos pontuais nas chamadas de autenticação via API externa.
 
 ---
 
-## 2.3 Relacao entre as Caracteristicas
+### 🛡️ GOAL 2 — Confiabilidade
 
-Conforme exigido nas premissas do projeto, apresentamos a relacao entre as tres características avaliadas:
+* **Q4: Qual é a cobertura de testes automatizados do sistema e qual a taxa de sucesso dos testes existentes?**
+    * *Resposta:* O sistema possui uma carência crítica de testes (TMCT = 0% de taxa de sucesso por ausência de amostragem). Os arquivos de teste de todas as aplicações backend estão vazios, contendo apenas os comentários estruturais do Django. A cobertura de 57% gerada pelas ferramentas é puramente nominal e decorrente da carga de arquivos no boot do framework. Isso sinaliza um risco alto de regressão para futuras manutenções.
+* **Q5: O sistema permanece disponível e operacional durante sessões de uso contínuo e sob carga simulada?**
+    * *Resposta:* O ecossistema respondeu de forma robusta, cravando 100% de disponibilidade (TDO = 100,0%) durante os testes de estresse sequenciais. Não houve queda de pacotes, timeouts ou erros na faixa HTTP 5xx, mantendo respostas médias na casa de 21ms.
+* **Q6: Como o sistema responde a entradas inválidas, requisições malformadas e tentativas de acesso não autorizado?**
+    * *Resposta:* O tratamento de exceções barrou com sucesso 12 das 15 falhas intencionais injetadas (ITF = 80%). Os gargalos residem na aceitação de valores monetários negativos no campo de preço (criando itens com HTTP 201) e na aceitação de payloads sem categoria/descrição (sanados por valores default inseridos diretamente no banco).
 
-- **Adequacao Funcional x Confiabilidade:** Embora todas as funcionalidades estejam implementadas (M1 = 100%), a ausencia total de testes automatizados (M4 = 0%) significa que a correção dessas funcionalidades não e verificada automaticamente. Qualquer manutencao futura pode introduzir regressoes sem deteccao. A alta completude Funcional sem cobertura de testes cria uma falsa sensacao de maturidade.
+> [!CAUTION]
+> **Veredito do GOAL 2 — Confiabilidade:** 🔴 **INSUFICIENTE**
+> <br>O ecossistema falha no quesito maturidade técnica devido à **ausência total de uma suíte de testes automatizados**. A boa resiliência da API a falhas provocadas (80%) atenua o cenário, mas não substitui a segurança de testes unitários e de integração. A hipótese **H4** (pass rate acima de 80%) foi **refutada**, e a hipótese **H6** (erros 500 em entradas malformadas) foi **parcialmente confirmada** (visto o comportamento da rota de login).
 
-- **Confiabilidade x Eficiencia de Desempenho:** A tolerância a falhas (M6 = 80%) e razoavel, mas a aceitacao de precos negativos pode gerar dados inconsistentes no banco, o que agravaria a degradação de desempenho (M9) ao processar dados inválidos em consultas de listagem. Alem disso, a ausencia de validacao robusta sob carga pode multiplicar entradas inválidas.
+---
 
-- **Adequacao Funcional x Eficiencia de Desempenho:** Todas as funcionalidades implementadas (M1) apresentaram tempos de resposta excelentes (M7) em volumes baixos. Porem, a funcionalidade de exportacao CSV — que e uma das mais relevantes para PMEs — e justamente a mais afetada pela degradação por volume (M9). A funcionalidade existe, mas não escala.
+### ⚡ GOAL 3 — Eficiência de Desempenho
+
+* **Q7: Qual é o tempo médio de resposta dos endpoints críticos sob condições normais de uso?**
+    * *Resposta:* A latência base isolada em concorrência zero foi extremamente baixa, fechando em 2,3 ms (TMRE), consolidando um patamar excelente. A rota de criação de produtos (`POST`) foi a mais onerosa do grupo, gastando um tempo médio de apenas 4,3 ms.
+* **Q8: Qual é o consumo de CPU e memória do sistema sob carga de 50 usuários simultâneos?**
+    * *Resposta:* Durante a simulação de estresse (2.803 requisições sustentadas a uma vazão média de 47,39 req/s), o banco de dados PostgreSQL se manteve estável, com consumo de CPU zerado entre as transações e pico de apenas 32,58 MB de RAM. O tempo médio geral capturado pelo Locust sob carga fixou-se em excelentes 21 ms.
+* **Q9: O tempo de resposta se mantém aceitável à medida que o volume de dados cresce de 100 para 10.000 itens cadastrados?**
+    * *Resposta:* O sistema sofreu uma **degradação drástica e severa de performance**, saltando de uma latência de 1,7 ms para 91,0 ms ao atingir o teto do banco de dados (DDVD = 5.253%). Embora o tempo absoluto final (91 ms) ainda seja considerado baixo pelo usuário, a curva de crescimento é alarmante e expõe um sério problema de escalabilidade.
+
+> [!IMPORTANT]
+> **Veredito do GOAL 3 — Eficiência de Desempenho:** 🟡 **REGULAR (Resultados Mistos)**
+> <br>Embora a velocidade absoluta (TMRE) e o consumo de recursos de infraestrutura tenham sido excelentes, o sistema falha gravemente no quesito capacidade de escalabilidade de dados (M9). A hipótese **H9** (degradação acima de 50%) foi **confirmada e amplamente superada**. O ecossistema atende perfeitamente a demandas de PMEs com até 1.000 itens; acima dessa volumetria, a implementação de paginação e *query tuning* torna-se obrigatória.
+
+---
+
+## 2.3 Relação entre as Características de Qualidade
+
+Seguindo as premissas arquiteturais do projeto, as características avaliadas não operam de forma isolada. Abaixo é descrita a teia de interdependência mapeada na aplicação:
+
+* **Adequação Funcional x Confiabilidade:** Há uma falsa sensação de maturidade no projeto. Embora a aplicação entregue 100% do escopo funcional planejado (**M1**), a ausência completa de testes automatizados (**M4**) indica que o correto funcionamento das regras de negócio não possui validação de regressão. Qualquer manutenção corretiva futura pode quebrar funcionalidades estáveis sem que a equipe receba alertas automáticos.
+* **Confiabilidade x Eficiência de Desempenho:** A falha de validação que permite a gravação de preços negativos no inventário (**M6**) impacta a eficiência e a consistência do banco. O armazenamento de dados corrompidos ou matematicamente inconsistentes tende a onerar o processamento de agregação de relatórios, agravando a taxa de degradação volumétrica (**M9**) sob consultas pesadas.
+* **Adequação Funcional x Eficiência de Desempenho:** Em volumes pequenos, todas as funcionalidades entregues operam com tempos de resposta imperceptíveis (**M7**). Contudo, a funcionalidade de maior valor agregado para tomada de decisão das PMEs — a exportação de relatórios em CSV — é justamente o principal gargalo de performance do sistema por realizar a varredura irrestrita de tabelas sem limites de paginação. A funcionalidade atende ao propósito de negócio, mas não possui arquitetura para escalar.
