@@ -2,8 +2,12 @@
 
 O modelo **Goal-Question-Metric (GQM)**, proposto por Basili et al. (1994), define que cada meta de avaliação (**Goal**) deve ser desdobrada em questões (**Questions**) que reflitam aspectos observáveis do sistema, e em métricas (**Metrics**) que respondam a essas questões de forma objetiva.
 
-> [!TIP]
-> A aplicação do GQM assegura que cada métrica esteja diretamente relacionada a um objetivo de negócio ou técnico, evitando a coleta de dados e medições sem valor prático para o projeto.
+!!! tip "Aplicação do GQM"
+
+    A aplicação do modelo GQM assegura que cada métrica esteja diretamente vinculada a um objetivo técnico ou de negócio.
+
+    Dessa forma, evita-se a coleta de dados e medições sem relevância prática para a evolução e avaliação do projeto.
+
 
 ---
 
