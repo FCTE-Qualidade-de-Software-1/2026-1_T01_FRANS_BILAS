@@ -13,7 +13,7 @@ A matriz abaixo apresenta a distribuição estimada de esforço dedicado por cad
 | **Beatriz Geane Santos Lins** | 30% | 20% | 25% | 25% |
 | **Eduardo Belarmino Silva** | 10% | 0% | 0% | 0% |
 | **João Pedro Araújo de Freitas Lyra** | 40% | 50% | 45% | 45% |
-| **Manoel Castro Moura Filho** | 0% | 0% | 0% | 0% |
+| **Manoel Castro Moura Filho** | 0% | 15% | 15% | 15% |
 | **Rivadalvio Joaquim da Silva Filho** | 20% | 30% | 30% | 30% |
 
 ---
@@ -39,7 +39,7 @@ A matriz abaixo apresenta a distribuição estimada de esforço dedicado por cad
 | **Beatriz Geane Santos Lins** | Elaboração do documento de referência da Fase 2, focando na diagramação e organização visual das métricas GQM. | 20% |
 | **Eduardo Belarmino Silva** | - - - | 0% |
 | **João Pedro Araújo de Freitas Lyra** | Estruturação e formalização das metas GQM, definição analítica das métricas e estabelecimento dos critérios de julgamento para todas as características; manutenção do repositório. | 50% |
-| **Manoel Castro Moura Filho** | - - - | 0% |
+| **Manoel Castro Moura Filho** | Revisão estrutural da GitHub Pages; correção de inconsistências de formatação em Markdown/MkDocs Material; padronização de blocos admonition; ajustes de renderização e refinamento visual da documentação técnica. | 15% |
 | **Rivadalvio Joaquim da Silva Filho** | Coelaboração das métricas de desempenho e hipóteses técnicas; revisão e refinamento analítico das questões operacionais do GQM. | 30% |
 
 ---
@@ -51,7 +51,7 @@ A matriz abaixo apresenta a distribuição estimada de esforço dedicado por cad
 | **Beatriz Geane Santos Lins** | Correção, revisão e organização da gitpage | 25% |
 | **Eduardo Belarmino Silva** | - - - | 0% |
 | **João Pedro Araújo de Freitas Lyra** | Elaboração do plano de avaliação detalhado, construção das instruções procedimentais de coleta por métrica, desenho do cronograma e especificação técnica de recursos e ambiente. | 45% |
-| **Manoel Castro Moura Filho** | - - - | 0% |
+| **Manoel Castro Moura Filho** | Revisão estrutural da GitHub Pages; correção de inconsistências de formatação em Markdown/MkDocs Material; padronização de blocos admonition; ajustes de renderização e refinamento visual da documentação técnica. | 15% |
 | **Rivadalvio Joaquim da Silva Filho** | Coelaboração do plano de engenharia de testes; revisão estrita das rotinas e instruções de coleta de dados de desempenho. | 30% |
 
 ---
@@ -63,7 +63,7 @@ A matriz abaixo apresenta a distribuição estimada de esforço dedicado por cad
 | **Beatriz Geane Santos Lins** | Correção, revisão e organização da gitpage | 25% |
 | **Eduardo Belarmino Silva** | - - - | 0% |
 | **João Pedro Araújo de Freitas Lyra** | Execução empírica de todas as métricas mapeadas (M1 a M9); extração e consolidação dos dados reais; análise cruzada do GQM; redação do julgamento técnico, conclusões e documentação das evidências. | 45% |
-| **Manoel Castro Moura Filho** | - - -  | 0% |
+| **Manoel Castro Moura Filho** | Revisão estrutural da GitHub Pages; correção de inconsistências de formatação em Markdown/MkDocs Material; padronização de blocos admonition; ajustes de renderização e refinamento visual da documentação técnica.  | 15% |
 | **Rivadalvio Joaquim da Silva Filho** | Coexecução das métricas focadas em desempenho (M7, M8, M9); desenvolvimento e execução dos scripts automatizados de carga via Locust e revisão técnica da análise. | 30% |
 
 ---
