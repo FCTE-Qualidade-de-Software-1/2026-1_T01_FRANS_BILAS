@@ -1,24 +1,28 @@
-# 3.2 Adequacao Funcional — Questões e Métricas
+# 4. Adequação Funcional
 
-## Questões, Métricas e Critérios de Julgamento
+A tabela abaixo apresenta o desdobramento da característica de **Adequação Funcional** utilizando a abordagem GQM (Goal-Question-Metric), mapeando as questões, suas respectivas métricas, fontes de coleta e réguas de julgamento.
+
+## 4.1 Questões, Métricas e Critérios de Julgamento
 
 | Subcaracterística | Questão (Q) | Métrica (M) | Fonte de Dados / Método de Coleta | Critério de Julgamento |
-|---|---|---|---|---|
-| **Completude Funcional** | **Q1:** Quantas das funcionalidades previstas no backlog estão efetivamente implementadas e acessiveis? | **M1: Indice de Completude Funcional (ICF)** = (Funcionalidades implementadas e operacionais / Total de funcionalidades previstas no backlog) x 100 | Inspecao manual de cada funcionalidade listada no backlog; execucao dos endpoints via Postman/curl; verificacao do deploy na Vercel | Excelente: >= 90% / Bom: 75-89% / Regular: 60-74% / Insuficiente: < 60% |
-| **Correcao Funcional** | **Q2:** Os resultados retornados pelos endpoints da API correspondem ao comportamento especificado (regras de negocio corretas)? | **M2: Taxa de Correcao Funcional (TCF)** = (Casos de teste com resultado correto / Total de casos de teste funcionais executados) x 100 | Execucao dos testes automatizados existentes (`python manage.py test`) + casos de teste manuais adicionais cobrindo regras de negocio (CRUD, JWT, exportacao CSV) | Excelente: >= 95% / Bom: 80-94% / Regular: 65-79% / Insuficiente: < 65% |
-| **Adequacao a Tarefa** | **Q3:** As funcionalidades implementadas são suficientes para cobrir os fluxos de trabalho essenciais de gestão de inventario para PMEs? | **M3: Indice de Adequacao a Tarefa (IAT)** = (Fluxos de trabalho completamente suportados / Total de fluxos de trabalho mapeados) x 100 | Definicao de fluxos de trabalho essenciais (cadastro de item, consulta, edicao, remocao, exportacao, autenticacao); verificacao passo a passo de cada fluxo no sistema | Excelente: >= 90% / Bom: 75-89% / Regular: 50-74% / Insuficiente: < 50% |
+| :--- | :--- | :--- | :--- | :--- |
+| **Completude Funcional** | **Q1:** Quantas das funcionalidades previstas no backlog estão efetivamente implementadas e acessíveis? | **M1: Índice de Completude Funcional (ICF)**<br><br>`ICF = (Func. Operacionais / Total do Backlog) x 100` | Inspeção manual do backlog; execução dos endpoints via Postman/curl; verificação do deploy na Vercel. | 🟢 **Excelente:** $\ge$ 90%<br>🔵 **Bom:** 75-89%<br>🟡 **Regular:** 60-74%<br>🔴 **Insuficiente:** < 60% |
+| **Correção Funcional** | **Q2:** Os resultados retornados pelos endpoints da API correspondem ao comportamento especificado? | **M2: Taxa de Correção Funcional (TCF)**<br><br>`TCF = (Testes Corretos / Total de Testes) x 100` | Execução de testes automatizados (`python manage.py test`) + testes manuais de regras de negócio (CRUD, JWT, CSV). | 🟢 **Excelente:** $\ge$ 95%<br>🔵 **Bom:** 80-94%<br>🟡 **Regular:** 65-79%<br>🔴 **Insuficiente:** < 65% |
+| **Adequação à Tarefa** | **Q3:** As funcionalidades são suficientes para cobrir os fluxos essenciais de gestão de inventário para PMEs? | **M3: Índice de Adequação à Tarefa (IAT)**<br><br>`IAT = (Fluxos Suportados / Total de Fluxos) x 100` | Definição dos fluxos essenciais (cadastro, consulta, edição, remoção, exportação, login) e validação passo a passo. | 🟢 **Excelente:** $\ge$ 90%<br>🔵 **Bom:** 75-89%<br>🟡 **Regular:** 50-74%<br>🔴 **Insuficiente:** < 50% |
 
 ---
 
-## Hypotheses por Questão
+## 4.2 Hipóteses por Questão
 
 - **H1 (Q1):** Pelo menos 75% das funcionalidades do backlog estão implementadas, dado que o projeto passou por 9 sprints. Funcionalidades de integracao avancada (BI, SSO) podem estar ausentes.
+
 - **H2 (Q2):** A taxa de correção sera alta (acima de 80%) para operacoes basicas de CRUD, mas pode apresentar falhas em scenarios de borda (tokens expirados, campos nulos).
+
 - **H3 (Q3):** Os fluxos basicos de gestão de inventario estão cobertos, mas fluxos avancados (relatorios personalizados, controle de lotes) podem não estar implementados.
 
 ---
 
-## Diagram GQM — Adequacao Funcional
+## 4.3 Diagram GQM — Adequação Funcional
 
 ```mermaid
 graph TD
