@@ -68,6 +68,6 @@ A matriz abaixo apresenta a distribuição estimada de esforço dedicado por cad
 
 ---
 
-> [!TIP]
-> **Gestão de Tarefas e Governança:**
-> As contribuições e alinhamentos da equipe foram coordenados de forma ágil por meio de reuniões síncronas remotas via WhatsApp e encontros presenciais ao longo do semestre letivo.
+!!! tip "Gestão de Tarefas e Governança"
+
+    As contribuições e alinhamentos da equipe foram coordenados de maneira ágil por meio de reuniões síncronas remotas realizadas via WhatsApp, além de encontros presenciais ao longo do semestre letivo.
