@@ -1,16 +1,17 @@
-# 3.4 Eficiencia de Desempenho — Questões e Métricas
+# 6. Eficiencia de Desempenho 
 
-## Questões, Métricas e Critérios de Julgamento
+A tabela abaixo apresenta o desdobramento da característica de **Eficiência de Desempenho** utilizando a abordagem GQM (Goal-Question-Metric), avaliando a velocidade, o consumo de recursos e a escalabilidade do sistema.
+
+## 6.1 Questões, Métricas e Critérios de Julgamento
 
 | Subcaracterística | Questão (Q) | Métrica (M) | Fonte de Dados / Método de Coleta | Critério de Julgamento |
-|---|---|---|---|---|
-| **Comportamento Temporal** | **Q7:** Qual e o tempo medio de resposta dos endpoints criticos (CRUD, autenticacao, exportacao CSV) sob condicoes normais de uso? | **M7: Tempo Medio de Resposta por Endpoint (TMRE)** = media aritmetica dos tempos de resposta (ms) por endpoint em N requisições sequenciais | Execucao de 50 requisições por endpoint com intervalo de 0,5s; coleta do tempo de resposta via Postman Runner ou script Python com `requests`; ambiente Docker local | Excelente: <= 500ms / Bom: 501-1000ms / Regular: 1001-2000ms / Insuficiente: > 2000ms |
-| **Utilizacao de Recursos** | **Q8:** Qual e o consumo de CPU e memoria do sistema sob carga de 50 usuarios simultâneos? | **M8: Utilizacao de Recursos sob Carga (URC)** = pico de uso de CPU (%) e memoria RAM (MB) durante teste de carga com 50 usuarios simultâneos | Monitoramento via `docker stats` durante execucao de teste de carga com Locust (50 usuarios, ramp-up de 10 usuarios/segundo, por 60 segundos) | CPU: Excelente <= 50% / Bom: 51-70% / Regular: 71-85% / Insuficiente: > 85%. RAM: Excelente <= 256MB / Bom: 257-512MB / Regular: 513-768MB / Insuficiente: > 768MB |
-| **Capacidade** | **Q9:** O tempo de resposta se mantem aceitavel a medida que o volume de dados cresce de 100 para 10.000 items cadastrados? | **M9: Degradacao de Desempenho por Volume de Dados (DDVD)** = variacao percentual do TMRE do endpoint de listagem entre 100, 1.000, 5.000 e 10.000 items cadastrados | Insercao progressiva de dados sinteticos via script Python; medicao do tempo de resposta do endpoint `GET /api/items/` em cada patamar de volume | Excelente: degradação <= 20% entre 100 e 10.000 items / Bom: 21-50% / Regular: 51-100% / Insuficiente: > 100% |
-
+| :--- | :--- | :--- | :--- | :--- |
+| **Comportamento Temporal** | **Q7:** Qual é o tempo médio de resposta dos endpoints críticos (CRUD, autenticação, exportação CSV) sob condições normais de uso? | **M7: Tempo Médio de Resposta por Endpoint (TMRE)**<br><br>`TMRE = Média aritmética dos tempos de resposta (ms) em N requisições` | Execução de 50 requisições por endpoint com intervalo de 0,5s; coleta via Postman Runner ou script Python (`requests`) em ambiente Docker local. | 🟢 **Excelente:** $\le$ 500ms<br>🔵 **Bom:** 501-1000ms<br>🟡 **Regular:** 1001-2000ms<br>🔴 **Insuficiente:** > 2000ms |
+| **Utilização de Recursos** | **Q8:** Qual é o consumo de CPU e memória do sistema sob carga de 50 usuários simultâneos? | **M8: Utilização de Recursos sob Carga (URC)**<br><br>`URC = Pico de uso de CPU (%) e Memória RAM (MB) durante o teste` | Monitoramento via `docker stats` durante teste de carga com Locust (50 usuários, ramp-up de 10 usuários/s, por 60 segundos). | **CPU:**<br>🟢 $\le$ 50% \| 🔵 51-70%<br>🟡 71-85% \| 🔴 > 85%<br><br>**RAM:**<br>🟢 $\le$ 256MB \| 🔵 257-512MB<br>🟡 513-768MB \| 🔴 > 768MB |
+| **Capacidade** | **Q9:** O tempo de resposta se mantém aceitável à medida que o volume de dados cresce de 100 para 10.000 itens cadastrados? | **M9: Degradação de Desempenho por Volume de Dados (DDVD)**<br><br>`DDVD = Variação % do TMRE (listagem) entre os patamares de volume` | Inserção progressiva de dados sintéticos via script Python; medição do tempo de resposta do endpoint `GET /api/items/` em 100, 1k, 5k e 10k itens. | 🟢 **Excelente:** Degradação $\le$ 20%<br>🔵 **Bom:** 21-50%<br>🟡 **Regular:** 51-100%<br>🔴 **Insuficiente:** > 100% |
 ---
 
-## Hypotheses por Questão
+## 6.2 Hipóteses por Questão
 
 - **H7 (Q7):** O tempo medio de resposta estara abaixo de 1 segundo para operacoes CRUD basicas em ambiente local. Endpoints de listagem podem ser mais lentos conforme o volume de dados.
 - **H8 (Q8):** O consumo de CPU ficara abaixo de 70% com 50 usuarios simultâneos, mas o consumo de memoria pode ultrapassar 512MB com o Django + PostgreSQL rodando no mesmo host Docker.
@@ -18,7 +19,7 @@
 
 ---
 
-## Diagram GQM — Eficiencia de Desempenho
+## 6.3 Diagram GQM — Eficiencia de Desempenho
 
 ```mermaid
 graph TD
