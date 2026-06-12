@@ -69,9 +69,11 @@ Contudo, a ausência de uma suíte de testes automatizados e o crescimento linea
 
 ## 3.6 Recomendação Final de Engenharia
 
-> [!IMPORTANT]
-> **Perfil de Adoção Recomendado:**
-> O Agio v1.0.0 é considerado **apto e recomendado** para adoção imediata por micro e pequenas empresas cujo volume total de inventário não ultrapasse o teto limite de **500 itens cadastrados**, operando preferencialmente via interface web tradicional.
+!!! info "Perfil de Adoção Recomendado"
+
+    O Agio v1.0.0 é considerado **apto e recomendado** para adoção imediata em micro e pequenas empresas cujo volume total de inventário não ultrapasse o limite de **500 itens cadastrados**.
+
+    Recomenda-se, preferencialmente, a utilização do sistema por meio da interface web tradicional.
 
 > [!CAUTION]
 > **Restrição de Implantação:**
