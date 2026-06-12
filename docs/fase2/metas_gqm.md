@@ -30,8 +30,11 @@ Medir o nível de completude e a correção das funcionalidades implementadas no
 
 Verificar a estabilidade do sistema Agio sob uso contínuo e entradas inesperadas, com foco em maturidade (cobertura de testes), disponibilidade e tolerância a falhas, do ponto de vista de operadores e administradores, no contexto da execução via Docker Compose com carga simulada de até 50 usuários simultâneos.
 
-> [!TIP]
-> **Hipótese 2 (H2):** Espera-se que o sistema apresente boa disponibilidade operacional (acima de 95%), mas a tolerância a falhas severas pode ser limitada devido ao estágio inicial de maturidade do projeto (`v1.0.0`).
+!!! tip "Hipótese 2 (H2)"
+
+    Espera-se que o sistema apresente boa disponibilidade operacional (acima de 95%).
+
+    Entretanto, a tolerância a falhas severas pode ser limitada em razão do estágio inicial de maturidade do projeto (`v1.0.0`).
 
 ---
 
