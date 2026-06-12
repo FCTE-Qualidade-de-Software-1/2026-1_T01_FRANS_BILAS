@@ -18,14 +18,18 @@ As ferramentas de IA foram adotadas como assistentes consultivos de engenharia, 
 
 ## Diretrizes de Integridade Coletiva
 
-> [!NOTE]
+!!! note "Compromisso com o Uso Responsável"
 
-> **Compromisso com o Uso Responsável**
+    * **Revisão Humana Obrigatória:**  
+      Nenhum trecho de texto ou código gerado por IA foi incorporado automaticamente ao documento final sem validação, edição e refinamento crítico realizados pelos integrantes da equipe.
 
-> * **Revisão Humana Obrigatória:** Nenhum trecho de texto ou código gerado por IA foi incorporado de forma automatizada (*copy-paste*) ao documento final sem a validação, edição e refinamento crítico por parte dos integrantes.
+    * **Fidelidade aos Dados Reais:**  
+      As ferramentas de IA foram utilizadas exclusivamente como apoio para geração de rascunhos estruturais.
 
-> * **Fidelidade a Dados Reais:** As ferramentas de IA foram tratadas exclusivamente como geradoras de rascunhos estruturais. Todos os dados numéricos, resultados de testes, picos de infraestrutura e evidências partem de execuções reais e empíricas sobre o sistema Agio.
+      Todos os dados numéricos, resultados de testes, métricas de infraestrutura e evidências apresentadas derivam de execuções reais e empíricas realizadas sobre o sistema Agio.
 
-> * **Identidade Visual Controlada:** A escolha de tabelas, blocos de destaque e marcadores visuais passou por uma curadoria humana estrita para garantir a sobriedade, legibilidade e consistência de toda a documentação.
+    * **Identidade Visual Controlada:**  
+      A utilização de tabelas, blocos de destaque e marcadores visuais passou por curadoria humana com o objetivo de assegurar sobriedade, legibilidade e consistência documental.
 
-> * **Soberania Técnica:** A precisão dos dados de engenharia de software e as decisões de arquitetura da equipe têm precedência absoluta sobre qualquer sugestão gerada por algoritmos de linguagem.
+    * **Soberania Técnica:**  
+      As decisões de engenharia de software e arquitetura adotadas pela equipe possuem prioridade absoluta sobre quaisquer sugestões produzidas por modelos de linguagem.
