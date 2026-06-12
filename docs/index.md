@@ -254,6 +254,7 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 | 1.1 | 12/05/2026 | Atualização da página inicial e estruturas do projeto | [Beatriz](https://github.com/Beatriz-Ge) |
 | 1.2 | 13/05/2026 | Atualização da apresentação dos integrantes | [João Pedro](https://github.com/Jadequilin) |
 | 2.0 | 10/06/2026 | Conclusão das Fases 2, 3 e 4 — execução das métricas, análise GQM e julgamento final | [João Pedro](https://github.com/Jadequilin) e [Rivadalvio](https://github.com/RivaFilho) |
+| 2.1 | 11/06/2026 | Correção, revisão e organização | [Beatriz](https://github.com/Beatriz-Ge) |
 
 ---
 
