@@ -44,7 +44,7 @@ Essa classificação impacta diretamente o processo de avaliação porque:
 
 ---
 
-## 3.4 Arquitetura e Components
+## 3.4 Arquitetura e Componentes
 
 O Agio segue uma arquitetura modular dividida em quatro camadas principais:
 
@@ -59,7 +59,7 @@ O Agio segue uma arquitetura modular dividida em quatro camadas principais:
 
 ---
 
-## 3.5 Diagram de Arquitetura do Agio
+## 3.5 Diagrama de Arquitetura do Agio
 
 ```mermaid
 graph LR
@@ -73,8 +73,8 @@ graph LR
 
     subgraph Backend
         API["Django + DRF"]
-        AUTH["Autenticacao JWT"]
-        BL["Regras de Negocio"]
+        AUTH["Autenticação JWT"]
+        BL["Regras de Negócio"]
     end
 
     subgraph Banco de Dados
@@ -98,14 +98,14 @@ graph LR
 
 --- 
 
-## 3.6 Components Arquiteturais
+## 3.6 Componentes Arquiteturais
 
 | Camada         | Tecnologia                                  | Função                                                  |
 | :------------- | :------------------------------------------ | :------------------------------------------------------ |
 | Frontend       | HTML5 e CSS                                 | Interface do usuário: dashboards, tabelas e formulários |
 | Backend        | Django 5.1.3 + Django REST Framework 3.15.2 | API REST, autenticação JWT e regras de negócio          |
 | Banco de Dados | PostgreSQL                                  | Persistência de items, usuários e permissões            |
-| Infraestrutura | Docker + Docker Compose                     | Containerização e deploy do sistema                     |
+| Infraestrutura | Docker + Docker Compose                     | Conteinerização e deploy do sistema                     |
 
 ---
 

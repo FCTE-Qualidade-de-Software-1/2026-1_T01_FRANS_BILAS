@@ -60,7 +60,7 @@ Os items abaixo não serão avaliados nesta fase do projeto.
 
 ---
 
-## 6.3 Limites de Validate dos Resultados
+## 6.3 Limites de Validade dos Resultados
 
 Os resultados obtidos serão considerados válidos apenas dentro das seguintes condições experimentais.
 
@@ -68,7 +68,7 @@ Os resultados obtidos serão considerados válidos apenas dentro das seguintes c
 
 - **Versão Avaliada**
   
-  Release `1.0.0` do repositório official do Agio
+  Release `1.0.0` do repositório oficial do Agio
 
 - **Dados Sintéticos**
   

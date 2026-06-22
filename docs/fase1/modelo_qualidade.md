@@ -40,7 +40,7 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 
 <div class="grid cards" markdown>
 
-- **Adequação Functional**  
+- **Adequação Funcional**  
   Avaliação das funcionalidades implementadas, completude e correção do sistema.
 
 - **Confiabilidade**  
@@ -120,26 +120,26 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 graph TD
     ISO["ISO/IEC 25010<br>Modelo Adaptado para o Agio"]
 
-    ISO --> AF["Adequacao Functional"]
+    ISO --> AF["Adequação Funcional"]
     ISO --> CONF["Confiabilidade"]
-    ISO --> ED["Eficiencia de Desempenho"]
+    ISO --> ED["Eficiência de Desempenho"]
 
-    ISO -.->|"excluida"| USB["Usabilidade"]
-    ISO -.->|"excluida"| SEG["Seguranca"]
-    ISO -.->|"excluida"| MAN["Manutenibilidade"]
-    ISO -.->|"excluida"| COM["Compatibilidade"]
-    ISO -.->|"excluida"| POR["Portabilidade"]
+    ISO -.->|"excluída"| USB["Usabilidade"]
+    ISO -.->|"excluída"| SEG["Seguranca"]
+    ISO -.->|"excluída"| MAN["Manutenibilidade"]
+    ISO -.->|"excluída"| COM["Compatibilidade"]
+    ISO -.->|"excluída"| POR["Portabilidade"]
 
-    AF --> CF["Completude Functional"]
-    AF --> COR["Correcao Functional"]
-    AF --> ADEQ["Adequacao"]
+    AF --> CF["Completude Funcional"]
+    AF --> COR["Correção Funcional"]
+    AF --> ADEQ["Adequação"]
 
     CONF --> MAT["Maturidade"]
     CONF --> DISP["Disponibilidade"]
-    CONF --> TOL["Tolerancia a Falhas"]
+    CONF --> TOL["Tolerância a Falhas"]
 
     ED --> CT["Comportamento Temporal"]
-    ED --> UR["Utilizacao de Recursos"]
+    ED --> UR["Utilização de Recursos"]
     ED --> CAP["Capacidade"]
 
     style USB fill:#d9d9d9,stroke:#999,color:#666
