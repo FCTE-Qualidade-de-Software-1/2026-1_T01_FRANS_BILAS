@@ -10,11 +10,11 @@ A matriz abaixo apresenta a distribuição estimada de esforço dedicado por cad
 
 | Integrante da Equipe | Fase 1 | Fase 2 | Fase 3 | Fase 4 | Revisão Final das fases |
 | :--- | :---: | :---: | :---: | :---: | :---:|
-| **Beatriz Geane Santos Lins** | 30% | 20% | 20% | 20% | 25% |
+| **Beatriz Geane Santos Lins** | 30% | 20% | 20% | 20% | 30% |
 | **Eduardo Belarmino Silva** | 10% | 15% | 15% | 15% | 15% |
-| **João Pedro Araújo de Freitas Lyra** | 40% | 30% | 30% | 30% | 45% |
+| **João Pedro Araújo de Freitas Lyra** | 40% | 30% | 30% | 30% | 35% |
 | **Manoel Castro Moura Filho** | 0% | 15% | 15% | 15% | 0% |
-| **Rivadalvio Joaquim da Silva Filho** | 20% | 20% | 20% | 20% | 15% |
+| **Rivadalvio Joaquim da Silva Filho** | 20% | 20% | 20% | 20% | 20% |
 
 ---
 
@@ -70,11 +70,11 @@ A matriz abaixo apresenta a distribuição estimada de esforço dedicado por cad
 
 | Integrante | Atividades Técnicas Realizadas | Esforço |
 | :--- | :--- | :---: |
-| **Beatriz Geane Santos Lins** |Inicio da correção no PDF, autor da reelaboração dos dados da fase 4 para melhor visualização  | 25% |
+| **Beatriz Geane Santos Lins** |Inicio da correção no PDF, autor da reelaboração dos dados da fase 4 para melhor visualização  | 30% |
 | **Eduardo Belarmino Silva** | Revisão Ortográfica e de Formatação do projeto inteiro | 15% |
-| **João Pedro Araújo de Freitas Lyra** | Revisão Ortográfica do projeto inteiro, Melhoria de visualização dos diagramas e revisor da reelaboração dos dados da fase 4 para melhor visualização, adição da fase 1, validação ortografica e adição de todos os diagramas no PDF| 45% |
+| **João Pedro Araújo de Freitas Lyra** | Revisão Ortográfica do projeto inteiro, Melhoria de visualização dos diagramas e revisor da reelaboração dos dados da fase 4 para melhor visualização, adição da fase 1, validação ortografica e adição de todos os diagramas no PDF| 35% |
 | **Manoel Castro Moura Filho** | - | - |
-| **Rivadalvio Joaquim da Silva Filho** | Validação Revisão Ortográfica do projeto inteiro e validação da melhoria de visualização dos diagramas  | 15% |
+| **Rivadalvio Joaquim da Silva Filho** | Validação Revisão Ortográfica do projeto inteiro e validação da melhoria de visualização dos diagramas, além de revisão e formatação do PDF  | 20% |
 
 
 ---
