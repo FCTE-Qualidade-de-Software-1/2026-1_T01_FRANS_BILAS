@@ -275,17 +275,19 @@ Consumo de hardware e comportamento da aplicação sob estresse computacional ge
 
 Análise de escalabilidade temporal do sistema à medida que a base de dados sofre crescimento volumétrico incremental:
 
-| Patamar Volumétrico (Itens Gravados) | TMRE: `GET /dashboard/export/csv/` | Variação Percentual vs. Baseline |
-| :---: | :---: | :---: |
-| **100** *(Baseline)* | 1,7 ms | — |
-| **1.000** | 8,9 ms | +424% |
-| **5.000** | 46,1 ms | +2.612% |
-| **10.000** | 91,0 ms | +5.253% |
+| Volume (itens cadastrados) | Tempo de exportação CSV | Fator vs. base *(100 itens)* | Crescimento no salto |
+| :---: | :---: | :---: | :---: |
+| **100** *(base)* | 1,7 ms | 1&times; | — |
+| **1.000** | 8,9 ms | 5,2&times; | +424% *(vs. 100)* |
+| **5.000** | 46,1 ms | 27&times; | +418% *(vs. 1.000)* |
+| **10.000** | 91,0 ms | 53&times; | +97% *(vs. 5.000)* |
+
+**Leitura:** ao multiplicar o volume por 100 (de 100 para 10.000 itens), o tempo de exportação cresce cerca de **53&times;** — de 1,7 ms para 91,0 ms. A coluna *Crescimento no salto* evidencia que a degradação permanece acentuada em cada patamar, e não apenas no acumulado.
 
 
 !!! danger "Resultado Final (M9)"
 
-    **DDVD:** `5.253%`
+    **DDVD:** `5.253%` *(≈ 53× mais lento que a base)*
 
     **Nível de Maturidade:** **Insuficiente**
 
