@@ -120,7 +120,7 @@ Avaliação da cobertura sistêmica sobre a jornada operacional de gerenciamento
 
 !!! danger "Resultado Final (M4)"
 
-    **TMCT:** `0% pass rate` (0 testes implementados)  
+    **TMCT:** `0% de taxa de aprovação` (0 testes implementados)  
     **Cobertura Nominal:** `57%`
 
     **Nível de Maturidade:** **Insuficiente**

@@ -48,7 +48,7 @@ Para elevar o nível de maturidade do sistema Agio e viabilizar sua implantaçã
 | **H1** | Espera-se completude do backlog acima de 75% devido às 9 sprints. | `ICF = 100%` | **Confirmada e Superada** |
 | **H2** | Taxa de correção acima de 80% para operações básicas de CRUD. | `TCF = 90%` | **Confirmada** |
 | **H3** | Fluxos de trabalho básicos de inventário cobertos. | `IAT = 83,3%` | **Confirmada** |
-| **H4** | *Pass rate* de testes acima de 80%, mas volumetria e cobertura baixas. | `TMCT = 0%` | **Refutada** *(Não há testes escritos)* |
+| **H4** | *Taxa de aprovação* de testes acima de 80%, mas volumetria e cobertura baixas. | `TMCT = 0%` | **Refutada** *(Não há testes escritos)* |
 | **H5** | Taxa de disponibilidade em ambiente local superior a 99%. | `TDO = 100%` | **Confirmada e Superada** |
 | **H6** | Presença de erros HTTP 500 em cenários de entradas inválidas. | `ITF = 80%` | **Parcialmente Confirmada** *(Apenas a rota de login falhou)* |
 | **H7** | Tempo médio de resposta mantido abaixo de 1.000 ms sob uso normal. | `TMRE = 2,3ms` | **Confirmada com Margem** |

@@ -85,9 +85,9 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 **Passos:**
 
 1. No ambiente Docker, executar: `coverage run manage.py test`
-2. Gerar relatorio: `coverage report --show-missing`
-3. Registrar: numero de testes executados, numero de testes passando, numero de falhas.
-4. Registrar percentual de cobertura de codigo.
+2. Gerar relatório: `coverage report --show-missing`
+3. Registrar: número de testes executados, número de testes passando e número de falhas.
+4. Registrar percentual de cobertura de código.
 5. Calcular TMCT = (testes passando / total) x 100.
 
 > **Evidência Requerida:** Output completo do terminal com `coverage report`.
@@ -100,19 +100,19 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 
 1. Criar script Python que envia 200 requisições GET sequenciais ao endpoint `/api/items/` com intervalo de 0,5s.
 2. Executar contra o ambiente local (Docker) e contra o deploy na Vercel.
-3. Registrar o codigo HTTP de cada resposta.
+3. Registrar o código HTTP de cada resposta.
 4. Calcular TDO = (respostas 2xx ou 3xx / 200) x 100.
 
-> **Evidência Requerida:** Arquivo CSV com timestamp, endpoint, codigo HTTP e tempo de resposta de cada requisicao.
+> **Evidência Requerida:** Arquivo CSV com timestamp, endpoint, codigo HTTP e tempo de resposta de cada requisição.
 
 ---
 
-### 1.2.6 - M6 Indice de Tolerancia a Falhas (ITF)
+### 1.2.6 - M6 Índice de Tolerância a Falhas (ITF)
 
 **Passos:**
 
-1. Definir 15 casos de falha: campos obrigatorios ausentes (5 casos), dados com tipo errado (3 casos), token JWT expirado (1 caso), token ausente (1 caso), payload vazio (1 caso), ID inexistente em GET/PUT/DELETE (3 casos), método HTTP não permitido (1 caso).
-2. Para cada caso, enviar a requisicao via Postman e registrar o codigo HTTP retornado.
+1. Definir 15 casos de falha: campos obrigatórios ausentes (5 casos), dados com tipo errado (3 casos), token JWT expirado (1 caso), token ausente (1 caso), payload vazio (1 caso), ID inexistente em GET/PUT/DELETE (3 casos), método HTTP não permitido (1 caso).
+2. Para cada caso, enviar a requisição via Postman e registrar o código HTTP retornado.
 3. Classificar como "tratado corretamente" se retorna 400, 401, 403, 404 ou 422. Classificar como "não tratado" se retorna 500 ou comportamento inesperado.
 4. Calcular ITF = (tratados corretamente / 15) x 100.
 
@@ -120,41 +120,41 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 
 ---
 
-### 1.2.7 - M7 Tempo Medio de Resposta por Endpoint (TMRE)
+### 1.2.7 - M7 Tempo Médio de Resposta por Endpoint (TMRE)
 
 **Passos:**
 
-1. Identificar 5 endpoints criticos: POST /api/login/, GET /api/items/, POST /api/items/, PUT /api/items/{id}/, DELETE /api/items/{id}/.
+1. Identificar 5 endpoints críticos: POST /api/login/, GET /api/items/, POST /api/items/, PUT /api/items/{id}/, DELETE /api/items/{id}/.
 2. Para cada endpoint, enviar 50 requisições sequenciais com intervalo de 0,5s via script Python.
-3. Registrar o tempo de resposta (em ms) de cada requisicao.
-4. Calcular a media aritmetica por endpoint.
-5. Calcular TMRE geral = media de todas as medias.
+3. Registrar o tempo de resposta (em ms) de cada requisição.
+4. Calcular a média aritmética por endpoint.
+5. Calcular TMRE geral = média de todas as médias.
 
 > **Evidência Requerida:** Arquivo CSV com endpoint, requisicao_n, tempo_ms.
 
 ---
 
-### 1.2.8 - M8 Utilizacao de Recursos sob Carga (URC)
+### 1.2.8 - M8 Utilização de Recursos sob Carga (URC)
 
 **Passos:**
 
 1. Instalar Locust: `pip install locust`.
-2. Criar locustfile.py com scenarios: login, listagem de items, criacao de item.
-3. Executar teste de carga: 50 usuarios simultâneos, ramp-up de 10 usuarios/segundo, duracao 60 segundos.
-4. Durante a execucao, monitorar via `docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"` com amostragem a cada 5 segundos.
+2. Criar locustfile.py com cenários: login, listagem de items, criação de item.
+3. Executar teste de carga: 50 usuários simultâneos, ramp-up de 10 usuários/segundo, duração de 60 segundos.
+4. Durante a execução, monitorar via `docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"` com amostragem a cada 5 segundos.
 5. Registrar pico de CPU e pico de RAM de cada container.
 
 > **Evidência Requerida:** Log do docker stats + relatorio HTML do Locust.
 
 ---
 
-### 1.2.9 - M9 Degradacao de Desempenho por Volume de Dados (DDVD)
+### 1.2.9 - M9 Degradação de Desempenho por Volume de Dados (DDVD)
 
 **Passos:**
 
-1. Criar script Python que insere dados sinteticos via API: items com nome, descrição, quantidade e preco aleatorios.
+1. Criar script Python que insere dados sintéticos via API: items com nome, descrição, quantidade e preços aleatórios.
 2. Inserir em patamares: 100, 1.000, 5.000 e 10.000 items.
-3. Apos cada patamar, executar 50 requisições GET /api/items/ e calcular o tempo medio de resposta.
+3. Após cada patamar, executar 50 requisições GET /api/items/ e calcular o tempo médio de resposta.
 4. Calcular degradação = ((TMRE_10000 - TMRE_100) / TMRE_100) x 100.
 
-> **Evidência Requerida:** Tabela com patamar, TMRE medio, e grafico de evolucao.
+> **Evidência Requerida:** Tabela com patamar, TMRE médio e gráfico de evolução.

@@ -13,7 +13,7 @@ A tabela abaixo resume os indicadores obtidos para cada métrica, correlacionand
 | **M1** | Índice de Completude Funcional (ICF) | 100,0% | **Excelente** |
 | **M2** | Taxa de Correção Funcional (TCF) | 90,0% | **Bom** |
 | **M3** | Índice de Adequação à Tarefa (IAT) | 83,3% | **Bom** |
-| **M4** | Taxa de Maturidade por Cobertura de Testes (TMCT) | 0% pass *(0 testes)* / 57% cob. | **Insuficiente** |
+| **M4** | Taxa de Maturidade por Cobertura de Testes (TMCT) | 0% de taxa de aprovação *(0 testes)* / 57% cob. | **Insuficiente** |
 | **M5** | Taxa de Disponibilidade Operacional (TDO) | 100,0% *(200/200 reqs)* | **Excelente** |
 | **M6** | Índice de Tolerância a Falhas (ITF) | 80,0% | **Bom** |
 | **M7** | Tempo Médio de Resposta por Endpoint (TMRE) | 2,3 ms | **Excelente** |
@@ -46,11 +46,11 @@ A tabela abaixo resume os indicadores obtidos para cada métrica, correlacionand
 * **Q5: O sistema permanece disponível e operacional durante sessões de uso contínuo e sob carga simulada?**
     * *Resposta:* O ecossistema respondeu de forma robusta, cravando 100% de disponibilidade (TDO = 100,0%) durante os testes de estresse sequenciais. Não houve queda de pacotes, timeouts ou erros na faixa HTTP 5xx, mantendo respostas médias na casa de 21ms.
 * **Q6: Como o sistema responde a entradas inválidas, requisições malformadas e tentativas de acesso não autorizado?**
-    * *Resposta:* O tratamento de exceções barrou com sucesso 12 das 15 falhas intencionais injetadas (ITF = 80%). Os gargalos residem na aceitação de valores monetários negativos no campo de preço (criando itens com HTTP 201) e na aceitação de payloads sem categoria/descrição (sanados por valores default inseridos diretamente no banco).
+    * *Resposta:* O tratamento de exceções barrou com sucesso 12 das 15 falhas intencionais injetadas (ITF = 80%). Os gargalos residem na aceitação de valores monetários negativos no campo de preço (criando itens com HTTP 201) e na aceitação de payloads sem categoria/descrição (sanados por valores `default` inseridos diretamente no banco).
 
 > [!CAUTION]
 > **Veredito do GOAL 2 — Confiabilidade:** **INSUFICIENTE**
-> <br>O ecossistema falha no quesito maturidade técnica devido à **ausência total de uma suíte de testes automatizados**. A boa resiliência da API a falhas provocadas (80%) atenua o cenário, mas não substitui a segurança de testes unitários e de integração. A hipótese **H4** (pass rate acima de 80%) foi **refutada**, e a hipótese **H6** (erros 500 em entradas malformadas) foi **parcialmente confirmada** (visto o comportamento da rota de login).
+> <br>O ecossistema falha no quesito maturidade técnica devido à **ausência total de uma suíte de testes automatizados**. A boa resiliência da API a falhas provocadas (80%) atenua o cenário, mas não substitui a segurança de testes unitários e de integração. A hipótese **H4** (Taxa de aprovação acima de 80%) foi **refutada**, e a hipótese **H6** (erros 500 em entradas malformadas) foi **parcialmente confirmada** (visto o comportamento da rota de login).
 
 ---
 
