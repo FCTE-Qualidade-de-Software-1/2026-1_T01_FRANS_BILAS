@@ -144,7 +144,7 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 4. Durante a execução, monitorar via `docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"` com amostragem a cada 5 segundos.
 5. Registrar pico de CPU e pico de RAM de cada container.
 
-> **Evidência Requerida:** Log do docker stats + relatorio HTML do Locust.
+> **Evidência Requerida:** Log do docker stats + relatório HTML do Locust.
 
 ---
 
