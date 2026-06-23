@@ -1,30 +1,31 @@
 # Frans Bilas — Qualidade de Software 1 (2026.1)
 
-Repositorio da equipe Frans Bilas para a disciplina FGA315 — Qualidade de Software 1, ministrada pela Profa. Cristiane Ramos na FCTE/UnB, semestre 2026.1.
+Repositório da equipe Frans Bilas para a disciplina FGA315 — Qualidade de Software 1, ministrada pela Profa. Cristiane Ramos na FCTE/UnB, semestre 2026.1.
 
 ## Projeto
 
-Avaliacao da qualidade de produto de software do sistema **Agio** — Aplicacao de Gestao de Inventario Otimizada, desenvolvido na disciplina MDS (UnB, 2024.2).
+Avaliação da qualidade de produto de software do sistema **Agio** — Aplicação de Gestao de Inventario Otimizada, desenvolvido na disciplina MDS (UnB, 2024.2).
 
-- Repositorio do Agio: [github.com/unb-mds/2024-2-Agio](https://github.com/unb-mds/2024-2-Agio)
+- Repositório do Agio: [github.com/unb-mds/2024-2-Agio](https://github.com/unb-mds/2024-2-Agio)
 - Deploy: [agio-inventory-system.vercel.app](https://agio-inventory-system.vercel.app/)
 
 ## Caracteristicas de Qualidade Avaliadas (ISO/IEC 25010)
 
 | Caracteristica | Subcaracteristicas |
 |---|---|
-| Adequacao Functional | Completude, Correcao, Adequacao (Pertinencia) |
-| Confiabilidade | Maturidade, Disponibilidade, Tolerancia a Falhas |
-| Eficiencia de Desempenho | Comportamento Temporal, Utilizacao de Recursos, Capacidade |
+| Adequação Funcional | Completude, Correção, Adequação (Pertinência) |
+| Confiabilidade | Maturidade, Disponibilidade, Tolerância a Falhas |
+| Eficiência de Desempenho | Comportamento Temporal, Utilização de Recursos, Capacidade |
 
 ## Fases do Processo (ISO/IEC 25040)
 
 | Fase | Status | Entrega |
 |---|---|---|
-| Fase 1 — Requisitos de Avaliacao | Em andamento | EU1 |
-| Fase 2 — Especificacao da Avaliacao | Pendente | EU1 |
-| Fase 3 — Projeto da Avaliacao | Pendente | EU2 |
-| Fase 4 — Execucao da Avaliacao | Pendente | EU2 |
+| Fase 1 — Requisitos de Avaliação | Concluída | EU1 |
+| Fase 2 — Especificação da Avaliação | Concluída | EU1 |
+| Fase 3 — Projeto da Avaliação | Concluída | EU2 |
+| Fase 4 — Execucao da Avaliação | concluída | EU2 |
+| Revisão Final | Concluída | EU3 | 
 
 ## GitPage
 

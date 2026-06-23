@@ -189,10 +189,10 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 
 | Etapa | Objetivo | Status |
 |:--|:--|:--:|
-| [Fase 1 — Requisitos de Avaliação](fase1/proposito.md) | Definição do escopo, propósito e modelo de qualidade | Em revisão |
-| [Fase 2 — Especificação](fase2/introducao.md) | Definição das métricas e critérios de julgamento | Em revisão |
-| [Fase 3 — Projeto da Avaliação](fase3/metodo_avaliacao.md) | Planejamento da coleta e ferramentas | Em revisão |
-| [Fase 4 — Execução](fase4/execucao_medicoes.md) | Coleta, análise e relatório final | Em revisão |
+| [Fase 1 — Requisitos de Avaliação](fase1/proposito.md) | Definição do escopo, propósito e modelo de qualidade | Concluída |
+| [Fase 2 — Especificação](fase2/introducao.md) | Definição das métricas e critérios de julgamento | Concluída |
+| [Fase 3 — Projeto da Avaliação](fase3/metodo_avaliacao.md) | Planejamento da coleta e ferramentas |  Concluída |
+| [Fase 4 — Execução](fase4/execucao_medicoes.md) | Coleta, análise e relatório final |  Concluída |
 
 ---
 
@@ -259,6 +259,7 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 | 1.2 | 13/05/2026 | Atualização da apresentação dos integrantes | [João Pedro](https://github.com/Jadequilin) |
 | 2.0 | 10/06/2026 | Conclusão das Fases 2, 3 e 4 — execução das métricas, análise GQM e julgamento final | [João Pedro](https://github.com/Jadequilin) e [Rivadalvio](https://github.com/RivaFilho) |
 | 2.1 | 11/06/2026 | Correção, revisão e organização | [Beatriz](https://github.com/Beatriz-Ge) |
+| 3.0 | 23/06/2026 | Compila as correções e atualiza o index e o README | [João](https://github.com/Jadequilin) | 
 
 ---
 
