@@ -42,7 +42,7 @@ graph TD
     Q5 --> M5["M5: TDO"]
     Q6 --> M6["M6: ITF"]
 
-    G3 --> Q7["Q7: Tempo resposta?"]
+    G3 --> Q7["Q7: Tempo de resposta?"]
     G3 --> Q8["Q8: Recursos?"]
     G3 --> Q9["Q9: Capacidade?"]
     Q7 --> M7["M7: TMRE"]

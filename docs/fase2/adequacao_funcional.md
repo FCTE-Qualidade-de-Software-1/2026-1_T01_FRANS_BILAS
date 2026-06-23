@@ -32,7 +32,7 @@ graph TD
     G1 --> Q3["Q3: Adequação aos fluxos de PMEs?"]
     Q1 --> M1["M1: Índice de Completude<br>Funcional - ICF"]
     Q2 --> M2["M2: Taxa de Correção<br>Funcional - TCF"]
-    Q3 --> M3["M3: Indice de Adequação<br>a Tarefa - IAT"]
+    Q3 --> M3["M3: Índice de Adequação<br>a Tarefa - IAT"]
 
     style G1 fill:#AEC9E8,stroke:#1E3A5F,color:#10243F
     style M1 fill:#fff3cd,stroke:#ffc107
