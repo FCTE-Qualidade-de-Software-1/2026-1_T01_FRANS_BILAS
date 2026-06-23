@@ -15,7 +15,7 @@ O cronograma abaixo distribui as atividades da Fase 4 (Execução) em períodos 
 | **Semana 3** | Período 3 | Geração da massa de dados sintéticos via script; medição de tempo de resposta (**M7**); teste de carga (**M8**); medição de degradação por volume (**M9**). | **M7, M8, M9** | [Rivadalvio](https://github.com/RivaFilho), <br> [Manoel](https://github.com/manoelmoura) |
 | **Semana 3** | Período 3 | Consolidação geral dos dados brutos coletados e upload das evidências estruturadas no repositório. | **Todas** | **Todos** |
 | **Semana 4** | Período 4 | Análise aprofundada dos resultados; comparação com os critérios de julgamento estabelecidos; elaboração de gráficos estatísticos. | **Todas** | [Beatriz](https://github.com/Beatriz-Ge) e <br> [João Pedro](https://github.com/Jadequilin) |
-| **Semana 4** | Período 4 | Redação do relatório técnico final; atualização e publicação no GitPages; fechamento da release EU2. | — | **Todos** |
+| **Semana 4** | Período 4 | Redação do relatório técnico final; atualização e publicação no GitHub Pages; fechamento da release EU2. | — | **Todos** |
 
 ---
 
@@ -29,4 +29,4 @@ Acompanhe os principais pontos de virada e entregáveis previstos ao longo das q
 | **Dados de Adequação Coletados** | Final da Semana 2 | Métricas **M1**, **M2** e **M3** consolidadas com suas respectivas evidências e logs anexados. |
 | **Dados de Confiabilidade Coletados** | Final da Semana 2 | Métricas **M4**, **M5** e **M6** finalizadas, contendo relatórios de cobertura de código e falhas controladas. |
 | **Dados de Eficiência Coletados** | Final da Semana 3 | Métricas **M7**, **M8** e **M9** concluídas com os relatórios gerados pelas ferramentas Locust e scripts de estresse. |
-| **Relatório Final & GitPages** | Final da Semana 4 | Documentação final revisada, gráficos gerados e homologação concluída para a entrega da **Release EU2**. |
+| **Relatório Final & GitHub Pages** | Final da Semana 4 | Documentação final revisada, gráficos gerados e homologação concluída para a entrega da **Release EU2**. |

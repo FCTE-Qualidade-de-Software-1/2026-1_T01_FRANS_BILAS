@@ -14,9 +14,9 @@ A tabela abaixo apresenta o desdobramento da característica de **Confiabilidade
 
 ## 5.2 Hipóteses por Questão
 
-- **H4 (Q4):** A taxa de sucesso dos testes existentes será alta (acima de 80%), pois testes que falham consistentemente costumam ser corrigidos ou removidos. A cobertura de codigo pode ser baixa (abaixo de 50%) dado o contexto acadêmico do projeto.
+- **H4 (Q4):** A taxa de sucesso dos testes existentes será alta (acima de 80%), pois testes que falham consistentemente costumam ser corrigidos ou removidos. A cobertura de código pode ser baixa (abaixo de 50%) dado o contexto acadêmico do projeto.
 - **H5 (Q5):** A disponibilidade em ambiente local sera superior a 99%. No deploy Vercel, pode haver variação por limitações do plano gratuito.
-- **H6 (Q6):** O sistema pode apresentar fragilidades na validação de entradas, retornando erros 500 (Internal Server Erro) em vez de codigos adequados (400, 422), dado que validações robustas nem sempre são prioridade em projetos academicos.
+- **H6 (Q6):** O sistema pode apresentar fragilidades na validação de entradas, retornando erros 500 (Internal Server Error) em vez de códigos adequados (400, 422), dado que validações robustas nem sempre são prioridade em projetos academicos.
 
 ---
 

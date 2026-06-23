@@ -95,7 +95,7 @@ O Agio é um sistema web open source desenvolvido por alunos da UnB na disciplin
 
 <div class="grid cards" markdown>
 
--  CRUD completo de items
+-  CRUD completo de itens
 -  Login e autenticação
 -  Dashboard de visualização
 -  Exportação CSV
@@ -157,7 +157,7 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
     PostgreSQL: CPU 0%, RAM 32,58 MB sob 50 usuários simultâneos.
 
 !!! danger "Capacidade — Insuficiente (5.253% de degradação)"
-    Sem páginação, o sistema não escala para volumes acima de 1.000 items.
+    Sem paginação, o sistema não escala para volumes acima de 1.000 itens.
 
 ---
 
@@ -182,6 +182,10 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 ---
 
 ## Processo de Avaliação — ISO/IEC 25040
+
+<div style="text-align: center; margin: 0; font-size: 14px;">
+  Tabela 1: Fases do processo de avaliação
+</div>
 
 | Etapa | Objetivo | Status |
 |:--|:--|:--:|

@@ -22,7 +22,7 @@ O Agio é classificado como um software sob medida de código aberto (*custom op
 
     - Segundo **Pressman (2014)**, o Agio é um software de aplicação voltado à resolução de um problema de negócio específico, neste caso, a gestão de inventário.
 
-    - Segundo a **IEEE 1062**, o sistema não se enquadra como COTS (*Commercial Off-The-Shelf*), pois não é um produto commercial empacotado, mas sim um sistema desenvolvido sob demanda acadêmica e distribuído com código-fonte aberto.
+    - Segundo a **IEEE 1062**, o sistema não se enquadra como COTS (*Commercial Off-The-Shelf*), pois não é um produto comercial empacotado, mas sim um sistema desenvolvido sob demanda acadêmica e distribuído com código-fonte aberto.
 
     - Conforme a **ISO/IEC 25010**, o produto avaliado é um sistema computacional interativo composto por frontend web, backend com API REST e banco de dados relacional.
 
@@ -104,7 +104,7 @@ graph LR
 | :------------- | :------------------------------------------ | :------------------------------------------------------ |
 | Frontend       | HTML5 e CSS                                 | Interface do usuário: dashboards, tabelas e formulários |
 | Backend        | Django 5.1.3 + Django REST Framework 3.15.2 | API REST, autenticação JWT e regras de negócio          |
-| Banco de Dados | PostgreSQL                                  | Persistência de items, usuários e permissões            |
+| Banco de Dados | PostgreSQL                                  | Persistência de itens, usuários e permissões            |
 | Infraestrutura | Docker + Docker Compose                     | Conteinerização e deploy do sistema                     |
 
 ---
@@ -146,7 +146,7 @@ As funcionalidades identificadas no backlog e nas entregas da sprint 9 incluem:
 |:--|:--|
 | Controle de acesso | Criação de superusuário e autenticação |
 | Login JWT | Login/logout com autenticação baseada em tokens |
-| CRUD de items | Cadastro, edição, remoção e consulta de items |
+| CRUD de itens | Cadastro, edição, remoção e consulta de itens |
 | Dashboard | Visualização de dados do inventário |
 | Exportação CSV | Geração de relatórios exportáveis |
 | PostgreSQL | Integração com banco de dados relacional |

@@ -14,7 +14,7 @@ As referências utilizadas na elaboração deste projeto abrangem normas interna
 
 ###  Literatura e Métodologia
 
-* **PRESSMAN, R. S.** *Engenharia de Software: uma abordagem professional.* 8. ed. Porto Alegre: AMGH, 2014.
+* **PRESSMAN, R. S.** *Engenharia de Software: uma abordagem profissional.* 8. ed. Porto Alegre: AMGH, 2014.
 
 ---
 

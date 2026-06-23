@@ -2,7 +2,7 @@
 
 ## 6.1 Dentro do Escopo
 
-Os components abaixo serão diretamente avaliados durante o processo definido pela ISO/IEC 25040.
+Os componentes abaixo serão diretamente avaliados durante o processo definido pela ISO/IEC 25040.
 
 | Objeto de Avaliação | Profundidade da Avaliação | Justificativa |
 |:--|:--|:--|
@@ -37,7 +37,7 @@ Os components abaixo serão diretamente avaliados durante o processo definido pe
 
 ## 6.2 Fora do Escopo
 
-Os items abaixo não serão avaliados nesta fase do projeto.
+Os itens abaixo não serão avaliados nesta fase do projeto.
 
 | Item Excluído | Justificativa |
 |:--|:--|
@@ -55,7 +55,7 @@ Os items abaixo não serão avaliados nesta fase do projeto.
     A avaliação concentra-se exclusivamente nas características
     selecionadas pela equipe e definidas no modelo de qualidade.
 
-    Aspects como segurança, experiência do usuário e manutenção
+    Aspectos como segurança, experiência do usuário e manutenção
     do código-fonte não fazem parte desta análise.
 
 ---
@@ -80,7 +80,7 @@ Os resultados obtidos serão considerados válidos apenas dentro das seguintes c
 
 - **Carga Simulada**
   
-  Até 50 usuários simultâneos e 10.000 items cadastrados
+  Até 50 usuários simultâneos e 10.000 itens cadastrados
 
 </div>
 

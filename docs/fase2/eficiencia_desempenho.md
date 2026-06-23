@@ -15,7 +15,7 @@ A tabela abaixo apresenta o desdobramento da característica de **Eficiência de
 
 - **H7 (Q7):** O tempo médio de resposta estará abaixo de 1 segundo para operações CRUD básicas em ambiente local. Endpoints de listagem podem ser mais lentos conforme o volume de dados.
 - **H8 (Q8):** O consumo de CPU ficará abaixo de 70% com 50 usuários simultâneos, mas o consumo de memória pode ultrapassar 512MB com o Django + PostgreSQL rodando no mesmo host Docker.
-- **H9 (Q9):** Haverá degradação significativa (acima de 50%) entre 100 e 10.000 items, pois não há evidências de paginação ou indexação otimizada no código do Agio.
+- **H9 (Q9):** Haverá degradação significativa (acima de 50%) entre 100 e 10.000 itens, pois não há evidências de paginação ou indexação otimizada no código do Agio.
 
 ---
 

@@ -8,10 +8,6 @@ Este documento descreve o plano de avaliação detalhado para a execução das m
 
 O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos concretos de coleta. A tabela a seguir estabelece essa rastreabilidade direta:
 
-## 1.1 Rastreabilidade com a Fase 2
-
-O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos concretos de coleta. A tabela a seguir estabelece essa rastreabilidade direta:
-
 | Métrica (Fase 2) | Método de Coleta (Fase 3) | Ferramenta Principal | Seção deste Documento |
 | :---: | :--- | :--- | :---: |
 | **M1** | Inspeção manual do backlog vs. funcionalidades. | Postman + Navegador Web | [1.2.1](#121-m1-indice-de-completude-funcional-icf) |
@@ -103,7 +99,7 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 3. Registrar o código HTTP de cada resposta.
 4. Calcular TDO = (respostas 2xx ou 3xx / 200) x 100.
 
-> **Evidência Requerida:** Arquivo CSV com timestamp, endpoint, codigo HTTP e tempo de resposta de cada requisição.
+> **Evidência Requerida:** Arquivo CSV com timestamp, endpoint, código HTTP e tempo de resposta de cada requisição.
 
 ---
 
@@ -139,7 +135,7 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 **Passos:**
 
 1. Instalar Locust: `pip install locust`.
-2. Criar locustfile.py com cenários: login, listagem de items, criação de item.
+2. Criar locustfile.py com cenários: login, listagem de itens, criação de item.
 3. Executar teste de carga: 50 usuários simultâneos, ramp-up de 10 usuários/segundo, duração de 60 segundos.
 4. Durante a execução, monitorar via `docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"` com amostragem a cada 5 segundos.
 5. Registrar pico de CPU e pico de RAM de cada container.
@@ -152,8 +148,8 @@ O plano abaixo traduz cada métrica especificada na Fase 2 em procedimentos conc
 
 **Passos:**
 
-1. Criar script Python que insere dados sintéticos via API: items com nome, descrição, quantidade e preços aleatórios.
-2. Inserir em patamares: 100, 1.000, 5.000 e 10.000 items.
+1. Criar script Python que insere dados sintéticos via API: itens com nome, descrição, quantidade e preços aleatórios.
+2. Inserir em patamares: 100, 1.000, 5.000 e 10.000 itens.
 3. Após cada patamar, executar 50 requisições GET /api/items/ e calcular o tempo médio de resposta.
 4. Calcular degradação = ((TMRE_10000 - TMRE_100) / TMRE_100) x 100.
 

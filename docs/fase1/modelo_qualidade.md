@@ -59,7 +59,7 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 |:--|:--|
 | Usabilidade | Necessidade de testes com usuários reais representativos |
 | Segurança | Exigiria pentesting e análise especializada |
-| Manutenibilidade | Alto risco de superficialidade métodológica |
+| Manutenibilidade | Alto risco de superficialidade metodológica |
 | Compatibilidade | Baixa relevância para o contexto do Agio |
 | Portabilidade | Docker já fornece portabilidade suficiente |
 

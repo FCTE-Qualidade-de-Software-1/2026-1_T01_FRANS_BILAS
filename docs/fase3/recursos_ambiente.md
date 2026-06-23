@@ -57,7 +57,7 @@ Para as métricas de **Eficiência de Desempenho (M7, M8 e M9)**, será utilizad
 | **quantidade** | `integer` | Valor numérico inteiro gerado aleatoriamente no intervalo de 1 a 1000. |
 | **preço** | `decimal` | Valor decimal de ponto flutuante flutuando aleatoriamente entre 0.01 e 9999.99. |
 
-Patamares de volume: 100, 1.000, 5.000 e 10.000 items.
+Patamares de volume: 100, 1.000, 5.000 e 10.000 itens.
 A massa de dados será armazenada no repositorio Git em formato CSV para auditória (conforme premissa do projeto).
 
 ---

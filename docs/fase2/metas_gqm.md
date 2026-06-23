@@ -9,7 +9,7 @@ As metas da avaliação foram estruturadas seguindo o padrão metodológico do G
 | **Objeto** | Sistema Agio v1.0.0<br>*(API REST + Frontend)* | Sistema Agio v1.0.0<br>*(API REST + Banco de Dados)* | Sistema Agio v1.0.0<br>*(Backend Django + PostgreSQL)* |
 | **Propósito** | Avaliar a completude e a correção das funcionalidades implementadas em relação ao backlog planejado. | Verificar a estabilidade do sistema sob uso contínuo e diante de entradas inesperadas. | Medir o desempenho do sistema em operações de inventário sob condições de carga crescente. |
 | **Foco de Qualidade** | Completude funcional, correção funcional e adequação à tarefa. | Maturidade, disponibilidade e tolerância a falhas. | Comportamento temporal, utilização de recursos e capacidade. |
-| **Ponto de Vista** | Equipe de desenvolvimento e potenciais adotantes (PMEs). | Operadores e administradores do sistema. | Potenciais adotantes de PMEs que exigem tempo de resposta adequado. |
+| **Ponto de Vista** | Equipe de desenvolvimento e potenciais adotantes (PMEs). | Operadores e administradores do sistema. | Potenciais adotantes de PMEs, que exigem tempo de resposta adequado. |
 | **Ambiente** | Ambiente local controlado via Docker Compose; dados sintéticos; requisições via scripts automatizados. | Ambiente local com Docker Compose; carga simulada de até 50 usuários simultâneos. | Ambiente local com Docker Compose; até 10.000 itens cadastrados; carga progressiva via ferramenta de teste. |
 
 ---
