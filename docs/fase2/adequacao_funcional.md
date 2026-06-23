@@ -27,9 +27,9 @@ A tabela abaixo apresenta o desdobramento da característica de **Adequação Fu
 ```mermaid
 graph TD
     G1["GOAL 1<br>Adequação Funcional"]
-    G1 --> Q1["Q1: Completude do backlog?"]
-    G1 --> Q2["Q2: Correção dos resultados da API?"]
-    G1 --> Q3["Q3: Adequação aos fluxos de PMEs?"]
+    G1 --> Q1["Q1: Completude<br>do backlog?"]
+    G1 --> Q2["Q2: Correção dos<br>resultados da API?"]
+    G1 --> Q3["Q3: Adequação aos<br>fluxos de PMEs?"]
     Q1 --> M1["M1: Índice de Completude<br>Funcional - ICF"]
     Q2 --> M2["M2: Taxa de Correção<br>Funcional - TCF"]
     Q3 --> M3["M3: Índice de Adequação<br>a Tarefa - IAT"]
@@ -39,3 +39,4 @@ graph TD
     style M2 fill:#fff3cd,stroke:#ffc107
     style M3 fill:#fff3cd,stroke:#ffc107
 ```
+

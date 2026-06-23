@@ -25,9 +25,9 @@ A tabela abaixo apresenta o desdobramento da característica de **Confiabilidade
 ```mermaid
 graph TD
     G2["GOAL 2<br>Confiabilidade"]
-    G2 --> Q4["Q4: Cobertura e taxa de sucesso dos testes?"]
-    G2 --> Q5["Q5: Disponibilidade sob carga contínua?"]
-    G2 --> Q6["Q6: Resposta a entradas inválidas e falhas?"]
+    G2 --> Q4["Q4: Cobertura e taxa de<br>sucesso dos testes?"]
+    G2 --> Q5["Q5: Disponibilidade sob<br>carga contínua?"]
+    G2 --> Q6["Q6: Resposta a entradas<br>inválidas e falhas?"]
     Q4 --> M4["M4: Taxa de Maturidade por<br>Cobertura de Testes - TMCT"]
     Q5 --> M5["M5: Taxa de Disponibilidade<br>Operacional - TDO"]
     Q6 --> M6["M6: Índice de Tolerância<br>a Falhas - ITF"]
@@ -37,3 +37,4 @@ graph TD
     style M5 fill:#fff3cd,stroke:#ffc107
     style M6 fill:#fff3cd,stroke:#ffc107
 ```
+

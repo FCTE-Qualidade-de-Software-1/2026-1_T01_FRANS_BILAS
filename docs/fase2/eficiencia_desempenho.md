@@ -24,9 +24,9 @@ A tabela abaixo apresenta o desdobramento da característica de **Eficiência de
 ```mermaid
 graph TD
     G3["GOAL 3<br>Eficiência de Desempenho"]
-    G3 --> Q7["Q7: Tempo médio de resposta dos endpoints?"]
-    G3 --> Q8["Q8: Consumo de CPU e memória sob carga?"]
-    G3 --> Q9["Q9: Degradação por volume de dados?"]
+    G3 --> Q7["Q7: Tempo médio de<br>resposta dos endpoints?"]
+    G3 --> Q8["Q8: Consumo de CPU e<br>memória sob carga?"]
+    G3 --> Q9["Q9: Degradação por<br>volume de dados?"]
     Q7 --> M7["M7: Tempo Médio de Resposta<br>por Endpoint - TMRE"]
     Q8 --> M8["M8: Utilização de Recursos<br>sob Carga - URC"]
     Q9 --> M9["M9: Degradação de Desempenho<br>por Volume - DDVD"]
@@ -36,3 +36,4 @@ graph TD
     style M8 fill:#fff3cd,stroke:#ffc107
     style M9 fill:#fff3cd,stroke:#ffc107
 ```
+

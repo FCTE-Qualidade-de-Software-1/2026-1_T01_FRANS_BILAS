@@ -66,6 +66,7 @@ graph TD
 
 ---
 
+
 ## 7.3 Critérios de Julgamento Consolidados
 
 Esta matriz consolida as réguas de corte para cada um dos níveis de maturidade e aceitação das métricas definidas no projeto.
