@@ -109,7 +109,7 @@ nav:
       - Priorização das Características: fase1/priorizacao_caracteristicas.md
       - Escopo da Avaliação: fase1/escopo.md
       - ODS Relacionados: fase1/ods_relacionados.md
-      - Referências: fase1/referencias.md
+      
       
 
   -  Fase 2:
@@ -134,6 +134,7 @@ nav:
   -  Projeto:
       - Contribuição da Equipe: Projeto/contribuicao_equipe.md
       - Uso de Inteligência Artificial: Projeto/uso_de_IA.md
+      - Referências: fase1/referencias.md
 
 extra:
   social:
