@@ -1,4 +1,4 @@
-# 6. Eficiencia de Desempenho 
+# 6. Eficiência de Desempenho 
 
 A tabela abaixo apresenta o desdobramento da característica de **Eficiência de Desempenho** utilizando a abordagem GQM (Goal-Question-Metric), avaliando a velocidade, o consumo de recursos e a escalabilidade do sistema.
 
@@ -13,23 +13,23 @@ A tabela abaixo apresenta o desdobramento da característica de **Eficiência de
 
 ## 6.2 Hipóteses por Questão
 
-- **H7 (Q7):** O tempo medio de resposta estara abaixo de 1 segundo para operacoes CRUD basicas em ambiente local. Endpoints de listagem podem ser mais lentos conforme o volume de dados.
-- **H8 (Q8):** O consumo de CPU ficara abaixo de 70% com 50 usuarios simultâneos, mas o consumo de memoria pode ultrapassar 512MB com o Django + PostgreSQL rodando no mesmo host Docker.
-- **H9 (Q9):** Havera degradação significativa (acima de 50%) entre 100 e 10.000 items, pois não ha evidencias de páginacao ou indexacao otimizada no codigo do Agio.
+- **H7 (Q7):** O tempo médio de resposta estará abaixo de 1 segundo para operações CRUD básicas em ambiente local. Endpoints de listagem podem ser mais lentos conforme o volume de dados.
+- **H8 (Q8):** O consumo de CPU ficará abaixo de 70% com 50 usuários simultâneos, mas o consumo de memória pode ultrapassar 512MB com o Django + PostgreSQL rodando no mesmo host Docker.
+- **H9 (Q9):** Haverá degradação significativa (acima de 50%) entre 100 e 10.000 items, pois não há evidências de paginação ou indexação otimizada no código do Agio.
 
 ---
 
-## 6.3 Diagram GQM — Eficiencia de Desempenho
+## 6.3 Diagrama GQM — Eficiência de Desempenho
 
 ```mermaid
 graph TD
-    G3["GOAL 3<br>Eficiencia de Desempenho"]
-    G3 --> Q7["Q7: Tempo medio de resposta dos endpoints?"]
-    G3 --> Q8["Q8: Consumo de CPU e memoria sob carga?"]
-    G3 --> Q9["Q9: Degradacao por volume de dados?"]
-    Q7 --> M7["M7: Tempo Medio de Resposta<br>por Endpoint - TMRE"]
-    Q8 --> M8["M8: Utilizacao de Recursos<br>sob Carga - URC"]
-    Q9 --> M9["M9: Degradacao de Desempenho<br>por Volume - DDVD"]
+    G3["GOAL 3<br>Eficiência de Desempenho"]
+    G3 --> Q7["Q7: Tempo médio de resposta dos endpoints?"]
+    G3 --> Q8["Q8: Consumo de CPU e memória sob carga?"]
+    G3 --> Q9["Q9: Degradação por volume de dados?"]
+    Q7 --> M7["M7: Tempo Médio de Resposta<br>por Endpoint - TMRE"]
+    Q8 --> M8["M8: Utilização de Recursos<br>sob Carga - URC"]
+    Q9 --> M9["M9: Degradação de Desempenho<br>por Volume - DDVD"]
 
     style G3 fill:#1E3A5F,color:#fff
     style M7 fill:#fff3cd,stroke:#ffc107

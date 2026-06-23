@@ -14,25 +14,25 @@ A tabela abaixo apresenta o desdobramento da característica de **Adequação Fu
 
 ## 4.2 Hipóteses por Questão
 
-- **H1 (Q1):** Pelo menos 75% das funcionalidades do backlog estão implementadas, dado que o projeto passou por 9 sprints. Funcionalidades de integracao avancada (BI, SSO) podem estar ausentes.
+- **H1 (Q1):** Pelo menos 75% das funcionalidades do backlog estão implementadas, dado que o projeto passou por 9 sprints. Funcionalidades de integração avançada (BI, SSO) podem estar ausentes.
 
-- **H2 (Q2):** A taxa de correção sera alta (acima de 80%) para operacoes basicas de CRUD, mas pode apresentar falhas em scenarios de borda (tokens expirados, campos nulos).
+- **H2 (Q2):** A taxa de correção será alta (acima de 80%) para operações básicas de CRUD, mas pode apresentar falhas em cenários de borda (tokens expirados, campos nulos).
 
-- **H3 (Q3):** Os fluxos basicos de gestão de inventario estão cobertos, mas fluxos avancados (relatorios personalizados, controle de lotes) podem não estar implementados.
+- **H3 (Q3):** Os fluxos básicos de gestão de inventário estão cobertos, mas fluxos avançados (relatórios personalizados, controle de lotes) podem não estar implementados.
 
 ---
 
-## 4.3 Diagram GQM — Adequação Funcional
+## 4.3 Diagrama GQM — Adequação Funcional
 
 ```mermaid
 graph TD
-    G1["GOAL 1<br>Adequacao Funcional"]
+    G1["GOAL 1<br>Adequação Funcional"]
     G1 --> Q1["Q1: Completude do backlog?"]
-    G1 --> Q2["Q2: Correcao dos resultados da API?"]
-    G1 --> Q3["Q3: Adequacao aos fluxos de PMEs?"]
-    Q1 --> M1["M1: Indice de Completude<br>Funcional - ICF"]
-    Q2 --> M2["M2: Taxa de Correcao<br>Funcional - TCF"]
-    Q3 --> M3["M3: Indice de Adequacao<br>a Tarefa - IAT"]
+    G1 --> Q2["Q2: Correção dos resultados da API?"]
+    G1 --> Q3["Q3: Adequação aos fluxos de PMEs?"]
+    Q1 --> M1["M1: Índice de Completude<br>Funcional - ICF"]
+    Q2 --> M2["M2: Taxa de Correção<br>Funcional - TCF"]
+    Q3 --> M3["M3: Indice de Adequação<br>a Tarefa - IAT"]
 
     style G1 fill:#1E3A5F,color:#fff
     style M1 fill:#fff3cd,stroke:#ffc107

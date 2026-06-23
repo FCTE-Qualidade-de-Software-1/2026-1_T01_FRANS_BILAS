@@ -6,7 +6,7 @@ Conforme definido na Seção 4.2, as características selecionadas para avaliaç
 
 <div class="grid cards" markdown>
 
--  **Adequação Functional**
+-  **Adequação Funcional**
 -  **Confiabilidade**
 -  **Eficiência de Desempenho**
 
@@ -43,7 +43,7 @@ A priorização foi conduzida utilizando uma matriz de Impacto × Viabilidade, c
 
 | Característica | Impacto | Viabilidade | Pontuação | Resultado |
 |:--|:--:|:--:|:--:|:--|
-| Adequação Functional | 5 | 5 | **25** | Prioridade 1 |
+| Adequação Funcional | 5 | 5 | **25** | Prioridade 1 |
 | Confiabilidade | 5 | 4 | **20** | Prioridade 2 |
 | Eficiência de Desempenho | 4 | 5 | **20** | Prioridade 3 |
 | Segurança | 4 | 2 | 8 | Excluída |
@@ -62,7 +62,7 @@ Durante o processo de seleção, alguns *trade-offs* foram discutidos pela equip
 
 ### Trade-offs Considerados
 
-!!! tip "Adequação Functional × Usabilidade"
+!!! tip "Adequação Funcional × Usabilidade"
 
     Ambas impactam diretamente o usuário final.  
     Entretanto, Adequação Funcional foi priorizada por permitir
@@ -114,5 +114,5 @@ As três características selecionadas apresentam forte relação entre si:
 !!! note "Análise Integrada"
 
     Na Fase 4, os resultados das métricas serão analisados em conjunto
-    para identificar correlações entre adequação functional,
+    para identificar correlações entre adequação funcional,
     confiabilidade e desempenho.

@@ -24,20 +24,20 @@ Uma visão consolidada de todas as métricas mapeadas para o projeto, agrupadas 
 graph TD
     AGIO["Avaliação de Qualidade<br>Agio v1.0.0"]
 
-    AGIO --> G1["GOAL 1<br>Adequacao Funcional"]
+    AGIO --> G1["GOAL 1<br>Adequação Funcional"]
     AGIO --> G2["GOAL 2<br>Confiabilidade"]
-    AGIO --> G3["GOAL 3<br>Eficiencia de Desempenho"]
+    AGIO --> G3["GOAL 3<br>Eficiência de Desempenho"]
 
     G1 --> Q1["Q1: Completude?"]
-    G1 --> Q2["Q2: Correcao?"]
-    G1 --> Q3["Q3: Adequacao?"]
+    G1 --> Q2["Q2: Correção?"]
+    G1 --> Q3["Q3: Adequação?"]
     Q1 --> M1["M1: ICF"]
     Q2 --> M2["M2: TCF"]
     Q3 --> M3["M3: IAT"]
 
     G2 --> Q4["Q4: Maturidade?"]
     G2 --> Q5["Q5: Disponibilidade?"]
-    G2 --> Q6["Q6: Tolerancia?"]
+    G2 --> Q6["Q6: Tolerância?"]
     Q4 --> M4["M4: TMCT"]
     Q5 --> M5["M5: TDO"]
     Q6 --> M6["M6: ITF"]

@@ -151,7 +151,7 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
 ## Eficiência de Desempenho
 
 !!! success "Comportamento Temporal — Excelente (2,3ms)"
-    Tempo médio de resposta muito abaixo do limit aceitável de 500ms.
+    Tempo médio de resposta muito abaixo do limite aceitável de 500ms.
 
 !!! success "Utilização de Recursos — Excelente"
     PostgreSQL: CPU 0%, RAM 32,58 MB sob 50 usuários simultâneos.
@@ -218,7 +218,7 @@ As características selecionadas pelo grupo foram definidas utilizando uma matri
       <td align="center">
         <a href="https://github.com/Jadequilin">
           <img src="https://avatars.githubusercontent.com/Jadequilin" width="100" height="100" style="border-radius: 50%; object-fit: cover;" alt="Joao Pedro Lyra"/>
-          <br /><sub><b>Joao Pedro A. de F. Lyra</b></sub>
+          <br /><sub><b>Joao Pedro Araújo de Freitas Lyra</b></sub>
           <br /><sub>232003661</sub>
         </a>
       </td>

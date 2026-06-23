@@ -1,4 +1,4 @@
-#  9. Referências
+# Referências
 
 As referências utilizadas na elaboração deste projeto abrangem normas internacionais de qualidade, literatura fundamental de engenharia de software e documentação técnica do sistema.
 
