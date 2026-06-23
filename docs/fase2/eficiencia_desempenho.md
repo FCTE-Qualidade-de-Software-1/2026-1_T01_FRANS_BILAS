@@ -31,7 +31,7 @@ graph TD
     Q8 --> M8["M8: Utilização de Recursos<br>sob Carga - URC"]
     Q9 --> M9["M9: Degradação de Desempenho<br>por Volume - DDVD"]
 
-    style G3 fill:#1E3A5F,color:#fff
+    style G3 fill:#AEC9E8,stroke:#1E3A5F,color:#10243F
     style M7 fill:#fff3cd,stroke:#ffc107
     style M8 fill:#fff3cd,stroke:#ffc107
     style M9 fill:#fff3cd,stroke:#ffc107

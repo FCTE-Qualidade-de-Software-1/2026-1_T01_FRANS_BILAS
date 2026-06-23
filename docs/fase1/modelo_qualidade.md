@@ -117,18 +117,20 @@ O modelo da ISO/IEC 25010 foi adaptado ao contexto do sistema Agio, considerando
 ### Modelo de Qualidade Adaptado (ISO/IEC 25010)
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 25, 'rankSpacing': 50}}}%%
 graph TD
     ISO["ISO/IEC 25010<br>Modelo Adaptado para o Agio"]
 
     ISO --> AF["Adequação Funcional"]
     ISO --> CONF["Confiabilidade"]
     ISO --> ED["Eficiência de Desempenho"]
+    ISO -.-> EXC["Características Excluídas"]
 
-    ISO -.->|"excluída"| USB["Usabilidade"]
-    ISO -.->|"excluída"| SEG["Segurança"]
-    ISO -.->|"excluída"| MAN["Manutenibilidade"]
-    ISO -.->|"excluída"| COM["Compatibilidade"]
-    ISO -.->|"excluída"| POR["Portabilidade"]
+    EXC -.-> USB["Usabilidade"]
+    EXC -.-> SEG["Segurança"]
+    EXC -.-> MAN["Manutenibilidade"]
+    EXC -.-> COM["Compatibilidade"]
+    EXC -.-> POR["Portabilidade"]
 
     AF --> CF["Completude Funcional"]
     AF --> COR["Correção Funcional"]
@@ -142,6 +144,7 @@ graph TD
     ED --> UR["Utilização de Recursos"]
     ED --> CAP["Capacidade"]
 
+    style EXC fill:#bfbfbf,stroke:#999,color:#000
     style USB fill:#d9d9d9,stroke:#999,color:#666
     style SEG fill:#d9d9d9,stroke:#999,color:#666
     style MAN fill:#d9d9d9,stroke:#999,color:#666

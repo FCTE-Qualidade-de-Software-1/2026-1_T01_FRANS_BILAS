@@ -49,10 +49,10 @@ graph TD
     Q8 --> M8["M8: URC"]
     Q9 --> M9["M9: DDVD"]
 
-    style AGIO fill:#1E3A5F,color:#fff
-    style G1 fill:#2E5A8F,color:#fff
-    style G2 fill:#2E5A8F,color:#fff
-    style G3 fill:#2E5A8F,color:#fff
+    style AGIO fill:#AEC9E8,stroke:#1E3A5F,color:#10243F
+    style G1 fill:#CFE0F2,stroke:#2E5A8F,color:#10243F
+    style G2 fill:#CFE0F2,stroke:#2E5A8F,color:#10243F
+    style G3 fill:#CFE0F2,stroke:#2E5A8F,color:#10243F
     style M1 fill:#fff3cd,stroke:#ffc107
     style M2 fill:#fff3cd,stroke:#ffc107
     style M3 fill:#fff3cd,stroke:#ffc107

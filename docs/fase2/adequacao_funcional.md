@@ -34,7 +34,7 @@ graph TD
     Q2 --> M2["M2: Taxa de Correção<br>Funcional - TCF"]
     Q3 --> M3["M3: Indice de Adequação<br>a Tarefa - IAT"]
 
-    style G1 fill:#1E3A5F,color:#fff
+    style G1 fill:#AEC9E8,stroke:#1E3A5F,color:#10243F
     style M1 fill:#fff3cd,stroke:#ffc107
     style M2 fill:#fff3cd,stroke:#ffc107
     style M3 fill:#fff3cd,stroke:#ffc107

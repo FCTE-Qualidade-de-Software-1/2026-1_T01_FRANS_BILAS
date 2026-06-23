@@ -32,7 +32,7 @@ graph TD
     Q5 --> M5["M5: Taxa de Disponibilidade<br>Operacional - TDO"]
     Q6 --> M6["M6: Indice de Tolerância<br>a Falhas - ITF"]
 
-    style G2 fill:#1E3A5F,color:#fff
+    style G2 fill:#AEC9E8,stroke:#1E3A5F,color:#10243F
     style M4 fill:#fff3cd,stroke:#ffc107
     style M5 fill:#fff3cd,stroke:#ffc107
     style M6 fill:#fff3cd,stroke:#ffc107
